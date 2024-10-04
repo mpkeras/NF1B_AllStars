@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CAbilEffectTarget id="ArbiterMPRecall">
+        <Cost index="0">
+            <Vital index="Energy" value="150"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="ArbiterMPStasisField">
+        <Flags index="AllowMovement" value="1"/>
+        <CmdButtonArray index="Execute" Requirements="HaveStasisFieldUpgrade"/>
+    </CAbilEffectTarget>
+    <CAbilResearch id="BarracksTechLabResearch">
+        <InfoArray index="Research30" Time="110" Upgrade="JuggernautPlating">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchJuggernautPlating" Requirements="LearnJuggernautPlatingUpgrade"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="BarracksTrain">
+        <InfoArray index="Train28" Time="30">
+            <Button DefaultButtonFace="Firebat" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Firebat"/>
+        </InfoArray>
+        <InfoArray index="Train29" Time="25">
+            <Button DefaultButtonFace="Medic" Requirements="HaveAttachedTechLab"/>
+            <Unit value="Medic"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="40">
+            <Button DefaultButtonFace="Spectre" Requirements="HaveAttachedBarrTechLabAndShadowOps"/>
+            <Unit value="Spectre"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilTransport id="BunkerTransport">
+        <TargetFilters value="Biological,Visible;Neutral,Enemy,Dead,Hidden"/>
+    </CAbilTransport>
+    <CAbilArmMagazine id="CarrierHangar">
+        <InfoArray index="Ammo1" CountStart="0"/>
+    </CAbilArmMagazine>
+    <CAbilEffectTarget id="CorsairMPDisruptionWeb">
+        <Flags index="AllowMovement" value="1"/>
+        <Cost index="0">
+            <Vital index="Energy" value="125"/>
+        </Cost>
+        <AutoCastFilters value="Visible;Player,Ally,Neutral"/>
+        <AutoCastRange value="9"/>
+        <AutoCastValidatorArray value="IsNotDisruptionWebbed"/>
+        <AutoCastValidatorArray value="TargetIsGround"/>
+        <AutoCastValidatorArray value="TargetCanAttack"/>
+        <AutoCastValidatorArray value="DisruptionWebFilters"/>
+        <CmdButtonArray index="Execute" Requirements="HaveDisruptionWebUpgrade"/>
+    </CAbilEffectTarget>
+    <!--                                                                                         -->
+    <!-- Defiler............................................................................... -->
+    <!--                                                                                         -->
+    <CAbilEffectTarget id="DefilerMPConsume">
+        <CmdButtonArray index="Execute" Requirements="HaveConsumeUpgrade"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="DefilerMPPlague">
+        <CmdButtonArray index="Execute" Requirements="HavePlagueUpgrade"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="MothershipCoreTeleport">
+        <TargetFilters index="0" value="Structure,Visible;Self,Neutral,Enemy,UnderConstruction"/>
+    </CAbilEffectTarget>
+    <CAbilTransport id="NydusCanalTransport">
+        <TargetFilters value="Visible;Neutral,Enemy,Buried,Dead,Hidden"/>
+    </CAbilTransport>
+    <CAbilTransport id="NydusWormTransport">
+        <TargetFilters value="Visible;Neutral,Enemy,Buried,Dead,Hidden"/>
+    </CAbilTransport>
+    <CAbilEffectTarget id="ScienceVesselEMP">
+        <Alignment value="Negative"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Effect index="0" value="EMPLaunchMissile"/>
+        <Cost>
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <Range value="10"/>
+        <Arc value="360"/>
+        <PrepTime value="0.01"/>
+        <FinishTime value="0.0625"/>
+        <UninterruptibleArray index="Prep" value="1"/>
+        <UninterruptibleArray index="Finish" value="1"/>
+        <CursorEffect value="EMPSearch"/>
+        <AINotifyEffect value="EMPLaunchMissile"/>
+        <CmdButtonArray index="Execute" DefaultButtonFace="EMP"/>
+    </CAbilEffectTarget>
+    <CAbilTransport id="MedivacTransport">
+        <TargetFilters value="Visible;Self,Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
+    </CAbilTransport>
+    <CAbilTransport id="OverlordTransport">
+        <TargetFilters value="Visible;Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
+    </CAbilTransport>
+    <CAbilResearch id="FactoryTechLabResearch">
+        <InfoArray index="Research27" Time="70" Upgrade="SpiderMines">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchSpiderMinesSC1" Requirements="LearnSpiderMinesUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research28" Time="110" Upgrade="AresClassTargetingSystem">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchAresClassTargetingSystem" Requirements="LearnAresClassTargetingSystemUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research29" Time="110" Upgrade="HaywireMissiles">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchHaywireMissiles" Requirements="LearnHaywireMissilesUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research30" Time="90" Upgrade="IonThrusters">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchIonThrusters" Requirements="LearnIonThrustersUpgrade"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="FactoryTrain">
+        <InfoArray index="Train28" Time="25">
+            <Button DefaultButtonFace="Vulture"/>
+            <Unit value="Vulture"/>
+        </InfoArray>
+        <InfoArray index="Train29" Time="40">
+            <Button DefaultButtonFace="Goliath" State="Restricted"/>
+            <Unit value="Goliath"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="45">
+            <Button DefaultButtonFace="WarHound" State="Restricted" Requirements="HaveArmory"/>
+            <Unit value="WarHound"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="FleetBeaconResearch">
+        <InfoArray index="Research29" Time="90" Upgrade="DisruptionWeb">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchDisruptionWeb" Requirements="LearnDisruptionWebUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research30" Time="90" Upgrade="StasisField">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ArbiterMPStasisField" Requirements="LearnStasisFieldUpgrade"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="GatewayTrain">
+        <InfoArray index="Train30" Time="42">
+            <Button DefaultButtonFace="Dragoon" Requirements="HaveCyberneticsCore"/>
+            <Unit value="Dragoon"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="InfestationPitResearch">
+        <InfoArray index="Research29" Time="110" Upgrade="Plague">
+            <Resource index="Minerals" value="200"/>
+            <Resource index="Vespene" value="200"/>
+            <Button DefaultButtonFace="ResearchPlague" Requirements="LearnPlagueUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research30" Time="90" Upgrade="Consume">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="EvolveConsume" Requirements="LearnConsumeUpgrade"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilEffectTarget id="Irradiate">
+        <Cost index="0">
+            <Vital index="Energy" value="75"/>
+        </Cost>
+        <CmdButtonArray index="Execute" Requirements="HaveIrradiateUpgrade"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="LarvaTrain">
+        <InfoArray index="Train20" Time="50">
+            <Button DefaultButtonFace="Defiler" Requirements="HaveHive"/>
+            <Unit value="DefilerMP"/>
+        </InfoArray>
+        <InfoArray index="Train21" Time="33.5">
+            <Button DefaultButtonFace="MorphtoOverlordVentralSacs" Requirements="HaveLair"/>
+            <Unit value="OverlordTransport"/>
+        </InfoArray>
+        <InfoArray index="Train22" Time="50">
+            <Button DefaultButtonFace="QueenClassic" Requirements="HaveInfestationPit"/>
+            <Unit value="QueenMP"/>
+        </InfoArray>
+        <InfoArray index="Train23" Time="46.5">
+            <Button DefaultButtonFace="Guardian" Requirements="HaveGreaterSpire"/>
+            <Unit value="GuardianMP"/>
+        </InfoArray>
+        <InfoArray index="Train24" Time="46.5">
+            <Button DefaultButtonFace="MorphToDevourerMP" Requirements="HaveGreaterSpire"/>
+            <Unit value="DevourerMP"/>
+        </InfoArray>
+        <InfoArray index="Train25" Time="27">
+            <Resource index="Minerals" value="1"/>
+            <Resource index="Vespene" value="1"/>
+            <Button DefaultButtonFace="Scourge" Requirements="HaveSpire"/>
+            <Unit value="Scourge"/>
+            <Unit value="Scourge"/>
+        </InfoArray>
+        <InfoArray index="Train26" Time="29.1665">
+            <Button DefaultButtonFace="MorphToOverseer" Requirements="HaveLair"/>
+            <Unit value="Overseer"/>
+        </InfoArray>
+        <InfoArray index="Train27" Time="53.8381">
+            <Button DefaultButtonFace="BroodLord" Requirements="HaveGreaterSpire"/>
+            <Unit value="BroodLord"/>
+        </InfoArray>
+        <InfoArray index="Train28" Time="41.75">
+            <Button DefaultButtonFace="LurkerMPA" Requirements="HaveLurkerDen"/>
+            <Unit value="LurkerMP"/>
+        </InfoArray>
+        <InfoArray index="Train29" Time="30.5">
+            <Button DefaultButtonFace="MorphtoRavagerR" Requirements="HaveBanelingNest2"/>
+            <Unit value="Ravager"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="26">
+            <Button DefaultButtonFace="Baneling" Requirements="HaveBanelingNest"/>
+            <Unit value="Baneling"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilMorph id="MorphToBaneling">
+        <CmdButtonArray index="Execute" Requirements="DisabledinNF1B"/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToBroodLord">
+        <CmdButtonArray index="Execute" Requirements="DisabledinNF1B"/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToLurker">
+        <CmdButtonArray index="Execute" Requirements="DisabledinNF1B"/>
+    </CAbilMorph>
+    <CAbilMorph id="MorphToRavager">
+        <CmdButtonArray index="Execute" Requirements="DisabledinNF1B"/>
+    </CAbilMorph>
+    <CAbilBuild id="ProtossBuild">
+        <InfoArray index="Build8">
+            <Button Requirements="HaveGatewayAndForge"/>
+        </InfoArray>
+    </CAbilBuild>
+    <CAbilTrain id="RoboticsFacilityTrain">
+        <InfoArray index="Train30" Time="75">
+            <Button DefaultButtonFace="Reaver" Requirements="HaveRoboticsBay"/>
+            <Unit value="Reaver"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilBehavior id="RogueGhostCloak">
+        <CmdButtonArray index="On" Requirements="UsePersonalCloaking"/>
+    </CAbilBehavior>
+    <CAbilEffectTarget id="ScannerSweep">
+        <Cost index="0">
+            <Vital index="Energy" value="25"/>
+        </Cost>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SpectreNuke">
+        <CmdButtonArray index="Execute" Requirements="HaveNuke"/>
+    </CAbilEffectTarget>
+    <CAbilEffectTarget id="SpiderMineUnburrowRangeDummy">
+        <Range index="0" value="3"/>
+    </CAbilEffectTarget>
+    <CAbilTrain id="StargateTrain">
+        <InfoArray index="Train28" Time="50">
+            <Button DefaultButtonFace="WarpInScout"/>
+            <Unit value="Scout"/>
+        </InfoArray>
+        <InfoArray index="Train29" Time="35">
+            <Button DefaultButtonFace="Corsair"/>
+            <Unit value="CorsairMP"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="90" Effect="WarpInEffect">
+            <Button DefaultButtonFace="Arbiter" Requirements="HaveFleetBeacon"/>
+            <Unit value="ArbiterMP"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="StarportTechLabResearch">
+        <InfoArray index="Research29" Time="60" Upgrade="DisplacementField">
+            <Resource index="Minerals" value="100"/>
+            <Resource index="Vespene" value="100"/>
+            <Button DefaultButtonFace="ResearchDisplacementField" Requirements="LearnDisplacementFieldUpgrade"/>
+        </InfoArray>
+        <InfoArray index="Research30" Time="80" Upgrade="Irradiate">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchIrradiate" Requirements="LearnIrradiateUpgrade"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilTrain id="StarportTrain">
+        <InfoArray index="Train29" Time="50">
+            <Button DefaultButtonFace="Wraith"/>
+            <Unit value="Wraith"/>
+        </InfoArray>
+        <InfoArray index="Train30" Time="60">
+            <Button DefaultButtonFace="BuildScienceVessel" Requirements="HaveAttachedTechLab"/>
+            <Unit value="ScienceVessel"/>
+        </InfoArray>
+    </CAbilTrain>
+    <CAbilResearch id="TwilightCouncilResearch">
+        <InfoArray index="Research30" Time="170" Upgrade="DragoonRange">
+            <Resource index="Minerals" value="150"/>
+            <Resource index="Vespene" value="150"/>
+            <Button DefaultButtonFace="ResearchDragoonRange" Requirements="LearnDragoonRangeUpgrade"/>
+        </InfoArray>
+    </CAbilResearch>
+    <CAbilEffectTarget id="ViperConsumeStructure">
+        <TargetFilters index="0" value="Structure;Neutral,Enemy,Missile,Stasis,UnderConstruction,Dead,Hidden"/>
+    </CAbilEffectTarget>
+    <CAbilMorph id="VultureSpiderMineBurrow">
+        <AutoCastRange value="3"/>
+    </CAbilMorph>
+    <CAbilMorph id="VultureSpiderMineUnburrow">
+        <AutoCastFilters value="Ground,Visible;Player,Ally,Neutral,Structure,Hover,Worker,Missile,Stasis,Dead,Hidden,Invulnerable,Benign"/>
+        <AutoCastRange value="3"/>
+    </CAbilMorph>
+    <CAbilEffectTarget id="VultureSpiderMines">
+        <CmdButtonArray index="Execute" Requirements="HaveSpiderMinesUpgrade"/>
+    </CAbilEffectTarget>
+    <CAbilArmMagazine id="ReaverHangar">
+        <AbilSetId value="ReaverHanger"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Leash value="20"/>
+        <InfoArray index="Ammo1" Time="8" Unit="Scarab">
+            <Charge Link="ReaverScarabs" Location="Unit"/>
+            <Cooldown Link="Abil/##id##"/>
+            <Button DefaultButtonFace="ReaverScarabs" Requirements="ArmScarab">
+                <Flags index="ToSelection" value="1"/>
+            </Button>
+            <Flags index="AutoBuild" value="1"/>
+            <Flags index="AutoBuildOn" value="1"/>
+        </InfoArray>
+        <Alert value="TrainComplete"/>
+        <MaxCount value="5"/>
+    </CAbilArmMagazine>
+    <CAbilWarpTrain id="WarpGateTrain">
+        <InfoArray index="Train20" Time="16" Unit="Dragoon">
+            <Charge>
+                <CountMax value="1"/>
+                <CountStart value="1"/>
+                <CountUse value="1"/>
+                <Link value="WarpGateTrain"/>
+                <TimeUse value="32"/>
+            </Charge>
+            <Cooldown Link="WarpGateTrain"/>
+            <Button DefaultButtonFace="Dragoon" Requirements="HaveCyberneticsCore"/>
+        </InfoArray>
+    </CAbilWarpTrain>
+    <CAbilTransport id="WarpPrismTransport">
+        <TargetFilters value="Visible;Neutral,Enemy,Buried,UnderConstruction,Dead,Hidden"/>
+        <!--LoadCargoEffect value="PurificationNovaTransportPickupSet"/>
+        <UnloadCargoEffect value="PurificationNovaMorphBackFromTransport"/-->
+    </CAbilTransport>
+    <CAbilBehavior id="WraithCloak">
+        <CmdButtonArray index="On" Requirements="UseCloakingField"/>
+    </CAbilBehavior>
+    <CAbilBehavior id="SuicideBuilding">
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <CmdButtonArray index="On" DefaultButtonFace="EnableBuildingAttack">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <CmdButtonArray index="Off" DefaultButtonFace="DisableBuildingAttack">
+            <Flags index="ToSelection" value="1"/>
+        </CmdButtonArray>
+        <Flags index="Toggle" value="1"/>
+        <Flags index="Transient" value="1"/>
+        <BehaviorArray value="SuicideBuilding"/>
+    </CAbilBehavior>
+</Catalog>

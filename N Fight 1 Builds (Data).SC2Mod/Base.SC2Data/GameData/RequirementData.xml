@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="DisabledinNF1B">
+        <EditorCategories value="Race:Zerg"/>
+        <NodeArray index="Use" Link="Eq112290066501"/>
+    </CRequirement>
+    <CRequirement id="HaveConsumeUpgrade">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeConsumeCompleteOnly35947898TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HavePlagueUpgrade">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradePlagueCompleteOnly1678464967TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveGatewayAndForge">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <CanBeSuppressed index="Use" value="0"/>
+        <NodeArray index="Use" Link="AndTechTreeCheatCountUnitAlias_GatewayCompleteOnly4260347518CountUnitForgeCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveIonThrustersUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeIonThrustersCompleteOnly1290910403TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveStasisFieldUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeStasisFieldCompleteOnly2837226883TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveDragoonRangeUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDragoonRangeCompleteOnly37669541TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveDisruptionWebUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDisruptionWebCompleteOnly409704251TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveSpiderMinesUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeSpiderMinesCompleteOnly1029879106TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveIrradiateUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeIrradiateCompleteOnly4294488994TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveJuggernautPlatingUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeJuggernautPlatingCompleteOnly2588182588TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveHaywireMissilesUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeHaywireMissilesCompleteOnly451653264TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveAresClassTargetingSystemUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeAresClassTargetingSystemCompleteOnly498654291TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="HaveDisplacementFieldUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeDisplacementFieldCompleteOnly2802401698TechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnConsumeUpgrade">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeConsumeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnPlagueUpgrade">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradePlagueQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnIonThrustersUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeIonThrustersQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnStasisFieldUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeStasisFieldQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDragoonRangeUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDragoonRangeQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDisruptionWebUpgrade">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDisruptionWebQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnSpiderMinesUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeSpiderMinesQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnIrradiateUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeIrradiateQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnJuggernautPlatingUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeJuggernautPlatingQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnHaywireMissilesUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitFusionCoreCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeHaywireMissilesQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnAresClassTargetingSystemUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitArmoryCompleteOnly"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAresClassTargetingSystemQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDisplacementFieldUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDisplacementFieldQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="ArmScarab">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="LT3591367320CountUnitScarabQueuedOrBetterAtUnit5"/>
+    </CRequirement>
+    <CRequirement id="ScarabIsArmed">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="GTCountUnitScarabQueuedOrBetterAtUnit0"/>
+    </CRequirement>
+    <CRequirement id="ScarabNotArmed">
+        <EditorCategories value="Race:Protoss,TechType:Unit"/>
+        <NodeArray index="Use" Link="EqCountUnitScarabCompleteOnlyAtUnit0"/>
+    </CRequirement>
+</Catalog>

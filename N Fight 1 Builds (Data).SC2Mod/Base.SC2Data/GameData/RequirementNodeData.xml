@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementAnd id="AndTechTreeCheatCountUnitAlias_GatewayCompleteOnly4260347518CountUnitForgeCompleteOnly">
+        <Flags index="TechTreeCheat" value="1"/>
+        <OperandArray value="CountUnitAlias_GatewayCompleteOnly4260347518"/>
+        <OperandArray value="CountUnitForgeCompleteOnly"/>
+    </CRequirementAnd>
+    <CRequirementCountUnit id="CountUnitAlias_GatewayCompleteOnly4260347518">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Alias_Gateway" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitForgeCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Forge" State="CompleteOnly"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitScarabCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Scarab" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUnit id="CountUnitScarabQueuedOrBetterAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Scarab" State="QueuedOrBetterAtUnit"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeAresClassTargetingSystemCompleteOnly498654291TechTreeCheat">
+        <Count Link="AresClassTargetingSystem" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAresClassTargetingSystemQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AresClassTargetingSystem" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeConsumeCompleteOnly35947898TechTreeCheat">
+        <Count Link="Consume" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeConsumeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Consume" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDisplacementFieldCompleteOnly2802401698TechTreeCheat">
+        <Count Link="DisplacementField" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDisplacementFieldQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DisplacementField" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDisruptionWebCompleteOnly409704251TechTreeCheat">
+        <Count Link="DisruptionWeb" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDisruptionWebQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DisruptionWeb" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDragoonRangeCompleteOnly37669541TechTreeCheat">
+        <Count Link="DragoonRange" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDragoonRangeQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DragoonRange" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHaywireMissilesCompleteOnly451653264TechTreeCheat">
+        <Count Link="HaywireMissiles" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHaywireMissilesQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="HaywireMissiles" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeIonThrustersCompleteOnly1290910403TechTreeCheat">
+        <Count Link="IonThrusters" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeIonThrustersQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="IonThrusters" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeIrradiateCompleteOnly4294488994TechTreeCheat">
+        <Count Link="Irradiate" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeIrradiateQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="Irradiate" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeJuggernautPlatingCompleteOnly2588182588TechTreeCheat">
+        <Count Link="JuggernautPlating" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeJuggernautPlatingQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="JuggernautPlating" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePlagueCompleteOnly1678464967TechTreeCheat">
+        <Count Link="Plague" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradePlagueQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="Plague" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSpiderMinesCompleteOnly1029879106TechTreeCheat">
+        <Count Link="SpiderMines" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSpiderMinesQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SpiderMines" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStasisFieldCompleteOnly2837226883TechTreeCheat">
+        <Count Link="StasisField" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeStasisFieldQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="StasisField" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementEq id="Eq112290066501">
+        <OperandArray index="0" value="0"/>
+        <OperandArray index="1" value="1"/>
+    </CRequirementEq>
+    <CRequirementEq id="EqCountUnitScarabCompleteOnlyAtUnit0">
+        <OperandArray index="0" value="CountUnitScarabCompleteOnlyAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementEq>
+    <CRequirementGT id="GTCountUnitScarabQueuedOrBetterAtUnit0">
+        <OperandArray index="0" value="CountUnitScarabQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="0"/>
+    </CRequirementGT>
+    <CRequirementLT id="LT3591367320CountUnitScarabQueuedOrBetterAtUnit5">
+        <OperandArray index="0" value="CountUnitScarabQueuedOrBetterAtUnit"/>
+        <OperandArray index="1" value="5"/>
+    </CRequirementLT>
+    <CRequirementNot id="NotCountUpgradeAresClassTargetingSystemQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAresClassTargetingSystemQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeConsumeQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradeConsumeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDisplacementFieldQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDisplacementFieldQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDisruptionWebQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDisruptionWebQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDragoonRangeQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeDragoonRangeQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeHaywireMissilesQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeHaywireMissilesQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeIonThrustersQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeIonThrustersQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeIrradiateQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeIrradiateQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeJuggernautPlatingQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeJuggernautPlatingQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradePlagueQueuedOrBetter">
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <OperandArray index="0" value="CountUpgradePlagueQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSpiderMinesQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSpiderMinesQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeStasisFieldQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeStasisFieldQueuedOrBetter"/>
+    </CRequirementNot>
+</Catalog>

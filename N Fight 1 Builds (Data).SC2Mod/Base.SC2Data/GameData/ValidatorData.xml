@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorCombine id="IsSiegeTank2">
+        <CombineArray value="IsSiegeTank"/>
+        <CombineArray value="IsSiegedSiegeTank"/>
+    </CValidatorCombine>
+    <CValidatorPlayerRequirement id="ScarabIsArmed">
+        <WhichPlayer Value="Caster"/>
+        <Value value="ScarabIsArmed"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorPlayerRequirement id="ScarabNotArmed">
+        <WhichPlayer Value="Caster"/>
+        <Value value="ScarabNotArmed"/>
+    </CValidatorPlayerRequirement>
+    <CValidatorUnitType id="IsBrutalisk">
+        <Value value="Brutalisk"/>
+    </CValidatorUnitType>
+    <CValidatorLocationEnumArea id="CorsairFakeWeaponBehaviorDisable">
+        <WhichLocation Value="CasterUnit"/>
+        <AreaArray>
+            <Compare value="GT"/>
+            <Count value="0"/>
+            <Radius value="9"/>
+            <Validator value="IsFlying"/>
+        </AreaArray>
+        <SearchFilters value="-;Player,Ally,Neutral"/>
+    </CValidatorLocationEnumArea>
+    <CValidatorUnitType id="IsCorsairMP">
+        <Value value="CorsairMP"/>
+    </CValidatorUnitType>
+    <CValidatorUnitType id="StasisTargetIsCorsairMP">
+        <WhichUnit Effect="CreateStasisCocoonController"/>
+        <Value value="CorsairMP"/>
+    </CValidatorUnitType>
+    <CValidatorCombine id="DisruptionWebFilters">
+        <CombineArray value="TargetAttacksAir"/>
+        <CombineArray value="TargetAttacksGround"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="IsNotDisruptionWebbed">
+        <Behavior value="CorsairMPDisruptionWeb"/>
+    </CValidatorUnitCompareBehaviorCount>
+</Catalog>

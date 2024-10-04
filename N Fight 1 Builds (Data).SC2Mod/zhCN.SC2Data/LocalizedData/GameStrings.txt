@@ -1,0 +1,131 @@
+﻿Abil/Name/ArbiterMPStasisField=Stasis Field
+Abil/Name/CorsairMPDisruptionWeb=Disruption Web
+Abil/Name/ReaverHangar=Reaver Hangar
+Abil/Name/ScienceVesselEMP=EMP
+Behavior/Name/BuildingScarab=制造金甲虫
+Behavior/Tooltip/CorsairMPDisruptionWeb=该单位无法攻击。
+Behavior/Tooltip/DefilerMPDarkSwarm=该单位正在被黑暗虫群影响，它不会受到来自远程攻击的直接伤害。
+Behavior/Tooltip/DevourerMPAcidSpores=该单位正在被酸性孢子影响。对每个孢子，该单位对每次攻击会承受额外1点伤害。
+Button/Name/ArbiterCloakField=隐形力场
+Button/Name/Defiler=变异为蝎虫
+Button/Name/DisableBuildingAttackScourge=关闭对建筑攻击
+Button/Name/Dragoon=折跃龙骑士
+Button/Name/DragoonRange=奇点充能
+Button/Name/EnableBuildingAttackScourge=开启对建筑攻击
+Button/Name/Guardian=变异为守护者
+Button/Name/IncineratorNozzles=焚烧臂铠
+Button/Name/IonThrusters=离子推进器
+Button/Name/LurkerMPA=变异为潜伏者
+Button/Name/MorphPage2=变异（第2页）
+Button/Name/MorphtoOverlordVentralSacs=变异为王虫（装载体）
+Button/Name/MorphtoRavagerR=变异为破坏者
+Button/Name/QueenClassic=变异为虫巢女王
+Button/Name/Reaver=折跃掠夺者
+Button/Name/ReaverScarabs=制造金甲虫
+Button/Name/ResearchAresClassTargetingSystem=研发阿瑞斯级瞄准系统
+Button/Name/ResearchConsume=进化吞噬
+Button/Name/ResearchDisplacementField=研发偏转力场
+Button/Name/ResearchDisruptionWeb=研究干扰网
+Button/Name/ResearchDragoonChassis=研究万亿压缩系统
+Button/Name/ResearchDragoonRange=研究奇点充能
+Button/Name/ResearchHaywireMissiles=研发铁丝导弹
+Button/Name/ResearchIonThrusters=研发离子推进器
+Button/Name/ResearchIrradiate=研发辐照
+Button/Name/ResearchJuggernautPlating=研发铁人装甲
+Button/Name/ResearchPlague=进化瘟疫
+Button/Name/ResearchSpiderMinesSC1=研发蜘蛛雷
+Button/Name/ResearchStasisField=研究静滞力场
+Button/Name/VoidStalkerDragoonArmor=万亿压缩系统
+Button/Name/VoidStalkerDragoonWeapon=龙骑士相位碎裂炮
+Button/Tooltip/Arbiter=陆军支援舰船。拥有静滞力场，召回和隐形力场技能。<n/><n/><c val="ffff8a">可以对地和对空。</c>
+Button/Tooltip/ArbiterCloakField=使仲裁者附近的友方单位隐形。
+Button/Tooltip/AresClassWeaponsSystem=使对空武器射程提高3。
+Button/Tooltip/BuildScienceVessel=空中支援单位。能够使用辐照，纳米修复和EMP弹技能。<n/><n/><c val="FFE303">侦测单位</c>
+Button/Tooltip/Corsair=空中优势战机。可使用干扰网避免敌方地面单位和建筑进行攻击。<n/><n/><c val="ffff8a">可以对空。</c>
+Button/Tooltip/CorsairMPDisruptionWeb=在地面上制造一张能量网，使网中的敌方建筑和地面单位无法攻击，持续<d time="10"/>。
+Button/Tooltip/Defiler=施法者。可使用吞噬、黑暗虫群和瘟疫技能。
+Button/Tooltip/DefilerMPConsume=牺牲一个友方异虫单位，夺取其生命并为蝎虫增加50能量。
+Button/Tooltip/DefilerMPDarkSwarm=在地图上创建一片橙色云团，在云团下任何单位都不会受到远程攻击的直接伤害。建筑单位不受影响。对于拥有溅射攻击的单位，如攻城坦克，目标只会受到溅射伤害。
+Button/Tooltip/DisableBuildingAttackScourge=阻止爆蚊自动将建筑视为攻击目标。爆蚊仍会接受明确的攻击建筑指令。
+Button/Tooltip/Dragoon=远程步战机甲，拥有额外的生命值和攻击力。<n/><n/><c val="ffff8a">可以对地和对空。</c>
+Button/Tooltip/DragoonRange=<c val="ffff8a">龙骑士</c>的射程+2。
+Button/Tooltip/EnableBuildingAttackScourge=允许爆蚊自动将建筑视为攻击目标。
+Button/Tooltip/GhostAcademyDefeat=能够制造供幽灵使用的聚变弹头，并为幽灵提供升级方案。<n/><n/><c val="ffff8a">开启：</c><n/>- 可以在兵营中训练幽灵
+Button/Tooltip/Guardian=远程对地空军。<n/><n/><c val="ffff8a">可以对地。</c>
+Button/Tooltip/IonThrusters=<c val="ffff8a">秃鹫</c>的移动速度增加50%。
+Button/Tooltip/JuggernautPlating=<c val="ffff8a">火蝠</c>获得25生命值和2点护甲。
+Button/Tooltip/LurkerMPA=拥有范围攻击能力的伏兵。潜地后才能发动攻击。<n/><n/><c val="ffff8a">可以对地。</c>
+Button/Tooltip/MorphToDevourerMP=强大的对空飞行单位。可使用酸性孢子。<n/><n/><c val="ffff8a">可以对地。</c>
+Button/Tooltip/MorphtoOverlordVentralSacs=运输单位。提供与王虫相同的补给。
+Button/Tooltip/MorphtoRavagerR=远程火炮单位。可以使用腐蚀胆汁。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
+Button/Tooltip/QueenClassic=空中支援单位。可以使用视觉共生体和孵化巢虫。<n/><n/><c val="ffff8a">可以对空。</c>
+Button/Tooltip/Reaver=范围伤害攻城部队。能够建造并发射金甲虫，造成爆发性伤害。<n/><n/><c val="ffff8a">可以对地。</c>
+Button/Tooltip/ReaverScarabs=制造金甲虫。掠夺者会自动向目标发射金甲虫，并造成范围伤害。<n/><n/><c val="#ColorAttackInfo">可以对地。</c>
+Button/Tooltip/ResearchAresClassTargetingSystem=使<c val="ffff8a">女妖</c>和<c val="ffff8a">怨灵战机</c>能够使用隐形技能。隐形技能使<c val="ffff8a">女妖</c>和<c val="ffff8a">怨灵战机</c>进入隐形状态，只能被侦测单位或侦测效果发现。
+Button/Tooltip/ResearchConsume=解锁<c val="ffff8a">蝎虫</c>的吞噬技能。
+Button/Tooltip/ResearchDisplacementField=被侦测到的<c val="ffff8a">怨灵战机</c>在隐形状态下可避开20%的攻击。
+Button/Tooltip/ResearchDisruptionWeb=解锁<c val="ffff8a">海盗船</c>的干扰网技能。
+Button/Tooltip/ResearchDragoonChassis=<c val="ffff8a">龙骑士</c>获得+20生命值，并且他们的护盾恢复速度加倍。还允许龙骑士在战斗中持续恢复护盾。
+Button/Tooltip/ResearchDragoonRange=使<c val="ffff8a">龙骑士</c>的武器射程增加2。
+Button/Tooltip/ResearchHaywireMissiles=允许<c val="ffff8a">战狼</c>使用铁丝导弹技能。
+Button/Tooltip/ResearchIonThrusters=使<c val="ffff8a">秃鹫</c>的移动速度增加50%。
+Button/Tooltip/ResearchIrradiate=允许<c val="ffff8a">科学船</c>使用辐照技能。
+Button/Tooltip/ResearchJuggernautPlating=<c val="ffff8a">火蝠</c>获得25生命值和2点护甲。
+Button/Tooltip/ResearchPlague=解锁<c val="ffff8a">蝎虫</c>的瘟疫技能。
+Button/Tooltip/ResearchSpiderMinesSC1=为<c val="ffff8a">秃鹫</c>配备蜘蛛雷。蜘蛛雷部署在地下，只能被侦测单位或侦测效果发现。当大多数类型的敌方地面单位经过时，蜘蛛雷会出地追击目标并将自身引爆。
+Button/Tooltip/ResearchStasisField=解锁<c val="ffff8a">仲裁者</c>的静滞力场技能。
+Button/Tooltip/Stimpack=使<c val="ffff8a">陆战队员</c>, <c val="ffff8a">劫掠者</c>, 以及<c val="ffff8a">火蝠</c>能够使用强化剂。强化剂会对使用者造成伤害，但能暂时提高攻击速度和移动速度。
+Button/Tooltip/TornadoMissile=向目标攻城坦克发射充电飞弹，每波造成<d ref="Effect,HHTornadoMissileDamage,Amount"/>点伤害。死亡时会耗尽所有充能。<n/><c val="#ColorAttackInfo">可以对地和对空。</c> 
+DocInfo/DescShort=Any
+DocInfo/Name=N打1造(数据)
+Effect/Name/ArbiterMPRecallInitialSet=Arbiter MPRecall Initial Set
+Effect/Name/ArbiterMPRecallMagazineIterate=Arbiter MPRecall Magazine Iterate
+Effect/Name/CorsairMPDisruptionWebIterateTransport=Disruption Web (Iterate Transport)
+Effect/Name/CorsairMPDisruptionWebSet=Disruption Web (Set)
+Effect/Name/DragoonDamage=Dragoon Damage
+Effect/Name/DragoonLM=Dragoon
+Effect/Name/ScarabApplyReveal=Scarab Apply Reveal
+Effect/Name/ScarabExplode=Scarab Explode
+Effect/Name/ScarabExplodeTargetDamage=Scarab Explode Target Damage
+Effect/Name/ScarabLM=Scarab
+Effect/Name/ScarabLaunchPersistent=Scarab Launch Persistent
+Effect/Name/ScarabLaunchPersistentInitial=Scarab Launch Persistent Initial
+Effect/Name/ScarabLaunchSet=Scarab Launch Set
+Effect/Name/ScarabTimedLife=Scarab Timed Life
+Effect/Name/ScarabUM=Scarab
+RequirementNode/Tooltip/CountUnitAlias_GatewayCompleteOnly4260347518=传送门
+RequirementNode/Tooltip/CountUpgradeAresClassTargetingSystemCompleteOnly498654291TechTreeCheat=在重工厂的科技实验室中研发阿瑞斯级瞄准系统
+RequirementNode/Tooltip/CountUpgradeConsumeCompleteOnly35947898TechTreeCheat=在感染深渊进化吞噬
+RequirementNode/Tooltip/CountUpgradeDisplacementFieldCompleteOnly2802401698TechTreeCheat=在星港的科技实验室中研发偏转力场
+RequirementNode/Tooltip/CountUpgradeDisruptionWebCompleteOnly409704251TechTreeCheat=在舰队航标研究干扰网
+RequirementNode/Tooltip/CountUpgradeDragoonRangeCompleteOnly37669541TechTreeCheat=在光影议会研究奇点充能
+RequirementNode/Tooltip/CountUpgradeHaywireMissilesCompleteOnly451653264TechTreeCheat=在重工厂的科技实验室中研发铁丝导弹
+RequirementNode/Tooltip/CountUpgradeIonThrustersCompleteOnly1290910403TechTreeCheat=在重工厂的科技实验室中研发离子推进器
+RequirementNode/Tooltip/CountUpgradeIrradiateCompleteOnly4294488994TechTreeCheat=在星港的科技实验室中研发辐照
+RequirementNode/Tooltip/CountUpgradeJuggernautPlatingCompleteOnly2588182588TechTreeCheat=在兵营的科技实验室中研发铁人装甲
+RequirementNode/Tooltip/CountUpgradePlagueCompleteOnly1678464967TechTreeCheat=在感染深渊进化瘟疫
+RequirementNode/Tooltip/CountUpgradeSpiderMinesCompleteOnly1029879106TechTreeCheat=在重工厂的科技实验室中研发蜘蛛雷
+RequirementNode/Tooltip/CountUpgradeStasisFieldCompleteOnly2837226883TechTreeCheat=在舰队航标研究静滞力场
+RequirementNode/Tooltip/Eq112290066501=在N打1造模式中禁用
+RequirementNode/Tooltip/LT3591367320CountUnitScarabQueuedOrBetterAtUnit5=掠夺者拥有的金甲虫数量小于5个
+Unit/Name/Dragoon=龙骑士
+Unit/Name/DragoonWeapon=龙骑士
+Unit/Name/GhostAcademyDefeat=幽灵军校
+Unit/Name/Reaver=掠夺者
+Unit/Name/Scarab=Ammo unit
+Unit/Name/ScarabWeapon=Scarab Weapon
+Upgrade/Name/AresClassTargetingSystem=阿瑞斯级瞄准系统
+Upgrade/Name/Consume=吞噬
+Upgrade/Name/DisplacementField=偏转力场
+Upgrade/Name/DisruptionWeb=干扰网
+Upgrade/Name/DragoonRange=奇点充能
+Upgrade/Name/HaywireMissiles=铁丝导弹
+Upgrade/Name/IonThrusters=离子推进器
+Upgrade/Name/Irradiate=辐照
+Upgrade/Name/JuggernautPlating=铁人装甲
+Upgrade/Name/Plague=瘟疫
+Upgrade/Name/SpiderMines=蜘蛛雷
+Upgrade/Name/StasisField=静滞力场
+Weapon/Name/Dragoon=相位碎裂炮
+Weapon/Name/ReaverScarabsLaunch=金甲虫
+Weapon/Name/ScarabExplode=爆炸

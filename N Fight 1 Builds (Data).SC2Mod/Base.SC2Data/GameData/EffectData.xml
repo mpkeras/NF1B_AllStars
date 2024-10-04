@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CEffectEnumArea id="MothershipCoreMassRecallSearch">
+        <SearchFilters value="-;Neutral,Enemy,Structure,Missile,Item,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectEnumArea id="MothershipStrategicRecallSearch">
+        <SearchFilters value="-;Self,Neutral,Enemy,Structure,Missile,Item,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="NeutronFlare">
+        <AreaArray index="0" Radius="1.25"/>
+        <ExcludeArray Value="Target"/>
+    </CEffectDamage>
+    <CEffectEnumArea id="NexusMassRecallSearch">
+        <SearchFilters value="-;Self,Neutral,Enemy,Structure,Missile,Item,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectDamage id="ThermalLancesFriendlyDamage">
+        <AttributeBonus index="Light" value="0"/>
+        <Amount value="15"/>
+    </CEffectDamage>
+    <CEffectDamage id="ThermalLancesMU">
+        <AttributeBonus index="Light" value="0"/>
+        <Amount value="15"/>
+    </CEffectDamage>
+    <CEffectDamage id="DragoonDamage" parent="DU_WEAP">
+        <EditorCategories value="Race:Protoss"/>
+        <AttributeBonus index="Armored" value="8"/>
+        <Kind value="Ranged"/>
+        <Amount value="14"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="DragoonLM">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="DragoonDamage"/>
+        <AmmoUnit value="DragoonWeapon"/>
+    </CEffectLaunchMissile>
+    <CEffectSet id="ReaverDummyRangeKeeper2">
+        <EditorCategories value="Race:Protoss"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ScarabApplyReveal">
+        <Behavior value="ScarabReveal"/>
+    </CEffectApplyBehavior>
+    <CEffectSet id="ScarabExplode">
+        <ValidatorArray value="CasterIsNotHidden"/>
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="ScarabExplodeTargetDamage"/>
+        <EffectArray value="Suicide"/>
+    </CEffectSet>
+    <CEffectDamage id="ScarabExplodeTargetDamage" parent="DU_WEAP">
+        <AttributeBonus index="Structure" value="50"/>
+        <Kind value="Ranged"/>
+        <KindSplash value="Splash"/>
+        <Amount value="100"/>
+        <Death value="Blast"/>
+        <AreaArray Radius="0.25" Fraction="0.8"/>
+        <AreaArray Radius="0.5" Fraction="0.6"/>
+        <AreaArray Radius="1" Fraction="0.5"/>
+        <AreaArray Radius="1.5" Fraction="0.25"/>
+        <ExcludeArray Value="Target"/>
+        <SearchFilters value="Ground;Self,Player,Ally,Neutral,Missile,Stasis,Dead,Hidden,Invulnerable"/>
+    </CEffectDamage>
+    <CEffectLaunchMissile id="ScarabLM">
+        <EditorCategories value="Race:Protoss"/>
+        <ImpactEffect value="ScarabExplode"/>
+        <AmmoUnit value="ScarabWeapon"/>
+        <ImpactRange value="1"/>
+    </CEffectLaunchMissile>
+    <CEffectCreatePersistent id="ScarabLaunchPersistent">
+        <ValidatorArray value="ScarabNotArmed"/>
+        <EditorCategories value="Race:Protoss"/>
+        <WhichLocation Value="TargetUnit"/>
+        <TimeScaleSource Value="Caster"/>
+        <Flags index="Channeled" value="1"/>
+        <PeriodCount value="1"/>
+        <PeriodicValidator value="CasterNotDead"/>
+        <PeriodicEffectArray value="ScarabLaunchSet"/>
+        <PeriodicPeriodArray value="0.75"/>
+    </CEffectCreatePersistent>
+    <CEffectSet id="ScarabLaunchPersistentInitial">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="ScarabLaunchPersistent"/>
+    </CEffectSet>
+    <CEffectSet id="ScarabLaunchSet">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="ScarabApplyReveal"/>
+        <EffectArray value="ScarabUM"/>
+        <EffectArray value="ScarabLM"/>
+    </CEffectSet>
+    <CEffectApplyBehavior id="ScarabTimedLife">
+        <EditorCategories value="Race:Protoss"/>
+    </CEffectApplyBehavior>
+    <CEffectUseMagazine id="ScarabUM">
+        <EditorCategories value="Race:Protoss"/>
+        <AmmoEffect value="ScarabTimedLife"/>
+    </CEffectUseMagazine>
+    <CEffectSet id="ArbiterMPRecallInitialSet">
+        <ValidatorArray value="NotLarvaEgg"/>
+        <ValidatorArray value="NotLarva"/>
+        <EffectArray value="ArbiterMPRecallApplyPreRecallBehavior"/>
+        <EffectArray value="ArbiterMPRecallMagazineIterate"/>
+    </CEffectSet>
+    <CEffectEnumMagazine id="ArbiterMPRecallMagazineIterate">
+        <EditorCategories value=""/>
+        <EffectExternal value="ArbiterMPRecallApplyPreRecallBehavior"/>
+    </CEffectEnumMagazine>
+    <CEffectEnumArea id="ArbiterMPRecallSearch">
+        <AreaArray index="0" Radius="3" Effect="ArbiterMPRecallInitialSet"/>
+        <SearchFilters value="-;Self,Ally,Neutral,Enemy,Structure,Missile,Item,Uncommandable,Dead,Hidden,Invulnerable"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="ArbiterMPStasisFieldApply">
+        <ValidatorArray value="NotFrenzied"/>
+    </CEffectApplyBehavior>
+    <CEffectEnumArea id="ArbiterMPStasisFieldSearch">
+        <SearchFilters value="-;Self,Player,Ally,Neutral,Structure,Missile,Item,Dead,Hidden"/>
+        <ImpactLocation Value="TargetPoint"/>
+    </CEffectEnumArea>
+    <CEffectApplyBehavior id="ArbiterMPStasisFieldTimerApply">
+        <ValidatorArray value="NotFrenzied"/>
+    </CEffectApplyBehavior>
+    <CEffectApplyBehavior id="CorsairMPDisruptionWebApply">
+        <ResponseFlags index="Flee" value="1"/>
+    </CEffectApplyBehavior>
+    <CEffectCreatePersistent id="CorsairMPDisruptionWebCreatePersistent">
+        <PeriodCount value="40"/>
+    </CEffectCreatePersistent>
+    <CEffectEnumTransport id="CorsairMPDisruptionWebIterateTransport">
+        <ValidatorArray value="IsBunker"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Marker Link="Effect/DisablingCloudIterateTransport"/>
+        <Effect value="CorsairMPDisruptionWebApply"/>
+    </CEffectEnumTransport>
+    <CEffectSet id="CorsairMPDisruptionWebSet">
+        <EditorCategories value="Race:Protoss"/>
+        <EffectArray value="CorsairMPDisruptionWebApply"/>
+        <EffectArray value="CorsairMPDisruptionWebIterateTransport"/>
+    </CEffectSet>
+    <CEffectEnumArea id="CorsairMPDisruptionWebSearch">
+        <SearchFilters value="Ground;Player,Ally,Item,Dead,Hidden"/>
+        <AreaArray index="0" Effect="CorsairMPDisruptionWebSet"/>
+    </CEffectEnumArea>
+    <CEffectCreatePersistent id="TornadoMissileCP">
+        <ValidatorArray value="IsSiegeTank2"/>
+    </CEffectCreatePersistent>
+    <CEffectDamage id="VultureSpiderMinesDamage">
+        <AreaArray index="0" Radius="0.7812" Validator="NotSpiderMine"/>
+        <AreaArray index="1" Radius="1.1718" Validator="NotSpiderMine"/>
+        <AreaArray index="2" Radius="1.5625" Validator="NotSpiderMine"/>
+        <AttributeBonus index="Armored" value="55"/>
+        <AttributeBonus index="Massive" value="55"/>
+    </CEffectDamage>
+    <CEffectDamage id="VultureU">
+        <AttributeBonus index="Light" value="10"/>
+    </CEffectDamage>
+</Catalog>

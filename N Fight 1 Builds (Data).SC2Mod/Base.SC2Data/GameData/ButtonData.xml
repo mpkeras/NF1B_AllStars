@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CButton id="Arbiter">
+        <Icon value="Assets\Textures\btn-unit-protoss-arbiter.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-protoss-arbiter.dds"/>
+    </CButton>
+    <CButton id="ArbiterMPRecall">
+        <Icon value="Assets\Textures\btn-ability-protoss-recall.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-recall.dds"/>
+    </CButton>
+    <CButton id="AresClassWeaponsSystem">
+        <Icon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="BuildScienceVessel">
+        <Hotkey value="Button/Hotkey/ScienceVessel"/>
+        <HotkeyAlias value="BuildScienceVessel"/>
+    </CButton>
+    <CButton id="CerberusMines">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-cerberusmines.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-cerberusmines.dds"/>
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="DisplacementField">
+        <Icon value="Assets\Textures\btn-upgrade-swann-displacementfield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-displacementfield.dds"/>
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="Defiler">
+        <Icon value="Assets\Textures\btn-unit-zerg-defilerex3.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-defilerex3.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="JuggernautPlating">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-juggernautplating.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-juggernautplating.dds"/>
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="MorphtoOverlordVentralSacs">
+        <Icon value="Assets\Textures\btn-unit-zerg-overlordtransport.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-overlordtransport.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="QueenClassic">
+        <Icon value="Assets\Textures\btn-unit-zerg-classicqueen.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-classicqueen.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="IonThrusters">
+        <Icon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="LurkerMPA">
+        <Icon value="Assets\Textures\btn-unit-zerg-lurker.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-lurker.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="MorphToDevourerMP">
+        <Icon value="Assets\Textures\btn-unit-zerg-devourerex3.dds"/>
+    </CButton>
+    <CButton id="MultiLockTargetingSystem">
+        <Icon value="Assets\Textures\btn-upgrade-swann-multilockweaponsystem.dds"/>
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="Guardian">
+        <Icon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-primalguardian.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="NanoRepair">
+        <Icon value="Assets\Textures\btn-upgrade-swann-nanorepair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-nanorepair.dds"/>
+    </CButton>
+    <CButton id="MorphtoRavagerR">
+        <Icon value="Assets\Textures\btn-unit-zerg-ravager.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-zerg-ravager.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="EvolveConsume">
+        <Icon value="Assets\Textures\btn-ability-zerg-consume.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-consume.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="ResearchPlague">
+        <Icon value="Assets\Textures\btn-ability-zerg-defilerplague.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-defilerplague.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="ResearchIonThrusters">
+        <Icon value="Assets\Textures\btn-ability-terran-redlinereactor.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchSpiderMinesSC1">
+        <Icon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-spidermine.dds"/>
+    </CButton>
+    <CButton id="ResearchStasisField">
+        <Icon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="ResearchDragoonRange">
+        <Icon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="ResearchDragoonChassis">
+        <Icon value="Assets\Textures\btn-ability-protoss-dragoonchassis.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-dragoonchassis.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="DragoonRange">
+        <Icon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-artanis-singularitycharge.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="ResearchDisruptionWeb">
+        <Icon value="Assets\Textures\btn-ability-protoss-disruptionweb.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-disruptionweb.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="ResearchIrradiate">
+        <Icon value="Assets\Textures\btn-upgrade-swann-irradiate.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-irradiate.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchDisplacementField">
+        <Icon value="Assets\Textures\btn-upgrade-swann-displacementfield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-displacementfield.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchJuggernautPlating">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-juggernautplating.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-raynor-juggernautplating.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchAresClassTargetingSystem">
+        <Icon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-aresclasstargetingsystem.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="ResearchHaywireMissiles">
+        <Icon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-terran-haywiremissile.dds"/>
+        <EditorCategories value="Race:Terran"/>
+    </CButton>
+    <CButton id="IncineratorNozzles">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-incineratorgauntlets.dds"/>
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="MorphPage2">
+        <Icon value="Assets\Textures\btn-unit-zerg-larvaex3.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="Irradiate">
+        <Icon value="Assets\Textures\btn-upgrade-swann-irradiate.dds"/>
+        <AlertIcon value="Assets\Textures\btn-upgrade-swann-irradiate.dds"/>
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="Reaver">
+        <Icon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
+    </CButton>
+    <CButton id="SingularityAnchor">
+        <TintRacially value="0"/>
+    </CButton>
+    <CButton id="StabilizerMedPacks">
+        <Icon value="Assets\Textures\btn-upgrade-raynor-stabilizermedpacks.dds"/>
+    </CButton>
+    <CButton id="VoidStalkerDragoonArmor">
+        <Icon value="Assets\Textures\BTN-Ability-Protoss-DragoonChassis.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="VoidStalkerDragoonWeapon">
+        <Icon value="Assets\Textures\BTN-Ability-Protoss-PhaseDisruptor.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Protoss-PhaseDisruptor.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="Dragoon">
+        <Icon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Universal value="1"/>
+    </CButton>
+    <CButton id="ReaverScarabs">
+        <Icon value="Assets\Textures\BTN-Ability-Protoss-ScarabShot.dds"/>
+        <AlertIcon value="Assets\Textures\BTN-Ability-Protoss-ScarabShot.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="ArbiterCloakField">
+        <Icon value="Assets\Textures\btn-ability-protoss-cloakfield-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-cloakfield-color.dds"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CButton>
+    <CButton id="ArbiterMPStasisField">
+        <Icon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-protoss-stasisfield.dds"/>
+    </CButton>
+    <CButton id="Corsair">
+        <Hotkey value="Button/Hotkey/Phoenix"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Universal value="1"/>
+        <Icon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
+        <AlertIcon value="Assets\Textures\btn-unit-protoss-corsair.dds"/>
+    </CButton>
+    <CButton id="DisableBuildingAttackScourge">
+        <Icon value="Assets\Textures\btn-ability-zerg-explode-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-explode-color.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+    <CButton id="EnableBuildingAttackScourge">
+        <Icon value="Assets\Textures\btn-ability-zerg-attackstructure-color.dds"/>
+        <AlertIcon value="Assets\Textures\btn-ability-zerg-attackstructure-color.dds"/>
+        <EditorCategories value="Race:Zerg"/>
+    </CButton>
+</Catalog>

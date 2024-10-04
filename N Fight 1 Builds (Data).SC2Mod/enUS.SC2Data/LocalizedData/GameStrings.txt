@@ -1,0 +1,134 @@
+﻿Abil/Name/ArbiterMPStasisField=Stasis Field
+Abil/Name/CorsairMPDisruptionWeb=Disruption Web
+Abil/Name/ReaverHangar=Reaver Hangar
+Abil/Name/ScienceVesselEMP=EMP
+Abil/Name/SuicideBuilding=Suicide Building
+Behavior/Name/BuildingScarab=Building Scarab
+Behavior/Tooltip/CorsairMPDisruptionWeb=This unit cannot attack.
+Behavior/Tooltip/DefilerMPDarkSwarm=This unit is being affected by Dark Swarm. It does not take direct damage from ranged attacks.
+Behavior/Tooltip/DevourerMPAcidSpores=This unit is being affected by Acid Spores. For each spore, a unit takes one extra damage per attack.
+Button/Name/ArbiterCloakField=Cloak Field
+Button/Name/Defiler=Morph to Defiler
+Button/Name/DisableBuildingAttackScourge=Disable Building Attack
+Button/Name/Dragoon=Warp In Dragoon
+Button/Name/DragoonRange=Singularity Charge
+Button/Name/EnableBuildingAttackScourge=Enable Building Attack
+Button/Name/EvolveConsume=Evolve Consume
+Button/Name/Guardian=Morph to Guardian
+Button/Name/IncineratorNozzles=Incinerator Gauntlets
+Button/Name/IonThrusters=Ion Thrusters
+Button/Name/LurkerMPA=Morph to Lurker
+Button/Name/MorphPage2=Morph (Page 2)
+Button/Name/MorphtoOverlordVentralSacs=Morph to Overlord (Transport)
+Button/Name/MorphtoRavagerR=Morph to Ravager
+Button/Name/QueenClassic=Morph to Brood Queen
+Button/Name/Reaver=Warp In Reaver
+Button/Name/ReaverScarabs=Create Scarabs
+Button/Name/ResearchAresClassTargetingSystem=Research Ares-Class Targeting System
+Button/Name/ResearchDisplacementField=Research Displacement Field
+Button/Name/ResearchDisruptionWeb=Research Disruption Web
+Button/Name/ResearchDragoonChassis=Research Trillic Compression Systems
+Button/Name/ResearchDragoonRange=Research Singularity Charge
+Button/Name/ResearchHaywireMissiles=Research Haywire Missiles
+Button/Name/ResearchIonThrusters=Research Ion Thrusters
+Button/Name/ResearchIrradiate=Research Irradiate
+Button/Name/ResearchJuggernautPlating=Research Juggernaut Plating
+Button/Name/ResearchPlague=Evolve Plague
+Button/Name/ResearchSpiderMinesSC1=Research Spider Mines
+Button/Name/ResearchStasisField=Research Stasis Field
+Button/Name/VoidStalkerDragoonArmor=Dragoon Chassis
+Button/Name/VoidStalkerDragoonWeapon=Dragoon Phase Disruptor
+Button/Tooltip/Arbiter=Army support craft. Has Stasis Field, Recall and Cloak Field abilities.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/ArbiterCloakField=Cloaks friendly units near the Arbiter.
+Button/Tooltip/AresClassWeaponsSystem=Increases missile range by 3.
+Button/Tooltip/BuildScienceVessel=Aerial support unit. Can use Irradiate, Nano-Repair, and EMP Round abilities.<n/><n/><c val="FFE303">Detector</c>
+Button/Tooltip/Corsair=Air superiority starfighter. Can use Disruption Web.<n/><n/><c val="ffff8a">Can attack air units.</c>
+Button/Tooltip/CorsairMPDisruptionWeb=Creates a web of energy on the ground that prevents enemy structures and ground units from attacking for <d time="10"/>.
+Button/Tooltip/Defiler=Spellcaster. Can use the Consume, Dark Swarm, and Plague abilities.
+Button/Tooltip/DefilerMPConsume=Consume sacrifices a friendly Zerg unit, taking its life and giving the Defiler 50 more energy.
+Button/Tooltip/DefilerMPDarkSwarm=Casts an orange cloud on the map under which no units take direct damage from ranged attacks. Buildings are not affected. For units whose attacks do splash, such as the Siege Tank, only the splash damage is done to the target.
+Button/Tooltip/DisableBuildingAttackScourge=Prevents Scourge from automatically targeting structures. Scourge can still be explicitly ordered to attack structures.
+Button/Tooltip/Dragoon=Ranged assault strider.<n/><n/><c val="ffff8a">Can attack ground and air units.</c>
+Button/Tooltip/DragoonRange=Increases the <c val="ffff8a">Dragoon's</c> attack range by 2.
+Button/Tooltip/EnableBuildingAttackScourge=Allows Scourge to automatically target structures.
+Button/Tooltip/EvolveConsume=Unlocks the Consume ability on the <c val="ffff8a">Defiler</c>.
+Button/Tooltip/GhostAcademyDefeat=Contains upgrades for Ghosts. Can build Nukes for Ghosts.<n/><n/><c val="ffff8a">Enables:</c><n/>- Ghosts at the Barracks
+Button/Tooltip/Guardian=Long-range anti-ground flyer. <n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/IonThrusters=Increases <c val="ffff8a">Vulture</c> speed by 50%.
+Button/Tooltip/JuggernautPlating=<c val="ffff8a">Firebats</c> gain +25 life and +2 armor.
+Button/Tooltip/LurkerMPA=Anti-ground ambusher. Has a spine attack that damages all enemy units in its line of fire.<n/><n/><c val="ffff8a">Can attack ground units.<n/>Must burrow to attack.</c>
+Button/Tooltip/MorphToDevourerMP=Powerful anti-air flying unit. Can use Corrosive Acid.<n/><n/><c val="ffff8a">Can attack air units.</c>
+Button/Tooltip/MorphtoOverlordVentralSacs=Transport. Provides the same supply as an Overlord.
+Button/Tooltip/MorphtoRavagerR=Ranged artillery. Can use Corrosive Bile.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/QueenClassic=Basic worker unit. Can harvest minerals and vespene gas. Can mutate into structures.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/Reaver=Robotic disruption unit. Can use Purification Nova to deal heavy area damage.<n/><n/><c val="ffff8a">Can attack ground units.</c>
+Button/Tooltip/ReaverScarabs=Builds Scarabs that automatically launch at the Reaver's target and explode for area damage.<n/><n/><c val="#ColorAttackInfo">Can attack ground units.</c>
+Button/Tooltip/ResearchAresClassTargetingSystem=Increases <c val="ffff8a">Goliaths</c> air attack range by 3.
+Button/Tooltip/ResearchBansheeCloak=Enables <c val="ffff8a">Banshees</c> and <c val="ffff8a">Wraiths</c> to use the Cloak ability. Cloak renders the <c val="ffff8a">Banshee</c> and <c val="ffff8a">Wraiths</c> invisible to enemies unless the unit is revealed by detectors or effects.
+Button/Tooltip/ResearchDisplacementField=<c val="ffff8a">Wraiths</c> evade 20% of incoming attacks when cloaked.
+Button/Tooltip/ResearchDisruptionWeb=Unlocks the Disruption Web ability on the <c val="ffff8a">Corsair</c>.
+Button/Tooltip/ResearchDragoonChassis=Increases the <c val="ffff8a">Dragoon's</c> maximum HP by 20. Allows for shield regeneration in combat and increases shield regeneration rate from 2 to 4.
+Button/Tooltip/ResearchDragoonRange=Increases the <c val="ffff8a">Dragoon's</c> attack range by 2.
+Button/Tooltip/ResearchHaywireMissiles=Allows <c val="ffff8a">Warhounds</c> to use the Haywire Missiles ability.
+Button/Tooltip/ResearchIonThrusters=Increases <c val="ffff8a">Vulture</c> speed by 50%.
+Button/Tooltip/ResearchIrradiate=All <c val="ffff8a">Science Vessels</c> receive the ability to Irradiate units.
+Button/Tooltip/ResearchJuggernautPlating=<c val="ffff8a">Firebats</c> gain +25 life and +2 armor.
+Button/Tooltip/ResearchPlague=Unlocks the Plague ability on the <c val="ffff8a">Defiler</c>.
+Button/Tooltip/ResearchSpiderMinesSC1=Enables the <c val="ffff8a">Vulture</c> to carry Spider Mines. Spider Mines burrow into the ground and become cloaked unless spotted with a detector or effect. When most types of enemy ground units pass nearby, the Spider Mine will unburrow, chase down the units, and detonate.
+Button/Tooltip/ResearchStasisField=Unlocks the Stasis Field ability on the <c val="ffff8a">Arbiter</c>.
+Button/Tooltip/Stimpack=Enables <c val="ffff8a">Marines</c>, <c val="ffff8a">Marauders</c>, and <c val="ffff8a">Firebats</c> to use the Stimpack ability. Stimpacks cause damage to a unit, but they increase its attack and movement speeds for a short time.
+Button/Tooltip/TornadoMissile=When attacking a Siege Tank, the Warhound launches electrically charged missiles at its target, dealing 30 damage per volley.<n/><c val="#ColorAttackInfo">Can attack ground units.</c> 
+DocInfo/DescShort=Any
+DocInfo/Name=N Fight 1 Builds (Data)
+Effect/Name/ArbiterMPRecallInitialSet=Arbiter MPRecall Initial Set
+Effect/Name/ArbiterMPRecallMagazineIterate=Arbiter MPRecall Magazine Iterate
+Effect/Name/CorsairMPDisruptionWebIterateTransport=Disruption Web (Iterate Transport)
+Effect/Name/CorsairMPDisruptionWebSet=Disruption Web (Set)
+Effect/Name/DragoonDamage=Dragoon Damage
+Effect/Name/DragoonLM=Dragoon
+Effect/Name/ScarabApplyReveal=Scarab Apply Reveal
+Effect/Name/ScarabExplode=Scarab Explode
+Effect/Name/ScarabExplodeTargetDamage=Scarab Explode Target Damage
+Effect/Name/ScarabLM=Scarab
+Effect/Name/ScarabLaunchPersistent=Scarab Launch Persistent
+Effect/Name/ScarabLaunchPersistentInitial=Scarab Launch Persistent Initial
+Effect/Name/ScarabLaunchSet=Scarab Launch Set
+Effect/Name/ScarabTimedLife=Scarab Timed Life
+Effect/Name/ScarabUM=Scarab
+RequirementNode/Tooltip/CountUnitAlias_GatewayCompleteOnly4260347518=Gateway
+RequirementNode/Tooltip/CountUpgradeAresClassTargetingSystemCompleteOnly498654291TechTreeCheat=Research Ares-Class Targeting System at the Factory Tech Lab
+RequirementNode/Tooltip/CountUpgradeConsumeCompleteOnly35947898TechTreeCheat=Research Consume at the Infestation Pit
+RequirementNode/Tooltip/CountUpgradeDisplacementFieldCompleteOnly2802401698TechTreeCheat=Research Displacement Field at the Starport Tech Lab
+RequirementNode/Tooltip/CountUpgradeDisruptionWebCompleteOnly409704251TechTreeCheat=Research Disruption Web at the Fleet Beacon
+RequirementNode/Tooltip/CountUpgradeDragoonRangeCompleteOnly37669541TechTreeCheat=Research Singularity Charge at the Twilight Council
+RequirementNode/Tooltip/CountUpgradeHaywireMissilesCompleteOnly451653264TechTreeCheat=Research Haywire Missiles at the Factory Tech Lab
+RequirementNode/Tooltip/CountUpgradeIonThrustersCompleteOnly1290910403TechTreeCheat=Research Ion Thrusters at the Factory Tech Lab
+RequirementNode/Tooltip/CountUpgradeIrradiateCompleteOnly4294488994TechTreeCheat=Research Irradiate at the Starport Tech Lab
+RequirementNode/Tooltip/CountUpgradeJuggernautPlatingCompleteOnly2588182588TechTreeCheat=Research Juggernaut Plating at the Barracks Tech Lab
+RequirementNode/Tooltip/CountUpgradePlagueCompleteOnly1678464967TechTreeCheat=Research Plague at the Infestation Pit
+RequirementNode/Tooltip/CountUpgradeSpiderMinesCompleteOnly1029879106TechTreeCheat=Research Spider Mines at the Factory Tech Lab
+RequirementNode/Tooltip/CountUpgradeStasisFieldCompleteOnly2837226883TechTreeCheat=Research Stasis Field at the Fleet Beacon
+RequirementNode/Tooltip/Eq112290066501=Disabled in NF1B
+RequirementNode/Tooltip/LT3591367320CountUnitScarabQueuedOrBetterAtUnit5=Reaver must have fewer than 5 scarabs
+Unit/Name/Dragoon=Dragoon
+Unit/Name/DragoonWeapon=Dragoon
+Unit/Name/GhostAcademyDefeat=Ghost Academy
+Unit/Name/Reaver=Reaver
+Unit/Name/Scarab=Ammo unit
+Unit/Name/ScarabWeapon=Scarab Weapon
+Upgrade/Name/AresClassTargetingSystem=Ares-Class Targeting System
+Upgrade/Name/Consume=Consume
+Upgrade/Name/DisplacementField=Displacement Field
+Upgrade/Name/DisruptionWeb=Disruption Web
+Upgrade/Name/DragoonRange=Singularity Charge
+Upgrade/Name/HaywireMissiles=Haywire Missiles
+Upgrade/Name/IonThrusters=Ion Thrusters
+Upgrade/Name/Irradiate=Irradiate
+Upgrade/Name/JuggernautPlating=Juggernaut Plating
+Upgrade/Name/Plague=Plague
+Upgrade/Name/SpiderMines=Spider Mines
+Upgrade/Name/StasisField=Stasis Field
+Weapon/Name/Dragoon=Phase Disruptor
+Weapon/Name/ReaverScarabsLaunch=Scarabs
+Weapon/Name/ScarabExplode=Explode
+Weapon/Name/SuicideBuilding=Suicide Building

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <!--                                                                                         -->
+    <!-- Devourer ........................................................................... -->
+    <!--                                                                                         -->
+    <CActorUnit id="DevourerMP">
+        <UnitIcon value="Assets\Textures\btn-unit-zerg-devourerex3.dds"/>
+    </CActorUnit>
+    <CActorUnit id="Dragoon" parent="GenericUnitBase" unitName="Dragoon">
+        <Aliases value="_UnitMedium"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.*.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="WeaponStop.*.AttackStop" Send="AnimBracketStop Attack"/>
+        <On Terms="WeaponStart.Dragoon.AttackStart" Send="TimerKill CoverDelay"/>
+        <On Terms="WeaponStart.Dragoon.AttackStart" Send="AnimClear CoverStand"/>
+        <On Terms="WeaponStart.Dragoon.AttackStart" Send="AnimPlay Cover Cover PlayForever"/>
+        <On Terms="WeaponStop.Dragoon.AttackStop" Send="TimerSet 4.000000 CoverDelay"/>
+        <On Terms="TimerExpired; TimerName CoverDelay" Send="AnimClear Cover"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Dragoon_Land"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="DragoonWarpIn"/>
+        <DeathArray index="Normal" ModelLink="DragoonDeath" SoundLink="Dragoon_DeathExplosion"/>
+        <DeathCustoms ModelLink="ProtossLargeUnitDeathLow" Name="AntiGravProtoss"/>
+        <PlacementModel value="DragoonPlacement"/>
+        <PlacementSound value="Protoss_BuildingPlacementSmall"/>
+        <PortraitModel value="DragoonPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleLarge"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="1.25"/>
+        <BarOffset value="80"/>
+        <BarWidth value="90"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Protoss-Dragoon.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <SoundArray index="Ready" value="DragoonVoid_Ready"/>
+        <SoundArray index="Help" value="DragoonVoid_Help"/>
+        <SoundArray index="What" value="DragoonVoid_What"/>
+        <SoundArray index="Yes" value="DragoonVoid_Yes"/>
+        <SoundArray index="Attack" value="DragoonVoid_Attack"/>
+        <SoundArray index="Pissed" value="DragoonVoid_Pissed"/>
+        <SoundArray index="Movement" value="Dragoon_MoveStart"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-dragoon-void.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Protoss-Dragoon.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\Wireframe-Protoss-Dragoon-Shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Dragoon-Shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-Protoss-Dragoon-Shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
+    <CActorAction id="DragoonAttack" parent="GenericAttack" effectImpact="DragoonDamage" effectLaunch="DragoonLM">
+        <LaunchAssets Sound="DragoonVoid_AttackLaunch"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeStandard SOpForwardLaunchGuide"/>
+        <ImpactMap index="None" Sound="DragoonVoid_AttackImpact"/>
+        <ImpactMap index="Flesh" ModelReaction="BloodTargetImpact"/>
+        <ImpactPhysics Name="DragoonPhaseDisruptorImpact" MatchKeys="Basic" Physics="DragoonAttackDeathForce"/>
+    </CActorAction>
+    <CActorMissile id="DragoonAttackMissile" parent="GenericAttackMissile" unitName="DragoonWeapon">
+        <On Terms="UnitBirth" Send="AnimSetTimeScaleAbsolute Lifetime 1.000000"/>
+    </CActorMissile>
+    <CActorTurret id="DragoonTurret">
+        <On Terms="TurretEnable.Dragoon" Send="Create"/>
+    </CActorTurret>
+    <CActorSound id="Dragoon_Land" parent="SoundOneShot"/>
+    <CActorRange id="EMPRange">
+        <On Terms="Abil.ScienceVesselEMP.TargetOn" Send="Create"/>
+        <On Terms="Abil.ScienceVesselEMP.TargetOff" Send="Destroy"/>
+        <On Terms="Abil.ScienceVesselEMP.ButtonHoverOn" Send="Create"/>
+        <On Terms="Abil.ScienceVesselEMP.ButtonHoverOff" Send="Destroy"/>
+    </CActorRange>
+    <CActorUnit id="Immortal">
+        <On index="72" Terms="UnitHeightUpdate.*.Land" Send="Create Immortal_Land"/>
+        <On index="73" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
+        <On index="74" Send="Create Immortal_Barrier_OnSound"/>
+        <On index="75" Send="AnimBracketStop Cover"/>
+        <On index="76" Send="Create Immortal_Void_BarrierOffSound"/>
+        <On index="77" Terms="UnitMovementUpdate.*.Walk" Send="AnimBracketStop Attack"/>
+        <On index="78" removed="1"/>
+        <On index="79" removed="1"/>
+        <On index="80" removed="1"/>
+        <DeathCustoms index="7" ModelLink="ImmortalDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="ProtossRobotSquibDeathRagdoll"/>
+            <BodySquibs Name="BloodReduced" Model="ProtossRobotBloodSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms index="8" ModelLink="" Name="RagdollSiegeTank" InheritsFrom="RagdollBasic">
+            <BodySquibs index="0" removed="1"/>
+            <BodySquibs index="1" removed="1"/>
+        </DeathCustoms>
+        <DeathCustoms index="9" Name="RagdollNuke">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms index="10" Name="RagdollFire"/>
+        <DeathCustoms index="11" Name="RagdollAcid">
+            <BodySquibs index="0" Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms index="12" Name="RagdollBaneling"/>
+        <DeathCustoms index="13" Name="RagdollUltraUnburrow">
+            <BodySquibs index="0" removed="1"/>
+        </DeathCustoms>
+        <DeathCustoms index="14" Name="RagdollOverkillDPRH"/>
+        <DeathCustoms index="15" Name="RagdollOverkillDOI"/>
+        <DeathCustoms index="16" Name="RagdollMidair"/>
+        <DeathCustoms index="17" removed="1"/>
+    </CActorUnit>
+    <CActorSound id="ScannerSweepSound">
+        <Filter index="Ally" value="0"/>
+        <Filter index="Neutral" value="0"/>
+    </CActorSound>
+    <CActorSound id="ScannerSweepSoundOthers">
+        <Filter index="Ally" value="1"/>
+        <Filter index="Neutral" value="1"/>
+    </CActorSound>
+    <CActorSplat id="ScienceVesselEMPCursorSplat" parent="TerranCursorSplat" abil="ScienceVesselEMP"/>
+    <CActorRange id="ScienceVesselEMPRange" parent="RangeAbil" abil="ScienceVesselEMP">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorUnit id="GhostAcademyDefeat" parent="TerranBuildingEx" unitName="GhostAcademyDefeat">
+        <Aliases value="_UnitHuge"/>
+        <Macros value="QueueAnim"/>
+        <Model value="GhostAcademy"/>
+        <BuildModel value="GhostAcademy"/>
+        <DeathArray index="Normal" ModelLink="GhostAcademyDeath"/>
+        <DeathArray index="UnderConstruction" ModelLink="TerranBuildingDeath" SoundLink="GhostAcademy_Explode"/>
+        <PlacementModel value="GhostAcademyPlacement"/>
+        <PortraitModel value="GhostAcademyPortrait"/>
+        <BarOffset value="125"/>
+        <BarWidth value="155"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\Wireframe-Terran-GhostAcademy.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <NameOffset value="100"/>
+        <SoundArray index="Ready" value="GhostAcademy_Ready"/>
+        <SoundArray index="What" value="GhostAcademy_What"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitFlags index="StandAnimBirthVariation" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-building-terran-ghostacademy.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\Wireframe-Terran-GhostAcademy.dds"/>
+        </Wireframe>
+    </CActorUnit>
+    <CActorSplat id="GhostAcademySplatDefeat" parent="GenericUnitSplat" unitName="GhostAcademyDefeat">
+        <Model value="GhostAcademySplat"/>
+    </CActorSplat>
+    <CActorUnit id="Reaver" parent="GenericUnitStandard" unitName="Reaver">
+        <Aliases value="_UnitLarge"/>
+        <Aliases value="_UnitLarge"/>
+        <Macros value="TerrainSquibAnimations"/>
+        <Macros value="PhysicsDeathsSwarmGround"/>
+        <Macros value="PhysicsDeathsVoidGround"/>
+        <On Terms="WeaponStart.ReaverScarabsLaunch.AttackStart; AnimPlaying Birth" Send="AnimClear Birth"/>
+        <On Terms="Effect.ScarabLM.Start; At Caster" Send="AnimPlay Attack Attack"/>
+        <On Terms="Effect.ScarabLaunchPersistentInitial.Start; At Caster" Send="AnimBracketStart Cover Cover,Start Cover Cover,End"/>
+        <On Terms="Effect.ScarabLaunchPersistentInitial.Start; At Caster" Send="TimerKill CoverDelay"/>
+        <On Terms="Effect.ScarabLaunchPersistentInitial.Start; At Caster" Send="TimerSet 5.000000 CoverDelay"/>
+        <On Terms="UnitHeightUpdate.*.Land" Send="Create Reaver_Land"/>
+        <On Terms="Effect.ScarabLaunchPersistentInitial.Start; At Caster" Send="StatusSet Cover 1"/>
+        <On Terms="TimerExpired; TimerName CoverDelay" Send="AnimBracketStop Cover"/>
+        <On Terms="UnitBirth.ReaverBurrowed" Send="Create"/>
+        <On Terms="UnitRevive.ReaverBurrowed" Send="Create"/>
+        <On Terms="UnitBirth.ReaverBurrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <On Terms="UnitRevive.ReaverBurrowed" Send="AnimBracketStart Burrow Burrow IGNORE Unburrow ClosingFull,OpeningPlayForever,Instant"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Reaver" Send="TerrainSquibActivateGroup RippleStandard"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo ReaverBurrowed" Send="TerrainSquibDeactivate"/>
+        <On Terms="AbilMorph.*.Cancel; MorphFrom Reaver; MorphTo ReaverBurrowed" Send="AnimClear Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Reaver; MorphFrom ReaverBurrowed" Send="AnimBracketStop Burrow"/>
+        <On Terms="AbilMorph.*.Finish; MorphTo Reaver; MorphFrom ReaverBurrowed" Send="AnimClear Burrow"/>
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <BuildModel value="ReaverWarpIn"/>
+        <DeathArray index="Normal" ModelLink="ReaverDeath" SoundLink="Reaver_Death"/>
+        <DeathCustoms ModelLink="ProtossLargeUnitDeathLow" Name="AntiGravProtoss"/>
+        <DeathCustoms ModelLink="ReaverDeathRagdoll" Name="RagdollBasic">
+            <BodySquibs Name="Basic" Model="ProtossRobotSquibDeathRagdoll"/>
+            <BodySquibs Name="BloodReduced" Model="ProtossRobotBloodSquibDeathRagdoll"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollSiegeTank" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollNuke" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollFire" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Fire"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollAcid" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollBaneling" InheritsFrom="RagdollBasic">
+            <BodySquibs Name="Acid"/>
+        </DeathCustoms>
+        <DeathCustoms Name="RagdollUltraUnburrow" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDPRH" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollOverkillDOI" InheritsFrom="RagdollBasic"/>
+        <DeathCustoms Name="RagdollMidair" InheritsFrom="RagdollBasic"/>
+        <PlacementModel value="ReaverPlacement"/>
+        <PortraitModel value="ReaverPortrait"/>
+        <TerrainSquibs>
+            <MovementDistance value="0.150000,0.150000"/>
+            <IdlePeriod value="0.100000,0.250000"/>
+            <RangeUp value="0.600000"/>
+            <RangeDown value="1.000000"/>
+            <AttachQuery Methods="AMFilterCenter"/>
+            <Visuals TerrainPhysicsMaterial="Water" ActorModel="TerrainSquibHarnessContinuous" ModelLink="WaterRippleImmortal"/>
+        </TerrainSquibs>
+        <WalkAnimMoveSpeed value="1.875"/>
+        <BarOffset value="70"/>
+        <GroupIcon>
+            <Image value="Assets\Textures\wireframe-protoss-reaver.dds"/>
+        </GroupIcon>
+        <HeroIcon value="Assets\Textures\BTN-Unit-Protoss-Immortal.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <SoundArray index="Movement" value="Reaver_moveStart"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-reaver.dds"/>
+        <Wireframe>
+            <Image value="Assets\Textures\wireframe-protoss-reaver.dds"/>
+        </Wireframe>
+        <WireframeShield>
+            <Image value="Assets\Textures\wireframe-protoss-reaver-shield01.dds"/>
+            <Image value="Assets\Textures\Wireframe-protoss-reaver-shield02.dds"/>
+            <Image value="Assets\Textures\Wireframe-protoss-reaver-shield03.dds"/>
+        </WireframeShield>
+    </CActorUnit>
+    <CActorSound id="Reaver_Land" parent="SoundOneShot"/>
+    <CActorUnit id="Scarab" parent="GenericUnitStandard" unitName="Scarab">
+        <DeathArray index="Normal" ModelLink="ScarabAttackImpact" SoundLink=""/>
+        <BarOffset value="25"/>
+        <BarWidth value="36"/>
+        <HeroIcon value="Assets\Textures\btn-unit-protoss-interceptor.dds"/>
+        <LifeArmorIcon value="Assets\Textures\btn-upgrade-protoss-groundarmorlevel0.dds"/>
+        <SoundArray index="Birth" value=""/>
+        <SoundArray index="Movement" value="InterceptorWeaponBirth"/>
+        <StatusBarFlags index="Shields" value="0"/>
+        <StatusBarFlags index="Life" value="0"/>
+        <StatusBarFlags index="Energy" value="0"/>
+        <StatusBarFlags index="Cargo" value="0"/>
+        <StatusBarFlags index="Progress" value="0"/>
+        <UnitFlags index="ShowBlobShadow" value="0"/>
+        <UnitIcon value="Assets\Textures\btn-unit-protoss-interceptor.dds"/>
+    </CActorUnit>
+    <CActorAction id="ScarabAttack" parent="GenericAttack" effectImpact="ScarabExplodeTargetDamage" effectLaunch="ScarabLM">
+        <LaunchAssets Sound="Reaver_AttackLaunch"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeStandard SOpForwardLaunchGuide"/>
+        <ImpactMap index="None" Sound="Reaver_ScarabExplode"/>
+        <ImpactPhysics Name="Explosion" MatchKeys="Basic" Physics="ScarabExplosionForce"/>
+        <ShieldFlashType value="Header"/>
+    </CActorAction>
+    <CActorMissile id="ScarabAttackMissile" parent="GenericAttackMissileWithDeathAnim" unitName="ScarabWeapon">
+        <Macros value="GlobalLoopMacro"/>
+    </CActorMissile>
+    <CActorForceSphere id="ScarabExplosionForce">
+        <On Terms="ActorCreation" Send="Create ScarabExplosionUpForce"/>
+        <Host Subject="_ImpactGuide"/>
+        <HostSiteOps Ops="SOpRandomPointInSphereDot15"/>
+        <Duration value="0.150000"/>
+        <Magnitude value="25.000000,12.000000"/>
+        <Radius value="2.150000,0.200000"/>
+    </CActorForceSphere>
+    <CActorForceSphere id="ScarabExplosionUpForce">
+        <Host Subject="_ImpactGuide"/>
+        <HostSiteOps Ops="SOpRandomPointInCircleDot2"/>
+        <Field value="Directional"/>
+        <Duration value="0.150000"/>
+        <Magnitude value="23.000000,10.000000"/>
+        <Radius value="2.150000,0.200000"/>
+    </CActorForceSphere>
+    <CActorUnit id="ArbiterMP">
+        <ModelFlags index="OutlineEmitter" value="1"/>
+        <On Terms="Behavior.WarpInEffect.On" Send="ModelSwap ArbiterMPWarpInStargate"/>
+        <On Terms="Behavior.WarpInEffect.On" Send="$Spell"/>
+        <On Terms="AnimDone; AnimName Spell" Send="ModelSwap ArbiterMP"/>
+        <On Terms="AnimDone; AnimName Spell" Send="AnimBracketStart GL_BSD GLbirth GLstand GLdeath"/>
+        <On Terms="AnimDone; AnimName Spell" Send="AnimClear Spell"/>
+        <SoundArray index="Ready" value="Arbiter_Ready"/>
+        <SoundArray index="Help" value="Arbiter_Help"/>
+        <SoundArray index="What" value="Arbiter_What"/>
+        <SoundArray index="Yes" value="Arbiter_Yes"/>
+        <SoundArray index="Attack" value="Arbiter_Attack"/>
+        <SoundArray index="Pissed" value="Arbiter_Pissed"/>
+        <AbilSoundArray AbilCmd="ArbiterMPStasisField,Execute" Sound="Arbiter_StasisFieldVO"/>
+        <AbilSoundArray AbilCmd="ArbiterMPRecall,Execute" Sound="Arbiter_RecallVO"/>
+        <BuildModel value="ArbiterEX2WarpIn"/>
+        <PlacementModel value="ArbiterEX2Placement"/>
+    </CActorUnit>
+    <CActorRange id="ArbiterMPCloakingFieldRange">
+        <On Terms="SelectionLocalUpdate.ArbiterMP.Start" Send="Create"/>
+        <On Terms="SelectionLocalUpdate.ArbiterMP.Stop" Send="Destroy"/>
+        <Range value="5.000000"/>
+    </CActorRange>
+    <CActorModel id="ArbiterMPStasisFieldImpact">
+        <On Terms="ActorCreation; ValidateUnit IsBrutalisk" Send="SetScale 2.000000"/>
+    </CActorModel>
+    <CActorModel id="ArbiterMPWarpInStargate" parent="ModelAddition">
+        <On Terms="UnitDeathCustomize" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorModel id="ArbiterWarpInStargate" parent="ModelAddition">
+        <On Terms="UnitDeathCustomize" Send="Destroy"/>
+        <On Terms="ActorCreation; ValidateUnit IsChronoSurged" Send="AnimSetTimeScale BSD 0.200000"/>
+        <On Terms="Behavior.SOASuperChrono.On" Send="AnimSetTimeScale BSD 0.200000"/>
+        <On Terms="Behavior.SOASuperChrono.Off" Send="AnimSetTimeScale BSD 1.000000"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorUnit id="CorsairMP">
+        <ModelFlags index="OutlineEmitter" value="1"/>
+    </CActorUnit>
+    <CActorModel id="CorsairMPWarpInStargate" parent="ModelAddition">
+        <On Terms="UnitDeathCustomize" Send="Destroy"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+    </CActorModel>
+    <CActorUnit id="Stargate">
+        <On Terms="AbilTrain.StargateTrain.Start; AbilTrainProduced CorsairMP; !ValidateUnit HasNoPower" Send="Create CorsairMPWarpInStargate"/>
+        <On Terms="AbilTrain.StargateTrain.Start; AbilTrainProduced CorsairMP" Send="StatusSet WarpingIn 10"/>
+        <On Terms="BehaviorLevel.PowerUserQueue.Stop; Level 0; IsStatus WarpingIn 10" Send="Create CorsairMPWarpInStargate"/>
+        <On Terms="BehaviorLevel.PowerUserQueue.Start; Level 0" Target="CorsairMPWarpInStargate" Send="Destroy"/>
+        <On Terms="AbilTrain.StargateTrain.Cancel" Target="CorsairMPWarpInStargate" Send="Destroy"/>
+        <On Terms="AbilTrain.StargateTrain.Finish" Target="CorsairMPWarpInStargate" Send="Destroy"/>
+        <On Terms="AbilTrain.StargateTrain.Start; AbilTrainProduced ArbiterMP; !ValidateUnit HasNoPower" Send="Create ArbiterMPWarpInStargate"/>
+        <On Terms="AbilTrain.StargateTrain.Start; AbilTrainProduced ArbiterMP" Send="StatusSet WarpingIn 11"/>
+        <On Terms="BehaviorLevel.PowerUserQueue.Stop; Level 0; IsStatus WarpingIn 11" Send="Create ArbiterMPWarpInStargate"/>
+        <On Terms="BehaviorLevel.PowerUserQueue.Start; Level 0" Target="ArbiterMPWarpInStargate" Send="Destroy"/>
+        <On Terms="AbilTrain.StargateTrain.Cancel" Target="ArbiterMPWarpInStargate" Send="Destroy"/>
+        <On Terms="AbilTrain.StargateTrain.Finish" Target="ArbiterMPWarpInStargate" Send="Destroy"/>
+    </CActorUnit>
+    <CActorStateMonitor id="TerranFlamesMediumBuildingDefeat" parent="TerranFlames">
+        <On Terms="UnitCreation.GhostAcademyDefeat" Send="Create"/>
+    </CActorStateMonitor>
+</Catalog>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="BuildingScarab"/>
+    <CBehaviorBuff id="CloakDistortionField">
+        <Requirements value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DevourerMPAcidSpores">
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-rapidregeneration.dds"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals750">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals750">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque900">
+        <Capacity value="1500"/>
+        <Contents value="1500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawRichVespeneGeyserGas">
+        <Capacity value="2500"/>
+        <Contents value="2500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawVespeneGeyserGas">
+        <Capacity value="2500"/>
+        <Contents value="2500"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="ScarabReveal">
+        <Alignment value="Negative"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="NotCloaked"/>
+        <Duration value="7"/>
+        <Modification>
+            <ModifyFlags index="Reveal" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ScarabTimedLife">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="0.0625"/>
+        <InitialEffect value="SuicideRemove"/>
+        <ExpireEffect value="SuicideRemove"/>
+        <Modification>
+            <StateFlags index="Summoned" value="1"/>
+        </Modification>
+        <KillCredit Value="Caster"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArbiterMPCloakFieldEffect">
+        <Duration value="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArbiterMPRecalled">
+        <Modification>
+            <AbilLinkEnableArray value="CarrierRepairDroneHanger"/>
+            <AbilLinkEnableArray value="BroodLordHangar"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArbiterMPRecalling">
+        <Modification>
+            <AbilLinkEnableArray value="CarrierRepairDroneHanger"/>
+            <AbilLinkEnableArray value="BroodLordHangar"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ArbiterMPStasisField">
+        <Duration value="15"/>
+        <Modification>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <BehaviorLinkDisableArray value="Detector7"/>
+            <BehaviorLinkDisableArray value="Detector8"/>
+            <BehaviorLinkDisableArray value="Detector9"/>
+            <BehaviorLinkDisableArray value="Detector10"/>
+            <BehaviorLinkDisableArray value="Detector11"/>
+            <BehaviorLinkDisableArray value="Detector12"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CorsairMPDisruptionWeb">
+        <Modification>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+        </Modification>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-disruptionweb.dds"/>
+        <Alignment value="Negative"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CorsairDisableFakeWeapon">
+        <InfoFlags index="Hidden" value="1"/>
+        <DisableValidatorArray value="CorsairFakeWeaponBehaviorDisable"/>
+        <Modification>
+            <WeaponDisableArray value="CorsairFakeWeapon"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SpiderMineInvulnerable">
+        <Modification>
+            <StateFlags index="Invulnerable" value="0"/>
+            <StateFlags index="Untargetable" value="0"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="SuicideBuilding">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Modification>
+            <WeaponEnableArray value="SuicideBuilding"/>
+            <WeaponDisableArray value="Suicide"/>
+        </Modification>
+    </CBehaviorBuff>
+</Catalog>

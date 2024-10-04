@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="Dragoon" parent="Unit" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Dragoon_Void\Dragoon_Void.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraHigh08"/>
+        <Radius value="0.650000"/>
+        <SelectionRadius value="0.650000"/>
+        <ShadowRadius value="0.866400"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraHigh08"/>
+        <Tipability value="0.750000"/>
+        <TipabilityLength value="0.800000"/>
+        <TipabilityWidth value="0.800000"/>
+        <UnitGlossaryCamera value="Star2CameraHigh08"/>
+    </CModel>
+    <CModel id="DragoonAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile_Impact\DragoonEX2_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="DragoonDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Dragoon_Void_Death\Dragoon_Void_Death.m3"/>
+    </CModel>
+    <CModel id="DragoonPlacement" parent="Placement" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Dragoon_Placement\Dragoon_Placement.m3"/>
+    </CModel>
+    <CModel id="DragoonPortrait" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Protoss\Aiur_DragoonEx2_Portrait\Aiur_DragoonEx2_Portrait.m3"/>
+        <Image value="Assets\Textures\aiurdragoonportrait_static.dds"/>
+        <Lighting value="PortraitAiurDragoon"/>
+    </CModel>
+    <CModel id="DragoonWarpIn" parent="OneShotSpellFX">
+        <Model value="Assets\Units\Protoss\Dragoon_Void_WarpIn\Dragoon_Void_WarpIn.m3"/>
+        <LowQualityModel value="DragoonWarpInLow"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.555400"/>
+        <ShadowRadius value="0.555400"/>
+    </CModel>
+    <CModel id="DragoonWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\DragoonEX2_Missile\DragoonEX2_Missile.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="Reaver" parent="Unit" Race="Protoss">
+        <AttachProps>
+            <Id value="Ref_Center"/>
+            <SquibType value="Metal"/>
+            <RadiusTarget value="0.750000"/>
+            <RadiusShield value="1.000000"/>
+        </AttachProps>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraMid09"/>
+        <Radius value="0.800000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="1.029000"/>
+        <ShadowRadius value="0.800000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraMid09"/>
+        <Tipability value="1.000000"/>
+        <TipabilityLength value="1.800000"/>
+        <TipabilityWidth value="1.200000"/>
+        <TextureDeclares Prefix="reaver_">
+            <Adaptions TriggerOnSubstring="_Diffuse" Slot="main"/>
+        </TextureDeclares>
+        <UnitGlossaryCamera value="Star2CameraMid09"/>
+    </CModel>
+    <CModel id="ReaverDeath" parent="UnitDeath" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Reaver_Death\Reaver_Death.m3"/>
+        <LowQualityModel value="ProtossLargeUnitDeathLow"/>
+        <Events>
+            <Variation value="0"/>
+            <Anim value="Death,00"/>
+            <Name value="Reaver_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.370000"/>
+            <Payload value="Reaver_DeathExplosion"/>
+        </Events>
+        <VariationCount value="2"/>
+    </CModel>
+    <CModel id="ReaverDeathRagdoll" parent="UnitDeathRagdoll" Race="Protoss">
+        <Model value="Assets\Units\Protoss\Reaver_Ragdoll_Death\Reaver_Ragdoll_Death.m3"/>
+        <Events>
+            <Variation value="0"/>
+            <Anim value="Death,00"/>
+            <Name value="Reaver_DeathExplosion"/>
+            <Type value="Sound"/>
+            <Time value="1.370000"/>
+            <Payload value="Reaver_DeathExplosion"/>
+        </Events>
+        <VariationCount value="2"/>
+    </CModel>
+    <CModel id="ReaverPlacement">
+        <Model value="Assets\Units\Protoss\Reaver_Placement\Reaver_Placement.m3"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="ReaverPortrait" parent="Portrait" Race="Protoss">
+        <Model value="Assets\Portraits\Protoss\ReaverEx2Portrait\ReaverEx2Portrait.m3"/>
+        <Lighting value="PortraitReaver"/>
+    </CModel>
+    <CModel id="ReaverWarpIn">
+        <Model value="Assets\Units\Protoss\Reaver_WarpIn\Reaver_WarpIn.m3"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+    </CModel>
+    <CModel id="Scarab" parent="Unit" Race="Protoss">
+        <Model value="Assets\Units\Test\InvisibleUnit\InvisibleUnit.m3"/>
+        <Occlusion value="Show"/>
+        <PlanetPanelCamera value="Star2CameraLow03"/>
+        <Radius value="0.250000"/>
+        <SelectionRadius value="0.294000"/>
+        <ShadowRadius value="0.294000"/>
+        <SquibTypeDefault value="Metal"/>
+        <TechPurchaseCamera value="Star2CameraLow03"/>
+        <UnitGlossaryCamera value="Star2CameraLow03"/>
+    </CModel>
+    <CModel id="ScarabAttackImpact" parent="ImpactFX">
+        <Model value="Assets\Effects\Protoss\Reaver_Missile_Impact\Reaver_Missile_Impact.m3"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="ScarabWeapon" parent="MissileFX">
+        <Model value="Assets\Effects\Protoss\Reaver_Missile\Reaver_Missile.m3"/>
+    </CModel>
+    <CModel id="ArbiterEX2Placement" parent="Placement" Race="Protoss">
+        <Model value="Assets\Units\Protoss\ArbiterEX2_Placement\ArbiterEX2_Placement.m3"/>
+        <Occlusion value="Show"/>
+        <Radius value="-1.000000"/>
+        <ScaleMax value="0.850000,0.850000,0.850000"/>
+        <ScaleMin value="0.850000,0.850000,0.850000"/>
+        <SelectionRadius value="0.588100"/>
+        <ShadowRadius value="0.588100"/>
+    </CModel>
+    <CModel id="ArbiterEX2WarpIn" parent="OneShotSpellFX">
+        <Model value="Assets\Units\Protoss\ArbiterEX2_WarpIn\ArbiterEX2_WarpIn.m3"/>
+        <LowQualityModel value="ProtossUnitBirth"/>
+        <EditorCategories value="Race:Protoss"/>
+        <Occlusion value="Show"/>
+        <SelectionRadius value="0.666500"/>
+        <ShadowRadius value="0.666500"/>
+    </CModel>
+    <CModel id="ArbiterMPWarpInStargate" parent="PersistentSpellFX">
+        <Model value="Assets\Units\Protoss\Arbiter_WarpIn_StarGate\Arbiter_WarpIn_StarGate.m3"/>
+        <Occlusion value="Show"/>
+        <LowQualityModel value="ProtossUnitBirth"/>
+        <SelectionRadius value="0.666500"/>
+        <ShadowRadius value="0.666500"/>
+        <SquibTypeDefault value="Metal"/>
+        <Radius value="0.750000"/>
+        <EditorCategories value="Race:Protoss"/>
+    </CModel>
+    <CModel id="CorsairMPPlacement">
+        <LowQualityModel value=""/>
+    </CModel>
+    <CModel id="CorsairMPWarpInStargate" parent="PersistentSpellFX">
+        <Model value="Assets\Units\Protoss\Corsair_WarpIn_StarGate\Corsair_WarpIn_StarGate.m3"/>
+    </CModel>
+</Catalog>
