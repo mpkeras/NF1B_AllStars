@@ -1,0 +1,3529 @@
+include "TriggerLibs/NativeLib"
+
+include "LibFC904078_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: NF1B
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libFC904078_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Variable Initialization
+bool libFC904078_InitVariables_completed = false;
+
+void libFC904078_InitVariables () {
+    if (libFC904078_InitVariables_completed) {
+        return;
+    }
+
+    libFC904078_InitVariables_completed = true;
+
+    libFC904078_gv_mineral1 = c_invalidDialogControlId;
+    libFC904078_gv_vespene1 = c_invalidDialogControlId;
+    libFC904078_gv_mineral2 = c_invalidDialogControlId;
+    libFC904078_gv_vespene2 = c_invalidDialogControlId;
+    libFC904078_gv_ghostAcademy = UnitGroup("GhostAcademyDefeat", c_playerAny, RegionFromId(1), UnitFilter(0, 0, (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+    libFC904078_gv_ghostAcademy1 = UnitGroupEmpty();
+    libFC904078_gv_ghostAcademy2 = UnitGroupEmpty();
+    libFC904078_gv_teamInfo1.lv_fighterGroup = PlayerGroupEmpty();
+    libFC904078_gv_teamInfo1.lv_color = Color(100,100,100);
+    libFC904078_gv_teamInfo2.lv_fighterGroup = PlayerGroupEmpty();
+    libFC904078_gv_teamInfo2.lv_color = Color(100,100,100);
+    libFC904078_gv_playerGroup1 = PlayerGroupEmpty();
+    libFC904078_gv_playerGroup2 = PlayerGroupEmpty();
+    libFC904078_gv_playerGroupAll1 = PlayerGroupEmpty();
+    libFC904078_gv_playerGroupAll2 = PlayerGroupEmpty();
+    libFC904078_gv_fighterGroup1 = PlayerGroupEmpty();
+    libFC904078_gv_fighterGroup2 = PlayerGroupEmpty();
+    libFC904078_gv_fighterGroupAll1 = PlayerGroupEmpty();
+    libFC904078_gv_fighterGroupAll2 = PlayerGroupEmpty();
+    libFC904078_gv_pv_releaseToChangeOwner = 1;
+}
+
+// Functions
+void libFC904078_gf_wait (int lp_s) {
+    // Automatic Variable Declarations
+    // Implementation
+    libFC904078_gv_pv_releaseToChangeOwner -= 1;
+}
+
+void libFC904078_gf_signal (int lp_s) {
+    // Automatic Variable Declarations
+    // Implementation
+    libFC904078_gv_pv_releaseToChangeOwner += 1;
+    if ((lp_s >= 1)) {
+        TriggerExecute(libFC904078_gt_unlock_pv_releaseToChangeOwner, true, false);
+    }
+
+}
+
+trigger auto_libFC904078_gf_TvT_Trigger = null;
+playergroup auto_libFC904078_gf_TvT_lp__playGroupSelf;
+
+void libFC904078_gf_TvT (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_TvT_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_TvT_Trigger == null) {
+        auto_libFC904078_gf_TvT_Trigger = TriggerCreate("auto_libFC904078_gf_TvT_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_TvT_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_TvT_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_TvT_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_0EE65C85"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_6D0FEAA8"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_D5A32302"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_5D526F8F"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_TvZ_Trigger = null;
+playergroup auto_libFC904078_gf_TvZ_lp__playGroupSelf;
+
+void libFC904078_gf_TvZ (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_TvZ_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_TvZ_Trigger == null) {
+        auto_libFC904078_gf_TvZ_Trigger = TriggerCreate("auto_libFC904078_gf_TvZ_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_TvZ_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_TvZ_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_TvZ_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_A66DB3EB"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_3A95C0C0"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_35AB495A"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_6F43C3D2"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_TvP_Trigger = null;
+playergroup auto_libFC904078_gf_TvP_lp__playGroupSelf;
+
+void libFC904078_gf_TvP (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_TvP_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_TvP_Trigger == null) {
+        auto_libFC904078_gf_TvP_Trigger = TriggerCreate("auto_libFC904078_gf_TvP_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_TvP_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_TvP_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_TvP_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_41B0D21E"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_05DEA601"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_A57C1323"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_51970D36"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_ZvT_Trigger = null;
+playergroup auto_libFC904078_gf_ZvT_lp__playGroupSelf;
+
+void libFC904078_gf_ZvT (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_ZvT_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_ZvT_Trigger == null) {
+        auto_libFC904078_gf_ZvT_Trigger = TriggerCreate("auto_libFC904078_gf_ZvT_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_ZvT_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_ZvT_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_ZvT_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_C05F467B"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_77EA4992"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_802504E0"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_C32C754A"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_ZvZ_Trigger = null;
+playergroup auto_libFC904078_gf_ZvZ_lp__playGroupSelf;
+
+void libFC904078_gf_ZvZ (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_ZvZ_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_ZvZ_Trigger == null) {
+        auto_libFC904078_gf_ZvZ_Trigger = TriggerCreate("auto_libFC904078_gf_ZvZ_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_ZvZ_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_ZvZ_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_ZvZ_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_515E7C54"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_CB602A4E"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_6E144569"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_8DA67AED"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_ZvP_Trigger = null;
+playergroup auto_libFC904078_gf_ZvP_lp__playGroupSelf;
+
+void libFC904078_gf_ZvP (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_ZvP_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_ZvP_Trigger == null) {
+        auto_libFC904078_gf_ZvP_Trigger = TriggerCreate("auto_libFC904078_gf_ZvP_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_ZvP_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_ZvP_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_ZvP_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_43E78378"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_1865EA57"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_B61BB2D6"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_805DB513"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_PvT_Trigger = null;
+playergroup auto_libFC904078_gf_PvT_lp__playGroupSelf;
+
+void libFC904078_gf_PvT (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_PvT_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_PvT_Trigger == null) {
+        auto_libFC904078_gf_PvT_Trigger = TriggerCreate("auto_libFC904078_gf_PvT_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_PvT_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_PvT_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_PvT_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_8ED72B83"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_F54D96BE"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_6BDFA1FB"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_5E932C76"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_PvZ_Trigger = null;
+playergroup auto_libFC904078_gf_PvZ_lp__playGroupSelf;
+
+void libFC904078_gf_PvZ (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_PvZ_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_PvZ_Trigger == null) {
+        auto_libFC904078_gf_PvZ_Trigger = TriggerCreate("auto_libFC904078_gf_PvZ_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_PvZ_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_PvZ_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_PvZ_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_CF455D61"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_9990637C"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_9E98DE5B"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_1D6E2B5D"));
+    return true;
+}
+
+trigger auto_libFC904078_gf_PvP_Trigger = null;
+playergroup auto_libFC904078_gf_PvP_lp__playGroupSelf;
+
+void libFC904078_gf_PvP (playergroup lp__playGroupSelf) {
+    auto_libFC904078_gf_PvP_lp__playGroupSelf = lp__playGroupSelf;
+
+    if (auto_libFC904078_gf_PvP_Trigger == null) {
+        auto_libFC904078_gf_PvP_Trigger = TriggerCreate("auto_libFC904078_gf_PvP_TriggerFunc");
+    }
+
+    TriggerExecute(auto_libFC904078_gf_PvP_Trigger, false, false);
+}
+
+bool auto_libFC904078_gf_PvP_TriggerFunc (bool testConds, bool runActions) {
+    playergroup lp__playGroupSelf = auto_libFC904078_gf_PvP_lp__playGroupSelf;
+
+    // Automatic Variable Declarations
+    // Implementation
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_6F4AE9AD"));
+    Wait(5.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_E9F0839A"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_E850D414"));
+    Wait(14.0, c_timeReal);
+    UIDisplayMessage(lp__playGroupSelf, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_8B5BCDC8"));
+    return true;
+}
+
+// Triggers
+//--------------------------------------------------------------------------------------------------
+// Trigger: unlock_pv_releaseToChangeOwner
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_unlock_pv_releaseToChangeOwner_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_unlock_pv_releaseToChangeOwner_Init () {
+    libFC904078_gt_unlock_pv_releaseToChangeOwner = TriggerCreate("libFC904078_gt_unlock_pv_releaseToChangeOwner_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: initialization
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_initialization_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    TriggerExecute(libFC904078_gt_playerGroup, true, true);
+    TriggerExecute(libFC904078_gt_startLocation, true, true);
+    TriggerExecute(libFC904078_gt_roleSelection1, true, true);
+    TriggerExecute(libFC904078_gt_roleSelection2, true, true);
+    TriggerExecute(libFC904078_gt_meleeSettings1, true, false);
+    TriggerExecute(libFC904078_gt_meleeSettings2, true, false);
+    TriggerExecute(libFC904078_gt_singleMode, true, false);
+    TriggerExecute(libFC904078_gt_ghostAcademyGroup, true, false);
+    TriggerExecute(libFC904078_gt_resource, true, false);
+    TriggerExecute(libFC904078_gt_supplySettings, true, false);
+    TriggerExecute(libFC904078_gt_allianceSettings, true, false);
+    TriggerExecute(libFC904078_gt_raceHelp, true, false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_initialization_Init () {
+    libFC904078_gt_initialization = TriggerCreate("libFC904078_gt_initialization_Func");
+    TriggerAddEventMapInit(libFC904078_gt_initialization);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: playerGroup
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_playerGroup_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    PlayerGroupAdd(libFC904078_gv_playerGroup1, 1);
+    PlayerGroupAdd(libFC904078_gv_playerGroup1, 2);
+    PlayerGroupAdd(libFC904078_gv_playerGroup1, 3);
+    PlayerGroupAdd(libFC904078_gv_playerGroup1, 4);
+    PlayerGroupAdd(libFC904078_gv_playerGroup1, 5);
+    PlayerGroupAdd(libFC904078_gv_playerGroup1, 6);
+    PlayerGroupAdd(libFC904078_gv_playerGroup2, 7);
+    PlayerGroupAdd(libFC904078_gv_playerGroup2, 8);
+    PlayerGroupAdd(libFC904078_gv_playerGroup2, 9);
+    PlayerGroupAdd(libFC904078_gv_playerGroup2, 10);
+    PlayerGroupAdd(libFC904078_gv_playerGroup2, 11);
+    PlayerGroupAdd(libFC904078_gv_playerGroup2, 12);
+    libNtve_gf_AddPlayerGroupToPlayerGroup(libFC904078_gv_playerGroup1, libFC904078_gv_playerGroupAll1);
+    PlayerGroupAdd(libFC904078_gv_playerGroupAll1, 13);
+    libNtve_gf_AddPlayerGroupToPlayerGroup(libFC904078_gv_playerGroup2, libFC904078_gv_playerGroupAll2);
+    PlayerGroupAdd(libFC904078_gv_playerGroupAll2, 14);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_playerGroup_Init () {
+    libFC904078_gt_playerGroup = TriggerCreate("libFC904078_gt_playerGroup_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: startLocation
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_startLocation_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv__random;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv__random = RandomInt(1, 2);
+    if ((lv__random == 1)) {
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_startLocation_Init () {
+    libFC904078_gt_startLocation = TriggerCreate("libFC904078_gt_startLocation_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: roleSelection1
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_roleSelection1_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv__i;
+    int lv__random;
+    int lv__builderNum;
+    playergroup lv__builderGroup;
+
+    // Automatic Variable Declarations
+    playergroup auto31589D66_g;
+    int auto31589D66_var;
+    playergroup autoFFB4A463_g;
+    int autoFFB4A463_var;
+    playergroup auto8DE749EF_g;
+    int auto8DE749EF_var;
+    playergroup auto1F2D1977_g;
+    int auto1F2D1977_var;
+
+    // Variable Initialization
+    lv__i = 1;
+    lv__builderGroup = PlayerGroupEmpty();
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libFC904078_gv_teamInfo1.lv_playerNum = PlayerGroupCount(libFC904078_gv_playerGroup1);
+    auto31589D66_g = libFC904078_gv_playerGroup1;
+    auto31589D66_var = -1;
+    while (true) {
+        auto31589D66_var = PlayerGroupNextPlayer(auto31589D66_g, auto31589D66_var);
+        if (auto31589D66_var < 0) { break; }
+        if ((GameAttributePlayerValue("1", auto31589D66_var) == "0001")) {
+            PlayerGroupAdd(lv__builderGroup, auto31589D66_var);
+            lv__builderNum += 1;
+        }
+        else {
+            PlayerGroupAdd(libFC904078_gv_teamInfo1.lv_fighterGroup, auto31589D66_var);
+        }
+    }
+    if ((lv__builderNum == 0)) {
+        lv__random = RandomInt(1, libFC904078_gv_teamInfo1.lv_playerNum);
+        autoFFB4A463_g = libFC904078_gv_playerGroup1;
+        autoFFB4A463_var = -1;
+        while (true) {
+            autoFFB4A463_var = PlayerGroupNextPlayer(autoFFB4A463_g, autoFFB4A463_var);
+            if (autoFFB4A463_var < 0) { break; }
+            if ((lv__random == lv__i)) {
+                libFC904078_gv_teamInfo1.lv_builder = autoFFB4A463_var;
+                PlayerGroupRemove(libFC904078_gv_teamInfo1.lv_fighterGroup, autoFFB4A463_var);
+                break;
+            }
+
+            lv__i += 1;
+        }
+    }
+    else if ((lv__builderNum == 1)) {
+        auto8DE749EF_g = lv__builderGroup;
+        auto8DE749EF_var = -1;
+        while (true) {
+            auto8DE749EF_var = PlayerGroupNextPlayer(auto8DE749EF_g, auto8DE749EF_var);
+            if (auto8DE749EF_var < 0) { break; }
+            libFC904078_gv_teamInfo1.lv_builder = auto8DE749EF_var;
+        }
+    }
+    else if ((lv__builderNum > 1)) {
+        lv__random = RandomInt(1, lv__builderNum);
+        auto1F2D1977_g = lv__builderGroup;
+        auto1F2D1977_var = -1;
+        while (true) {
+            auto1F2D1977_var = PlayerGroupNextPlayer(auto1F2D1977_g, auto1F2D1977_var);
+            if (auto1F2D1977_var < 0) { break; }
+            if ((lv__random == lv__i)) {
+                libFC904078_gv_teamInfo1.lv_builder = auto1F2D1977_var;
+            }
+            else {
+                PlayerGroupAdd(libFC904078_gv_teamInfo1.lv_fighterGroup, auto1F2D1977_var);
+            }
+            lv__i += 1;
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_roleSelection1_Init () {
+    libFC904078_gt_roleSelection1 = TriggerCreate("libFC904078_gt_roleSelection1_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: roleSelection2
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_roleSelection2_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv__i;
+    int lv__random;
+    int lv__builderNum;
+    playergroup lv__builderGroup;
+
+    // Automatic Variable Declarations
+    playergroup auto975955B2_g;
+    int auto975955B2_var;
+    playergroup auto985DFB1D_g;
+    int auto985DFB1D_var;
+    playergroup auto1BABB61C_g;
+    int auto1BABB61C_var;
+    playergroup auto48C4FEDD_g;
+    int auto48C4FEDD_var;
+
+    // Variable Initialization
+    lv__i = 1;
+    lv__builderGroup = PlayerGroupEmpty();
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libFC904078_gv_teamInfo2.lv_playerNum = PlayerGroupCount(libFC904078_gv_playerGroup2);
+    auto975955B2_g = libFC904078_gv_playerGroup2;
+    auto975955B2_var = -1;
+    while (true) {
+        auto975955B2_var = PlayerGroupNextPlayer(auto975955B2_g, auto975955B2_var);
+        if (auto975955B2_var < 0) { break; }
+        if ((GameAttributePlayerValue("1", auto975955B2_var) == "0001")) {
+            PlayerGroupAdd(lv__builderGroup, auto975955B2_var);
+            lv__builderNum += 1;
+        }
+        else {
+            PlayerGroupAdd(libFC904078_gv_teamInfo2.lv_fighterGroup, auto975955B2_var);
+        }
+    }
+    if ((lv__builderNum == 0)) {
+        lv__random = RandomInt(1, libFC904078_gv_teamInfo2.lv_playerNum);
+        auto985DFB1D_g = libFC904078_gv_playerGroup2;
+        auto985DFB1D_var = -1;
+        while (true) {
+            auto985DFB1D_var = PlayerGroupNextPlayer(auto985DFB1D_g, auto985DFB1D_var);
+            if (auto985DFB1D_var < 0) { break; }
+            if ((lv__random == lv__i)) {
+                libFC904078_gv_teamInfo2.lv_builder = auto985DFB1D_var;
+                PlayerGroupRemove(libFC904078_gv_teamInfo2.lv_fighterGroup, auto985DFB1D_var);
+                break;
+            }
+
+            lv__i += 1;
+        }
+    }
+    else if ((lv__builderNum == 1)) {
+        auto1BABB61C_g = lv__builderGroup;
+        auto1BABB61C_var = -1;
+        while (true) {
+            auto1BABB61C_var = PlayerGroupNextPlayer(auto1BABB61C_g, auto1BABB61C_var);
+            if (auto1BABB61C_var < 0) { break; }
+            libFC904078_gv_teamInfo2.lv_builder = auto1BABB61C_var;
+        }
+    }
+    else if ((lv__builderNum > 1)) {
+        lv__random = RandomInt(1, lv__builderNum);
+        auto48C4FEDD_g = lv__builderGroup;
+        auto48C4FEDD_var = -1;
+        while (true) {
+            auto48C4FEDD_var = PlayerGroupNextPlayer(auto48C4FEDD_g, auto48C4FEDD_var);
+            if (auto48C4FEDD_var < 0) { break; }
+            if ((lv__random == lv__i)) {
+                libFC904078_gv_teamInfo2.lv_builder = auto48C4FEDD_var;
+            }
+            else {
+                PlayerGroupAdd(libFC904078_gv_teamInfo2.lv_fighterGroup, auto48C4FEDD_var);
+            }
+            lv__i += 1;
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_roleSelection2_Init () {
+    libFC904078_gt_roleSelection2 = TriggerCreate("libFC904078_gt_roleSelection2_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: meleeSettings1
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_meleeSettings1_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto053FFF25_g;
+    int auto053FFF25_var;
+    playergroup auto41450B95_g;
+    int auto41450B95_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupSingle(libFC904078_gv_teamInfo1.lv_builder), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_8835EEFA"));
+    UIDisplayMessage(libFC904078_gv_teamInfo1.lv_fighterGroup, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_E7323FDB"));
+    libFC904078_gv_teamInfo1.lv_race = PlayerRace(libFC904078_gv_teamInfo1.lv_builder);
+    libFC904078_gv_teamInfo1.lv_playerColor = PlayerGetColorIndex(libFC904078_gv_teamInfo1.lv_builder, false);
+    libFC904078_gv_teamInfo1.lv_color = libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libFC904078_gv_teamInfo1.lv_builder, false));
+    MeleeInitResourcesForPlayer(libFC904078_gv_teamInfo1.lv_builder, libFC904078_gv_teamInfo1.lv_race);
+    MeleeInitUnitsForPlayer(libFC904078_gv_teamInfo1.lv_builder, libFC904078_gv_teamInfo1.lv_race, libFC904078_gv_teamInfo1.lv_startLocation);
+    auto053FFF25_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+    auto053FFF25_var = -1;
+    while (true) {
+        auto053FFF25_var = PlayerGroupNextPlayer(auto053FFF25_g, auto053FFF25_var);
+        if (auto053FFF25_var < 0) { break; }
+        PlayerSetRace(auto053FFF25_var, libFC904078_gv_teamInfo1.lv_race);
+        PlayerSetColorIndex(auto053FFF25_var, libFC904078_gv_teamInfo1.lv_playerColor, true);
+        CameraPan(auto053FFF25_var, libFC904078_gv_teamInfo1.lv_startLocation, 0.0, -1, 10.0, false);
+    }
+    PlayerSetColorIndex(13, libFC904078_gv_teamInfo1.lv_playerColor, true);
+    MeleeSetOption(libFC904078_gv_teamInfo1.lv_builder, c_meleeOptionVictory, true);
+    MeleeSetOption(libFC904078_gv_teamInfo1.lv_builder, c_meleeOptionDefeat, true);
+    MeleeSetOption(libFC904078_gv_teamInfo1.lv_builder, c_meleeOptionReveal, true);
+    auto41450B95_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+    auto41450B95_var = -1;
+    while (true) {
+        auto41450B95_var = PlayerGroupNextPlayer(auto41450B95_g, auto41450B95_var);
+        if (auto41450B95_var < 0) { break; }
+        MeleeSetOption(auto41450B95_var, c_meleeOptionVictory, true);
+        MeleeSetOption(auto41450B95_var, c_meleeOptionDefeat, true);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_meleeSettings1_Init () {
+    libFC904078_gt_meleeSettings1 = TriggerCreate("libFC904078_gt_meleeSettings1_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: meleeSettings2
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_meleeSettings2_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto04DF8584_g;
+    int auto04DF8584_var;
+    playergroup auto45885D13_g;
+    int auto45885D13_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupSingle(libFC904078_gv_teamInfo2.lv_builder), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_8BC99833"));
+    UIDisplayMessage(libFC904078_gv_teamInfo2.lv_fighterGroup, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_D264061B"));
+    libFC904078_gv_teamInfo2.lv_race = PlayerRace(libFC904078_gv_teamInfo2.lv_builder);
+    libFC904078_gv_teamInfo2.lv_playerColor = PlayerGetColorIndex(libFC904078_gv_teamInfo2.lv_builder, false);
+    libFC904078_gv_teamInfo2.lv_color = libNtve_gf_ConvertPlayerColorToColor(PlayerGetColorIndex(libFC904078_gv_teamInfo2.lv_builder, false));
+    MeleeInitResourcesForPlayer(libFC904078_gv_teamInfo2.lv_builder, libFC904078_gv_teamInfo2.lv_race);
+    MeleeInitUnitsForPlayer(libFC904078_gv_teamInfo2.lv_builder, libFC904078_gv_teamInfo2.lv_race, libFC904078_gv_teamInfo2.lv_startLocation);
+    auto04DF8584_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+    auto04DF8584_var = -1;
+    while (true) {
+        auto04DF8584_var = PlayerGroupNextPlayer(auto04DF8584_g, auto04DF8584_var);
+        if (auto04DF8584_var < 0) { break; }
+        PlayerSetRace(auto04DF8584_var, libFC904078_gv_teamInfo2.lv_race);
+        PlayerSetColorIndex(auto04DF8584_var, libFC904078_gv_teamInfo2.lv_playerColor, true);
+        CameraPan(auto04DF8584_var, libFC904078_gv_teamInfo2.lv_startLocation, 0.0, -1, 10.0, false);
+    }
+    PlayerSetColorIndex(14, libFC904078_gv_teamInfo2.lv_playerColor, true);
+    MeleeSetOption(libFC904078_gv_teamInfo2.lv_builder, c_meleeOptionVictory, true);
+    MeleeSetOption(libFC904078_gv_teamInfo2.lv_builder, c_meleeOptionDefeat, true);
+    MeleeSetOption(libFC904078_gv_teamInfo2.lv_builder, c_meleeOptionReveal, true);
+    auto45885D13_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+    auto45885D13_var = -1;
+    while (true) {
+        auto45885D13_var = PlayerGroupNextPlayer(auto45885D13_g, auto45885D13_var);
+        if (auto45885D13_var < 0) { break; }
+        MeleeSetOption(auto45885D13_var, c_meleeOptionVictory, true);
+        MeleeSetOption(auto45885D13_var, c_meleeOptionDefeat, true);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_meleeSettings2_Init () {
+    libFC904078_gt_meleeSettings2 = TriggerCreate("libFC904078_gt_meleeSettings2_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: singleMode
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_singleMode_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((((PlayerGroupCount(libFC904078_gv_playerGroup1) != 0) && (PlayerGroupCount(libFC904078_gv_playerGroup2) == 0)) || ((PlayerGroupCount(libFC904078_gv_playerGroup2) != 0) && (PlayerGroupCount(libFC904078_gv_playerGroup1) == 0))))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libFC904078_gv_ggFlag = true;
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_singleMode_Init () {
+    libFC904078_gt_singleMode = TriggerCreate("libFC904078_gt_singleMode_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: ghostAcademyGroup
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_ghostAcademyGroup_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv__pickedGhostAcademy;
+
+    // Automatic Variable Declarations
+    unitgroup autoA7BF227D_g;
+    int autoA7BF227D_u;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    autoA7BF227D_g = libFC904078_gv_ghostAcademy;
+    autoA7BF227D_u = UnitGroupCount(autoA7BF227D_g, c_unitCountAll);
+    for (;; autoA7BF227D_u -= 1) {
+        lv__pickedGhostAcademy = UnitGroupUnitFromEnd(autoA7BF227D_g, autoA7BF227D_u);
+        if (lv__pickedGhostAcademy == null) { break; }
+        if (((UnitGetOwner(lv__pickedGhostAcademy) == libFC904078_gv_teamInfo1.lv_builder) || (UnitGetOwner(lv__pickedGhostAcademy) == libFC904078_gv_teamInfo2.lv_builder))) {
+            UnitRemove(lv__pickedGhostAcademy);
+        }
+        else if (((PlayerGroupHasPlayer(libFC904078_gv_teamInfo1.lv_fighterGroup, UnitGetOwner(lv__pickedGhostAcademy)) == true) || (UnitGetOwner(lv__pickedGhostAcademy) == 13))) {
+            UnitGroupAdd(libFC904078_gv_ghostAcademy1, lv__pickedGhostAcademy);
+        }
+        else if (((PlayerGroupHasPlayer(libFC904078_gv_teamInfo2.lv_fighterGroup, UnitGetOwner(lv__pickedGhostAcademy)) == true) || (UnitGetOwner(lv__pickedGhostAcademy) == 14))) {
+            UnitGroupAdd(libFC904078_gv_ghostAcademy2, lv__pickedGhostAcademy);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_ghostAcademyGroup_Init () {
+    libFC904078_gt_ghostAcademyGroup = TriggerCreate("libFC904078_gt_ghostAcademyGroup_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: resource
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_resource_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UISetResourceTradeCountdownTime(0);
+    UISetResourceTradingAllowed(c_resourceTypeMinerals, false);
+    UISetResourceTradingAllowed(c_resourceTypeVespene, false);
+    UISetResourceVisible(libFC904078_gv_teamInfo1.lv_fighterGroup, c_resourceTypeMinerals, false);
+    UISetResourceVisible(libFC904078_gv_teamInfo1.lv_fighterGroup, c_resourceTypeVespene, false);
+    UISetResourceVisible(libFC904078_gv_teamInfo2.lv_fighterGroup, c_resourceTypeMinerals, false);
+    UISetResourceVisible(libFC904078_gv_teamInfo2.lv_fighterGroup, c_resourceTypeVespene, false);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_resource_Init () {
+    libFC904078_gt_resource = TriggerCreate("libFC904078_gt_resource_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: supplySettings
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_supplySettings_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoA568A2CE_g;
+    int autoA568A2CE_var;
+    playergroup auto60CD7F7F_g;
+    int auto60CD7F7F_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libFC904078_gv_teamInfo1.lv_supplyMade = PlayerGetPropertyFixed(libFC904078_gv_teamInfo1.lv_builder, c_playerPropSuppliesMade);
+    libFC904078_gv_teamInfo1.lv_supplyUsed = PlayerGetPropertyFixed(libFC904078_gv_teamInfo1.lv_builder, c_playerPropSuppliesUsed);
+    autoA568A2CE_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+    autoA568A2CE_var = -1;
+    while (true) {
+        autoA568A2CE_var = PlayerGroupNextPlayer(autoA568A2CE_g, autoA568A2CE_var);
+        if (autoA568A2CE_var < 0) { break; }
+        PlayerModifyPropertyFixed(autoA568A2CE_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+        PlayerModifyPropertyFixed(autoA568A2CE_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+    }
+    libFC904078_gv_teamInfo2.lv_supplyMade = PlayerGetPropertyFixed(libFC904078_gv_teamInfo2.lv_builder, c_playerPropSuppliesMade);
+    libFC904078_gv_teamInfo2.lv_supplyUsed = PlayerGetPropertyFixed(libFC904078_gv_teamInfo2.lv_builder, c_playerPropSuppliesUsed);
+    auto60CD7F7F_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+    auto60CD7F7F_var = -1;
+    while (true) {
+        auto60CD7F7F_var = PlayerGroupNextPlayer(auto60CD7F7F_g, auto60CD7F7F_var);
+        if (auto60CD7F7F_var < 0) { break; }
+        PlayerModifyPropertyFixed(auto60CD7F7F_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+        PlayerModifyPropertyFixed(auto60CD7F7F_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_supplySettings_Init () {
+    libFC904078_gt_supplySettings = TriggerCreate("libFC904078_gt_supplySettings_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: allianceSettings
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_allianceSettings_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoC21AD5DF_g;
+    int autoC21AD5DF_var;
+    playergroup auto81C46883_g;
+    int auto81C46883_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SetPlayerGroupAlliance(libFC904078_gv_playerGroup1, libNtve_ge_AllianceSetting_AllyWithSharedVision);
+    libNtve_gf_SetAllianceAspectForPlayerGroup(libFC904078_gv_playerGroup1, c_allianceIdPower, true);
+    autoC21AD5DF_g = libFC904078_gv_playerGroup1;
+    autoC21AD5DF_var = -1;
+    while (true) {
+        autoC21AD5DF_var = PlayerGroupNextPlayer(autoC21AD5DF_g, autoC21AD5DF_var);
+        if (autoC21AD5DF_var < 0) { break; }
+        libNtve_gf_SetAlliance(autoC21AD5DF_var, 13, libNtve_ge_AllianceSetting_AllyWithSharedVisionAndControl);
+        libNtve_gf_SetAlliance(autoC21AD5DF_var, 14, libNtve_ge_AllianceSetting_Enemy);
+        PlayerSetAlliance(13, c_allianceIdPower, autoC21AD5DF_var, true);
+    }
+    libNtve_gf_SetPlayerGroupAlliance(libFC904078_gv_playerGroup2, libNtve_ge_AllianceSetting_AllyWithSharedVision);
+    libNtve_gf_SetAllianceAspectForPlayerGroup(libFC904078_gv_playerGroup2, c_allianceIdPower, true);
+    auto81C46883_g = libFC904078_gv_playerGroup2;
+    auto81C46883_var = -1;
+    while (true) {
+        auto81C46883_var = PlayerGroupNextPlayer(auto81C46883_g, auto81C46883_var);
+        if (auto81C46883_var < 0) { break; }
+        libNtve_gf_SetAlliance(auto81C46883_var, 14, libNtve_ge_AllianceSetting_AllyWithSharedVisionAndControl);
+        libNtve_gf_SetAlliance(auto81C46883_var, 13, libNtve_ge_AllianceSetting_Enemy);
+        PlayerSetAlliance(14, c_allianceIdPower, auto81C46883_var, true);
+    }
+    libNtve_gf_SetAlliance(13, 14, libNtve_ge_AllianceSetting_Enemy);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_allianceSettings_Init () {
+    libFC904078_gt_allianceSettings = TriggerCreate("libFC904078_gt_allianceSettings_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: raceHelp
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_raceHelp_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    Wait(1.0, c_timeReal);
+    if ((libFC904078_gv_teamInfo1.lv_race == "Terr") && (libFC904078_gv_teamInfo2.lv_race == "Terr")) {
+        libFC904078_gf_TvT(libFC904078_gv_playerGroup1);
+        libFC904078_gf_TvT(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Terr") && (libFC904078_gv_teamInfo2.lv_race == "Zerg")) {
+        libFC904078_gf_TvZ(libFC904078_gv_playerGroup1);
+        libFC904078_gf_ZvT(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Terr") && (libFC904078_gv_teamInfo2.lv_race == "Prot")) {
+        libFC904078_gf_TvP(libFC904078_gv_playerGroup1);
+        libFC904078_gf_PvT(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Zerg") && (libFC904078_gv_teamInfo2.lv_race == "Terr")) {
+        libFC904078_gf_ZvT(libFC904078_gv_playerGroup1);
+        libFC904078_gf_TvZ(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Zerg") && (libFC904078_gv_teamInfo2.lv_race == "Zerg")) {
+        libFC904078_gf_ZvZ(libFC904078_gv_playerGroup1);
+        libFC904078_gf_ZvZ(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Zerg") && (libFC904078_gv_teamInfo2.lv_race == "Prot")) {
+        libFC904078_gf_ZvP(libFC904078_gv_playerGroup1);
+        libFC904078_gf_PvZ(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Prot") && (libFC904078_gv_teamInfo2.lv_race == "Terr")) {
+        libFC904078_gf_PvT(libFC904078_gv_playerGroup1);
+        libFC904078_gf_TvP(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Prot") && (libFC904078_gv_teamInfo2.lv_race == "Zerg")) {
+        libFC904078_gf_PvZ(libFC904078_gv_playerGroup1);
+        libFC904078_gf_ZvP(libFC904078_gv_playerGroup2);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Prot") && (libFC904078_gv_teamInfo2.lv_race == "Prot")) {
+        libFC904078_gf_PvP(libFC904078_gv_playerGroup1);
+        libFC904078_gf_PvP(libFC904078_gv_playerGroup2);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_raceHelp_Init () {
+    libFC904078_gt_raceHelp = TriggerCreate("libFC904078_gt_raceHelp_Func");
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: supplyLimit
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_supplyLimit_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto8E5B8AC9_g;
+    int auto8E5B8AC9_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    auto8E5B8AC9_g = PlayerGroupAll();
+    auto8E5B8AC9_var = -1;
+    while (true) {
+        auto8E5B8AC9_var = PlayerGroupNextPlayer(auto8E5B8AC9_g, auto8E5B8AC9_var);
+        if (auto8E5B8AC9_var < 0) { break; }
+        PlayerModifyPropertyInt(auto8E5B8AC9_var, c_playerPropSuppliesLimit, c_playerPropOperSetTo, 400);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_supplyLimit_Init () {
+    libFC904078_gt_supplyLimit = TriggerCreate("libFC904078_gt_supplyLimit_Func");
+    TriggerAddEventMapInit(libFC904078_gt_supplyLimit);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: tipCommands
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_tipCommands_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    HelpPanelAddTip(PlayerGroupAll(), libNtve_gf_FormatTipTitle(StringExternal("Param/Value/lib_FC904078_145AC551"), libNtve_ge_TipType_NormalTip), StringExternal("Param/Value/lib_FC904078_4D1DF8E5"), StringToText(""), "Assets\\Textures\\ui_tip_questionmark.dds");
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_tipCommands_Init () {
+    libFC904078_gt_tipCommands = TriggerCreate("libFC904078_gt_tipCommands_Func");
+    TriggerAddEventTimeElapsed(libFC904078_gt_tipCommands, 1.0, c_timeReal);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: tipGG
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_tipGG_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_8663EA44"));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_tipGG_Init () {
+    libFC904078_gt_tipGG = TriggerCreate("libFC904078_gt_tipGG_Func");
+    TriggerAddEventTimeElapsed(libFC904078_gt_tipGG, 120.0, c_timeReal);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: tipSensorTower
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_tipSensorTower_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "EngineeringBay"))) {
+            return false;
+        }
+
+        if (!((((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder) && (libFC904078_gv_tipSensorTowerFlag1 == false)) || ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo2.lv_builder) && (libFC904078_gv_tipSensorTowerFlag2 == false))))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder) && (libFC904078_gv_tipSensorTowerFlag1 == false)) {
+        libFC904078_gv_tipSensorTowerFlag1 = true;
+        UIDisplayMessage(libFC904078_gv_playerGroup1, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_24A3435E"));
+    }
+    else {
+        libFC904078_gv_tipSensorTowerFlag2 = true;
+        UIDisplayMessage(libFC904078_gv_playerGroup2, c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_EF08F478"));
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_tipSensorTower_Init () {
+    libFC904078_gt_tipSensorTower = TriggerCreate("libFC904078_gt_tipSensorTower_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_tipSensorTower, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: tipSupplyLimit
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_tipSupplyLimit_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_D8469CBB"));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_tipSupplyLimit_Init () {
+    libFC904078_gt_tipSupplyLimit = TriggerCreate("libFC904078_gt_tipSupplyLimit_Func");
+    TriggerAddEventTimeElapsed(libFC904078_gt_tipSupplyLimit, 420.0, c_timeReal);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: tipThank
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_tipThank_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((libFC904078_gv_ggFlag == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_48F8F66B"));
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_tipThank_Init () {
+    libFC904078_gt_tipThank = TriggerCreate("libFC904078_gt_tipThank_Func");
+    TriggerAddEventTimeElapsed(libFC904078_gt_tipThank, 48.0, c_timeReal);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: builderGG
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_builderGG_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto2E712F3E_g;
+    int auto2E712F3E_var;
+    playergroup autoC777B2CE_g;
+    int autoC777B2CE_var;
+    playergroup autoD2CD3F45_g;
+    int autoD2CD3F45_var;
+    playergroup auto5CD6FFAE_g;
+    int auto5CD6FFAE_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libFC904078_gv_ggFlag == false))) {
+            return false;
+        }
+
+        if (!(((EventPlayer() == libFC904078_gv_teamInfo1.lv_builder) || (EventPlayer() == libFC904078_gv_teamInfo2.lv_builder)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libFC904078_gv_ggFlag = true;
+    if ((EventPlayer() == libFC904078_gv_teamInfo1.lv_builder)) {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_BF139DFC"));
+        Wait(2.0, c_timeGame);
+        autoD2CD3F45_g = libFC904078_gv_playerGroup1;
+        autoD2CD3F45_var = -1;
+        while (true) {
+            autoD2CD3F45_var = PlayerGroupNextPlayer(autoD2CD3F45_g, autoD2CD3F45_var);
+            if (autoD2CD3F45_var < 0) { break; }
+            GameOver(autoD2CD3F45_var, c_gameOverDefeat, true, true);
+        }
+        auto5CD6FFAE_g = libFC904078_gv_playerGroup2;
+        auto5CD6FFAE_var = -1;
+        while (true) {
+            auto5CD6FFAE_var = PlayerGroupNextPlayer(auto5CD6FFAE_g, auto5CD6FFAE_var);
+            if (auto5CD6FFAE_var < 0) { break; }
+            GameOver(auto5CD6FFAE_var, c_gameOverVictory, true, true);
+        }
+    }
+    else {
+        UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_49A171B0"));
+        Wait(2.0, c_timeGame);
+        auto2E712F3E_g = libFC904078_gv_playerGroup2;
+        auto2E712F3E_var = -1;
+        while (true) {
+            auto2E712F3E_var = PlayerGroupNextPlayer(auto2E712F3E_g, auto2E712F3E_var);
+            if (auto2E712F3E_var < 0) { break; }
+            GameOver(auto2E712F3E_var, c_gameOverDefeat, true, true);
+        }
+        autoC777B2CE_g = libFC904078_gv_playerGroup1;
+        autoC777B2CE_var = -1;
+        while (true) {
+            autoC777B2CE_var = PlayerGroupNextPlayer(autoC777B2CE_g, autoC777B2CE_var);
+            if (autoC777B2CE_var < 0) { break; }
+            GameOver(autoC777B2CE_var, c_gameOverVictory, true, true);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_builderGG_Init () {
+    libFC904078_gt_builderGG = TriggerCreate("libFC904078_gt_builderGG_Func");
+    TriggerAddEventPlayerLeft(libFC904078_gt_builderGG, c_playerAny, c_gameResultUndecided);
+    TriggerAddEventChatMessage(libFC904078_gt_builderGG, c_playerAny, ("-gg"), true);
+    TriggerAddEventChatMessage(libFC904078_gt_builderGG, c_playerAny, ("-GG"), true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: fighterQuit
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_fighterQuit_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto9891A663_g;
+    int auto9891A663_var;
+    playergroup auto487BE079_g;
+    int auto487BE079_var;
+    playergroup autoBE0E2205_g;
+    int autoBE0E2205_var;
+    playergroup auto6AD8DF4B_g;
+    int auto6AD8DF4B_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libFC904078_gv_ggFlag == false))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != libFC904078_gv_teamInfo1.lv_builder))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != libFC904078_gv_teamInfo2.lv_builder))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((PlayerGroupHasPlayer(libFC904078_gv_playerGroup1, EventPlayer()) == true)) {
+        PlayerGroupRemove(libFC904078_gv_playerGroup1, EventPlayer());
+        PlayerGroupRemove(libFC904078_gv_teamInfo1.lv_fighterGroup, EventPlayer());
+        libFC904078_gv_teamInfo1.lv_playerNum -= 1;
+        if ((libFC904078_gv_teamInfo1.lv_playerNum == 1)) {
+            libFC904078_gv_ggFlag = true;
+            UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_15344E2A"));
+            Wait(2.0, c_timeGame);
+            autoBE0E2205_g = libFC904078_gv_playerGroup1;
+            autoBE0E2205_var = -1;
+            while (true) {
+                autoBE0E2205_var = PlayerGroupNextPlayer(autoBE0E2205_g, autoBE0E2205_var);
+                if (autoBE0E2205_var < 0) { break; }
+                GameOver(autoBE0E2205_var, c_gameOverDefeat, true, true);
+            }
+            auto6AD8DF4B_g = libFC904078_gv_playerGroup2;
+            auto6AD8DF4B_var = -1;
+            while (true) {
+                auto6AD8DF4B_var = PlayerGroupNextPlayer(auto6AD8DF4B_g, auto6AD8DF4B_var);
+                if (auto6AD8DF4B_var < 0) { break; }
+                GameOver(auto6AD8DF4B_var, c_gameOverVictory, true, true);
+            }
+        }
+
+    }
+    else {
+        PlayerGroupRemove(libFC904078_gv_playerGroup2, EventPlayer());
+        PlayerGroupRemove(libFC904078_gv_teamInfo2.lv_fighterGroup, EventPlayer());
+        libFC904078_gv_teamInfo2.lv_playerNum -= 1;
+        if ((libFC904078_gv_teamInfo2.lv_playerNum == 1)) {
+            libFC904078_gv_ggFlag = true;
+            UIDisplayMessage(PlayerGroupAll(), c_messageAreaSubtitle, StringExternal("Param/Value/lib_FC904078_3DB5EEC6"));
+            Wait(2.0, c_timeGame);
+            auto9891A663_g = libFC904078_gv_playerGroup2;
+            auto9891A663_var = -1;
+            while (true) {
+                auto9891A663_var = PlayerGroupNextPlayer(auto9891A663_g, auto9891A663_var);
+                if (auto9891A663_var < 0) { break; }
+                GameOver(auto9891A663_var, c_gameOverDefeat, true, true);
+            }
+            auto487BE079_g = libFC904078_gv_playerGroup1;
+            auto487BE079_var = -1;
+            while (true) {
+                auto487BE079_var = PlayerGroupNextPlayer(auto487BE079_g, auto487BE079_var);
+                if (auto487BE079_var < 0) { break; }
+                GameOver(auto487BE079_var, c_gameOverVictory, true, true);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_fighterQuit_Init () {
+    libFC904078_gt_fighterQuit = TriggerCreate("libFC904078_gt_fighterQuit_Func");
+    TriggerAddEventPlayerLeft(libFC904078_gt_fighterQuit, c_playerAny, c_gameResultUndecided);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: builderInfoDisplay
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_builderInfoDisplay_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogCreate(200, 100, c_anchorTopLeft, 10, 10, true);
+    DialogSetImageVisible(DialogLastCreated(), false);
+    DialogSetVisible(DialogLastCreated(), PlayerGroupAll(), true);
+    if ((libFC904078_gv_teamInfo1.lv_race == "Terr")) {
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 40, 40, c_anchorTopLeft, 0, 0, StringToText(""), "Assets\\Textures\\sc2_ui_loadingscreen_extended_raceindicator_terran.dds", c_triggerImageTypeNormal, true, libFC904078_gv_teamInfo1.lv_color, c_triggerBlendModeNormal);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Zerg")) {
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 40, 40, c_anchorTopLeft, 0, 0, StringToText(""), "Assets\\Textures\\sc2_ui_loadingscreen_extended_raceindicator_zerg.dds", c_triggerImageTypeNormal, true, libFC904078_gv_teamInfo1.lv_color, c_triggerBlendModeNormal);
+    }
+    else if ((libFC904078_gv_teamInfo1.lv_race == "Prot")) {
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 40, 40, c_anchorTopLeft, 0, 0, StringToText(""), "Assets\\Textures\\sc2_ui_loadingscreen_extended_raceindicator_protoss.dds", c_triggerImageTypeNormal, true, libFC904078_gv_teamInfo1.lv_color, c_triggerBlendModeNormal);
+    }
+    libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 200, 50, c_anchorTopLeft, 50, 13, PlayerName(libFC904078_gv_teamInfo1.lv_builder), libFC904078_gv_teamInfo1.lv_color, false, 2.0);
+    if ((libFC904078_gv_teamInfo2.lv_race == "Terr")) {
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 40, 40, c_anchorTopLeft, 0, 50, StringToText(""), "Assets\\Textures\\sc2_ui_loadingscreen_extended_raceindicator_terran.dds", c_triggerImageTypeNormal, true, libFC904078_gv_teamInfo2.lv_color, c_triggerBlendModeNormal);
+    }
+    else if ((libFC904078_gv_teamInfo2.lv_race == "Zerg")) {
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 40, 40, c_anchorTopLeft, 0, 50, StringToText(""), "Assets\\Textures\\sc2_ui_loadingscreen_extended_raceindicator_zerg.dds", c_triggerImageTypeNormal, true, libFC904078_gv_teamInfo2.lv_color, c_triggerBlendModeNormal);
+    }
+    else if ((libFC904078_gv_teamInfo2.lv_race == "Prot")) {
+        libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 40, 40, c_anchorTopLeft, 0, 50, StringToText(""), "Assets\\Textures\\sc2_ui_loadingscreen_extended_raceindicator_protoss.dds", c_triggerImageTypeNormal, true, libFC904078_gv_teamInfo2.lv_color, c_triggerBlendModeNormal);
+    }
+    libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 200, 50, c_anchorTopLeft, 50, 63, PlayerName(libFC904078_gv_teamInfo2.lv_builder), libFC904078_gv_teamInfo2.lv_color, false, 2.0);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_builderInfoDisplay_Init () {
+    libFC904078_gt_builderInfoDisplay = TriggerCreate("libFC904078_gt_builderInfoDisplay_Func");
+    TriggerAddEventMapInit(libFC904078_gt_builderInfoDisplay);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: resourceDisplay1
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_resourceDisplay1_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogCreate(300, 100, c_anchorTopRight, 220, 0, true);
+    DialogSetImageVisible(DialogLastCreated(), false);
+    DialogSetVisible(DialogLastCreated(), libFC904078_gv_teamInfo1.lv_fighterGroup, true);
+    libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 30, 30, c_anchorTopLeft, 0, 15, StringToText(""), "Assets\\Textures\\ui_emoticons_minerals.dds", c_triggerImageTypeNormal, true, Color(100,100,100), c_triggerBlendModeNormal);
+    libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 200, 50, c_anchorTopLeft, 35, 23, StringExternal("Param/Value/lib_FC904078_BE0D404B"), ColorWithAlpha(0,0,0,0), false, 0.0);
+    libFC904078_gv_mineral1 = DialogControlLastCreated();
+    libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 30, 30, c_anchorTopLeft, 150, 15, StringToText(""), "Assets\\Textures\\ui_emoticons_gas.dds", c_triggerImageTypeNormal, true, Color(100,100,100), c_triggerBlendModeNormal);
+    libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 200, 50, c_anchorTopLeft, 185, 23, StringExternal("Param/Value/lib_FC904078_627DE3F7"), ColorWithAlpha(0,0,0,0), false, 0.0);
+    libFC904078_gv_vespene1 = DialogControlLastCreated();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_resourceDisplay1_Init () {
+    libFC904078_gt_resourceDisplay1 = TriggerCreate("libFC904078_gt_resourceDisplay1_Func");
+    TriggerAddEventMapInit(libFC904078_gt_resourceDisplay1);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: resourceDisplay2
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_resourceDisplay2_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    DialogCreate(300, 125, c_anchorTopRight, 220, 0, true);
+    DialogSetImageVisible(DialogLastCreated(), false);
+    DialogSetVisible(DialogLastCreated(), libFC904078_gv_teamInfo2.lv_fighterGroup, true);
+    libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 30, 30, c_anchorTopLeft, 25, 15, StringToText(""), "Assets\\Textures\\ui_emoticons_minerals.dds", c_triggerImageTypeNormal, true, Color(100,100,100), c_triggerBlendModeNormal);
+    libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 200, 50, c_anchorTopLeft, 60, 23, StringExternal("Param/Value/lib_FC904078_32113F1A"), ColorWithAlpha(0,0,0,0), false, 0.0);
+    libFC904078_gv_mineral2 = DialogControlLastCreated();
+    libNtve_gf_CreateDialogItemImage(DialogLastCreated(), 30, 30, c_anchorTopLeft, 150, 15, StringToText(""), "Assets\\Textures\\ui_emoticons_gas.dds", c_triggerImageTypeNormal, true, Color(100,100,100), c_triggerBlendModeNormal);
+    libNtve_gf_CreateDialogItemLabel(DialogLastCreated(), 200, 50, c_anchorTopLeft, 185, 23, StringExternal("Param/Value/lib_FC904078_447145AE"), ColorWithAlpha(0,0,0,0), false, 0.0);
+    libFC904078_gv_vespene2 = DialogControlLastCreated();
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_resourceDisplay2_Init () {
+    libFC904078_gt_resourceDisplay2 = TriggerCreate("libFC904078_gt_resourceDisplay2_Func");
+    TriggerAddEventMapInit(libFC904078_gt_resourceDisplay2);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: resourceUpdate1
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_resourceUpdate1_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SetDialogItemText(libFC904078_gv_mineral1, IntToText(PlayerGetPropertyInt(libFC904078_gv_teamInfo1.lv_builder, c_playerPropMinerals)), libFC904078_gv_teamInfo1.lv_fighterGroup);
+    libNtve_gf_SetDialogItemText(libFC904078_gv_vespene1, IntToText(PlayerGetPropertyInt(libFC904078_gv_teamInfo1.lv_builder, c_playerPropVespene)), libFC904078_gv_teamInfo1.lv_fighterGroup);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_resourceUpdate1_Init () {
+    libFC904078_gt_resourceUpdate1 = TriggerCreate("libFC904078_gt_resourceUpdate1_Func");
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 1, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 1, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 2, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 2, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 3, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 3, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 4, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 4, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 5, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 5, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 6, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate1, 6, c_playerPropVespene);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: resourceUpdate2
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_resourceUpdate2_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    libNtve_gf_SetDialogItemText(libFC904078_gv_mineral2, IntToText(PlayerGetPropertyInt(libFC904078_gv_teamInfo2.lv_builder, c_playerPropMinerals)), libFC904078_gv_teamInfo2.lv_fighterGroup);
+    libNtve_gf_SetDialogItemText(libFC904078_gv_vespene2, IntToText(PlayerGetPropertyInt(libFC904078_gv_teamInfo2.lv_builder, c_playerPropVespene)), libFC904078_gv_teamInfo2.lv_fighterGroup);
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_resourceUpdate2_Init () {
+    libFC904078_gt_resourceUpdate2 = TriggerCreate("libFC904078_gt_resourceUpdate2_Func");
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 7, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 7, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 8, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 8, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 9, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 9, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 10, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 10, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 11, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 11, c_playerPropVespene);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 12, c_playerPropMinerals);
+    TriggerAddEventPlayerPropChange(libFC904078_gt_resourceUpdate2, 12, c_playerPropVespene);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: addBySupplyDrop
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_addBySupplyDrop_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoFE347DD3_g;
+    int autoFE347DD3_var;
+    playergroup autoCA4FD7D8_g;
+    int autoCA4FD7D8_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyMade = PlayerGetPropertyFixed(libFC904078_gv_teamInfo1.lv_builder, c_playerPropSuppliesMade);
+        autoCA4FD7D8_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        autoCA4FD7D8_var = -1;
+        while (true) {
+            autoCA4FD7D8_var = PlayerGroupNextPlayer(autoCA4FD7D8_g, autoCA4FD7D8_var);
+            if (autoCA4FD7D8_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoCA4FD7D8_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyMade = PlayerGetPropertyFixed(libFC904078_gv_teamInfo2.lv_builder, c_playerPropSuppliesMade);
+        autoFE347DD3_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        autoFE347DD3_var = -1;
+        while (true) {
+            autoFE347DD3_var = PlayerGroupNextPlayer(autoFE347DD3_g, autoFE347DD3_var);
+            if (autoFE347DD3_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoFE347DD3_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_addBySupplyDrop_Init () {
+    libFC904078_gt_addBySupplyDrop = TriggerCreate("libFC904078_gt_addBySupplyDrop_Func");
+    TriggerAddEventUnitBehaviorChange(libFC904078_gt_addBySupplyDrop, null, "SupplyDrop", c_unitBehaviorChangeIncrease);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: addByConstructComplete
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_addByConstructComplete_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto735B862C_g;
+    int auto735B862C_var;
+    playergroup auto150BCE27_g;
+    int auto150BCE27_var;
+
+    // Conditions
+    if (testConds) {
+        if (!(((libNtve_gf_TriggeringProgressUnitType() == "SupplyDepot") || (libNtve_gf_TriggeringProgressUnitType() == "CommandCenter") || (libNtve_gf_TriggeringProgressUnitType() == "Hatchery") || (libNtve_gf_TriggeringProgressUnitType() == "Pylon") || (libNtve_gf_TriggeringProgressUnitType() == "Nexus")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyMade = PlayerGetPropertyFixed(libFC904078_gv_teamInfo1.lv_builder, c_playerPropSuppliesMade);
+        auto150BCE27_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        auto150BCE27_var = -1;
+        while (true) {
+            auto150BCE27_var = PlayerGroupNextPlayer(auto150BCE27_g, auto150BCE27_var);
+            if (auto150BCE27_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto150BCE27_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyMade = PlayerGetPropertyFixed(libFC904078_gv_teamInfo2.lv_builder, c_playerPropSuppliesMade);
+        auto735B862C_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        auto735B862C_var = -1;
+        while (true) {
+            auto735B862C_var = PlayerGroupNextPlayer(auto735B862C_g, auto735B862C_var);
+            if (auto735B862C_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto735B862C_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_addByConstructComplete_Init () {
+    libFC904078_gt_addByConstructComplete = TriggerCreate("libFC904078_gt_addByConstructComplete_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_addByConstructComplete, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: addByTrainComplete
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_addByTrainComplete_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto1861AB83_g;
+    int auto1861AB83_var;
+    playergroup autoC0D4929E_g;
+    int autoC0D4929E_var;
+
+    // Conditions
+    if (testConds) {
+        if (!(((libNtve_gf_TriggeringProgressUnitType() == "Overlord") || (libNtve_gf_TriggeringProgressUnitType() == "Overseer") || (libNtve_gf_TriggeringProgressUnitType() == "OverlordTransport")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyMade = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesMade);
+        autoC0D4929E_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        autoC0D4929E_var = -1;
+        while (true) {
+            autoC0D4929E_var = PlayerGroupNextPlayer(autoC0D4929E_g, autoC0D4929E_var);
+            if (autoC0D4929E_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoC0D4929E_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyMade = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesMade);
+        auto1861AB83_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        auto1861AB83_var = -1;
+        while (true) {
+            auto1861AB83_var = PlayerGroupNextPlayer(auto1861AB83_g, auto1861AB83_var);
+            if (auto1861AB83_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto1861AB83_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_addByTrainComplete_Init () {
+    libFC904078_gt_addByTrainComplete = TriggerCreate("libFC904078_gt_addByTrainComplete_Func");
+    TriggerAddEventUnitTrainProgress(libFC904078_gt_addByTrainComplete, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: addByWarpStart
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_addByWarpStart_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoFDE639A7_g;
+    int autoFDE639A7_var;
+    playergroup auto0051851B_g;
+    int auto0051851B_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitTypeTestAttribute(libNtve_gf_TriggeringProgressUnitType(), c_unitAttributeStructure) == false))) {
+            return false;
+        }
+
+        if (!((PlayerRace(EventPlayer()) == "Prot"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        auto0051851B_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        auto0051851B_var = -1;
+        while (true) {
+            auto0051851B_var = PlayerGroupNextPlayer(auto0051851B_g, auto0051851B_var);
+            if (auto0051851B_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto0051851B_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        autoFDE639A7_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        autoFDE639A7_var = -1;
+        while (true) {
+            autoFDE639A7_var = PlayerGroupNextPlayer(autoFDE639A7_g, autoFDE639A7_var);
+            if (autoFDE639A7_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoFDE639A7_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_addByWarpStart_Init () {
+    libFC904078_gt_addByWarpStart = TriggerCreate("libFC904078_gt_addByWarpStart_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_addByWarpStart, null, c_unitProgressStageStart);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: decByConstructStarted
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_decByConstructStarted_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoC0E0C7F9_g;
+    int autoC0E0C7F9_var;
+    playergroup auto8B9121DD_g;
+    int auto8B9121DD_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((PlayerRace(EventPlayer()) == "Zerg"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        auto8B9121DD_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        auto8B9121DD_var = -1;
+        while (true) {
+            auto8B9121DD_var = PlayerGroupNextPlayer(auto8B9121DD_g, auto8B9121DD_var);
+            if (auto8B9121DD_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto8B9121DD_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        autoC0E0C7F9_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        autoC0E0C7F9_var = -1;
+        while (true) {
+            autoC0E0C7F9_var = PlayerGroupNextPlayer(autoC0E0C7F9_g, autoC0E0C7F9_var);
+            if (autoC0E0C7F9_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoC0E0C7F9_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_decByConstructStarted_Init () {
+    libFC904078_gt_decByConstructStarted = TriggerCreate("libFC904078_gt_decByConstructStarted_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_decByConstructStarted, null, c_unitProgressStageStart);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: addByTrainStart
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_addByTrainStart_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto59E1B98D_g;
+    int auto59E1B98D_var;
+    playergroup autoCB93D5D7_g;
+    int autoCB93D5D7_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Overlord"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Overseer"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyUsed += UnitTypeGetProperty(libNtve_gf_TriggeringProgressUnitType(), c_unitPropSuppliesUsed);
+        autoCB93D5D7_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        autoCB93D5D7_var = -1;
+        while (true) {
+            autoCB93D5D7_var = PlayerGroupNextPlayer(autoCB93D5D7_g, autoCB93D5D7_var);
+            if (autoCB93D5D7_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoCB93D5D7_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyUsed += UnitTypeGetProperty(libNtve_gf_TriggeringProgressUnitType(), c_unitPropSuppliesUsed);
+        auto59E1B98D_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        auto59E1B98D_var = -1;
+        while (true) {
+            auto59E1B98D_var = PlayerGroupNextPlayer(auto59E1B98D_g, auto59E1B98D_var);
+            if (auto59E1B98D_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto59E1B98D_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_addByTrainStart_Init () {
+    libFC904078_gt_addByTrainStart = TriggerCreate("libFC904078_gt_addByTrainStart_Func");
+    TriggerAddEventUnitTrainProgress(libFC904078_gt_addByTrainStart, null, c_unitProgressStageStart);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: decByTrainCancel
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_decByTrainCancel_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto6C2D0097_g;
+    int auto6C2D0097_var;
+    playergroup auto700104DB_g;
+    int auto700104DB_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Overlord"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Overseer"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        auto700104DB_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        auto700104DB_var = -1;
+        while (true) {
+            auto700104DB_var = PlayerGroupNextPlayer(auto700104DB_g, auto700104DB_var);
+            if (auto700104DB_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto700104DB_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        auto6C2D0097_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        auto6C2D0097_var = -1;
+        while (true) {
+            auto6C2D0097_var = PlayerGroupNextPlayer(auto6C2D0097_g, auto6C2D0097_var);
+            if (auto6C2D0097_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto6C2D0097_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_decByTrainCancel_Init () {
+    libFC904078_gt_decByTrainCancel = TriggerCreate("libFC904078_gt_decByTrainCancel_Func");
+    TriggerAddEventUnitTrainProgress(libFC904078_gt_decByTrainCancel, null, c_unitProgressStageCancel);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: unchangeByChangeOwner
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_unchangeByChangeOwner_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoB51C628A_g;
+    int autoB51C628A_var;
+    playergroup auto3C30A9B7_g;
+    int auto3C30A9B7_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((PlayerGroupHasPlayer(libFC904078_gv_playerGroupAll1, EventUnitOwnerNew()) == true)) {
+        auto3C30A9B7_g = libFC904078_gv_playerGroup1;
+        auto3C30A9B7_var = -1;
+        while (true) {
+            auto3C30A9B7_var = PlayerGroupNextPlayer(auto3C30A9B7_g, auto3C30A9B7_var);
+            if (auto3C30A9B7_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto3C30A9B7_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+            PlayerModifyPropertyFixed(auto3C30A9B7_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        autoB51C628A_g = libFC904078_gv_playerGroup2;
+        autoB51C628A_var = -1;
+        while (true) {
+            autoB51C628A_var = PlayerGroupNextPlayer(autoB51C628A_g, autoB51C628A_var);
+            if (autoB51C628A_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoB51C628A_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+            PlayerModifyPropertyFixed(autoB51C628A_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_unchangeByChangeOwner_Init () {
+    libFC904078_gt_unchangeByChangeOwner = TriggerCreate("libFC904078_gt_unchangeByChangeOwner_Func");
+    TriggerAddEventUnitChangeOwner(libFC904078_gt_unchangeByChangeOwner, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: decByFighterDie
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_decByFighterDie_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto6B074F95_g;
+    int auto6B074F95_var;
+    playergroup auto21412137_g;
+    int auto21412137_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) != libFC904078_gv_teamInfo1.lv_builder))) {
+            return false;
+        }
+
+        if (!((UnitGetOwner(EventUnit()) != libFC904078_gv_teamInfo2.lv_builder))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((PlayerGroupHasPlayer(libFC904078_gv_teamInfo1.lv_fighterGroup, UnitGetOwner(EventUnit())) == true) || (UnitGetOwner(EventUnit()) == 13))) {
+        libFC904078_gv_teamInfo1.lv_supplyMade -= UnitTypeGetProperty(UnitGetType(EventUnit()), c_unitPropSuppliesMade);
+        libFC904078_gv_teamInfo1.lv_supplyUsed -= UnitTypeGetProperty(UnitGetType(EventUnit()), c_unitPropSuppliesUsed);
+        auto21412137_g = libFC904078_gv_playerGroup1;
+        auto21412137_var = -1;
+        while (true) {
+            auto21412137_var = PlayerGroupNextPlayer(auto21412137_g, auto21412137_var);
+            if (auto21412137_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto21412137_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+            PlayerModifyPropertyFixed(auto21412137_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyMade -= UnitTypeGetProperty(UnitGetType(EventUnit()), c_unitPropSuppliesMade);
+        libFC904078_gv_teamInfo2.lv_supplyUsed -= UnitTypeGetProperty(UnitGetType(EventUnit()), c_unitPropSuppliesUsed);
+        auto6B074F95_g = libFC904078_gv_playerGroup2;
+        auto6B074F95_var = -1;
+        while (true) {
+            auto6B074F95_var = PlayerGroupNextPlayer(auto6B074F95_g, auto6B074F95_var);
+            if (auto6B074F95_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto6B074F95_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+            PlayerModifyPropertyFixed(auto6B074F95_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_decByFighterDie_Init () {
+    libFC904078_gt_decByFighterDie = TriggerCreate("libFC904078_gt_decByFighterDie_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_decByFighterDie, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: decByBuilderDie
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_decByBuilderDie_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoDC08502E_g;
+    int autoDC08502E_var;
+    playergroup auto62483871_g;
+    int auto62483871_var;
+
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder) || (UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo2.lv_builder)))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "Larva"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_teamInfo1.lv_supplyMade = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesMade);
+        libFC904078_gv_teamInfo1.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        auto62483871_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        auto62483871_var = -1;
+        while (true) {
+            auto62483871_var = PlayerGroupNextPlayer(auto62483871_g, auto62483871_var);
+            if (auto62483871_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto62483871_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+            PlayerModifyPropertyFixed(auto62483871_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        libFC904078_gv_teamInfo2.lv_supplyMade = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesMade);
+        libFC904078_gv_teamInfo2.lv_supplyUsed = PlayerGetPropertyFixed(EventPlayer(), c_playerPropSuppliesUsed);
+        autoDC08502E_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        autoDC08502E_var = -1;
+        while (true) {
+            autoDC08502E_var = PlayerGroupNextPlayer(autoDC08502E_g, autoDC08502E_var);
+            if (autoDC08502E_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoDC08502E_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+            PlayerModifyPropertyFixed(autoDC08502E_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_decByBuilderDie_Init () {
+    libFC904078_gt_decByBuilderDie = TriggerCreate("libFC904078_gt_decByBuilderDie_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_decByBuilderDie, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: structureShare
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_structureShare_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!(((libNtve_gf_TriggeringProgressUnitType() == "SensorTower") || (libNtve_gf_TriggeringProgressUnitType() == "CreepTumorQueen")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        UnitSetOwner(EventUnitProgressUnit(), 13, false);
+    }
+    else {
+        UnitSetOwner(EventUnitProgressUnit(), 14, false);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_structureShare_Init () {
+    libFC904078_gt_structureShare = TriggerCreate("libFC904078_gt_structureShare_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_structureShare, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: upgrade
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_upgrade_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto569FBF86_g;
+    int auto569FBF86_var;
+    playergroup autoB68EDC14_g;
+    int autoB68EDC14_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        autoB68EDC14_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+        autoB68EDC14_var = -1;
+        while (true) {
+            autoB68EDC14_var = PlayerGroupNextPlayer(autoB68EDC14_g, autoB68EDC14_var);
+            if (autoB68EDC14_var < 0) { break; }
+            TechTreeUpgradeAddLevel(autoB68EDC14_var, libNtve_gf_TriggeringProgressUpgrade(), 1);
+        }
+        TechTreeUpgradeAddLevel(13, libNtve_gf_TriggeringProgressUpgrade(), 1);
+    }
+    else {
+        auto569FBF86_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+        auto569FBF86_var = -1;
+        while (true) {
+            auto569FBF86_var = PlayerGroupNextPlayer(auto569FBF86_g, auto569FBF86_var);
+            if (auto569FBF86_var < 0) { break; }
+            TechTreeUpgradeAddLevel(auto569FBF86_var, libNtve_gf_TriggeringProgressUpgrade(), 1);
+        }
+        TechTreeUpgradeAddLevel(14, libNtve_gf_TriggeringProgressUpgrade(), 1);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_upgrade_Init () {
+    libFC904078_gt_upgrade = TriggerCreate("libFC904078_gt_upgrade_Func");
+    TriggerAddEventUnitResearchProgress(libFC904078_gt_upgrade, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: armoryAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_armoryAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoC157CF6A_g;
+    int autoC157CF6A_var;
+    playergroup auto176A0233_g;
+    int auto176A0233_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "Armory"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_armory += 1;
+        if ((libFC904078_gv_sharedUnit1.lv_armory == 1)) {
+            auto176A0233_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto176A0233_var = -1;
+            while (true) {
+                auto176A0233_var = PlayerGroupNextPlayer(auto176A0233_g, auto176A0233_var);
+                if (auto176A0233_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto176A0233_var, "HaveArmory", false);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_armory += 1;
+        if ((libFC904078_gv_sharedUnit2.lv_armory == 1)) {
+            autoC157CF6A_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            autoC157CF6A_var = -1;
+            while (true) {
+                autoC157CF6A_var = PlayerGroupNextPlayer(autoC157CF6A_g, autoC157CF6A_var);
+                if (autoC157CF6A_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(autoC157CF6A_var, "HaveArmory", false);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_armoryAdd_Init () {
+    libFC904078_gt_armoryAdd = TriggerCreate("libFC904078_gt_armoryAdd_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_armoryAdd, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: armoryDec
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_armoryDec_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoBC89D672_g;
+    int autoBC89D672_var;
+    playergroup auto69DC16AC_g;
+    int auto69DC16AC_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "Armory"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_armory -= 1;
+        if ((libFC904078_gv_sharedUnit1.lv_armory == 0)) {
+            auto69DC16AC_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto69DC16AC_var = -1;
+            while (true) {
+                auto69DC16AC_var = PlayerGroupNextPlayer(auto69DC16AC_g, auto69DC16AC_var);
+                if (auto69DC16AC_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto69DC16AC_var, "HaveArmory", true);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_armory -= 1;
+        if ((libFC904078_gv_sharedUnit2.lv_armory == 0)) {
+            autoBC89D672_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            autoBC89D672_var = -1;
+            while (true) {
+                autoBC89D672_var = PlayerGroupNextPlayer(autoBC89D672_g, autoBC89D672_var);
+                if (autoBC89D672_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(autoBC89D672_var, "HaveArmory", true);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_armoryDec_Init () {
+    libFC904078_gt_armoryDec = TriggerCreate("libFC904078_gt_armoryDec_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_armoryDec, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: banelingNestAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_banelingNestAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto0D78BD3B_g;
+    int auto0D78BD3B_var;
+    playergroup autoE83F13E8_g;
+    int autoE83F13E8_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "BanelingNest"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_banelingNest += 1;
+        if ((libFC904078_gv_sharedUnit1.lv_banelingNest == 1)) {
+            autoE83F13E8_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            autoE83F13E8_var = -1;
+            while (true) {
+                autoE83F13E8_var = PlayerGroupNextPlayer(autoE83F13E8_g, autoE83F13E8_var);
+                if (autoE83F13E8_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(autoE83F13E8_var, "HaveBanelingNest", false);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_banelingNest += 1;
+        if ((libFC904078_gv_sharedUnit2.lv_banelingNest == 1)) {
+            auto0D78BD3B_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto0D78BD3B_var = -1;
+            while (true) {
+                auto0D78BD3B_var = PlayerGroupNextPlayer(auto0D78BD3B_g, auto0D78BD3B_var);
+                if (auto0D78BD3B_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto0D78BD3B_var, "HaveBanelingNest", false);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_banelingNestAdd_Init () {
+    libFC904078_gt_banelingNestAdd = TriggerCreate("libFC904078_gt_banelingNestAdd_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_banelingNestAdd, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: banelingNestDec
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_banelingNestDec_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto882F55E4_g;
+    int auto882F55E4_var;
+    playergroup autoA876F76B_g;
+    int autoA876F76B_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "BanelingNest"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_banelingNest -= 1;
+        if ((libFC904078_gv_sharedUnit1.lv_banelingNest == 0)) {
+            autoA876F76B_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            autoA876F76B_var = -1;
+            while (true) {
+                autoA876F76B_var = PlayerGroupNextPlayer(autoA876F76B_g, autoA876F76B_var);
+                if (autoA876F76B_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(autoA876F76B_var, "HaveBanelingNest", true);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_banelingNest -= 1;
+        if ((libFC904078_gv_sharedUnit2.lv_banelingNest == 0)) {
+            auto882F55E4_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto882F55E4_var = -1;
+            while (true) {
+                auto882F55E4_var = PlayerGroupNextPlayer(auto882F55E4_g, auto882F55E4_var);
+                if (auto882F55E4_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto882F55E4_var, "HaveBanelingNest", true);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_banelingNestDec_Init () {
+    libFC904078_gt_banelingNestDec = TriggerCreate("libFC904078_gt_banelingNestDec_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_banelingNestDec, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: roachWarrenAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_roachWarrenAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto7D16ECDF_g;
+    int auto7D16ECDF_var;
+    playergroup auto6E7E3844_g;
+    int auto6E7E3844_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "RoachWarren"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_roachWarren += 1;
+        if ((libFC904078_gv_sharedUnit1.lv_roachWarren == 1)) {
+            auto6E7E3844_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto6E7E3844_var = -1;
+            while (true) {
+                auto6E7E3844_var = PlayerGroupNextPlayer(auto6E7E3844_g, auto6E7E3844_var);
+                if (auto6E7E3844_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto6E7E3844_var, "HaveBanelingNest2", false);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_roachWarren += 1;
+        if ((libFC904078_gv_sharedUnit2.lv_roachWarren == 1)) {
+            auto7D16ECDF_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto7D16ECDF_var = -1;
+            while (true) {
+                auto7D16ECDF_var = PlayerGroupNextPlayer(auto7D16ECDF_g, auto7D16ECDF_var);
+                if (auto7D16ECDF_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto7D16ECDF_var, "HaveBanelingNest2", false);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_roachWarrenAdd_Init () {
+    libFC904078_gt_roachWarrenAdd = TriggerCreate("libFC904078_gt_roachWarrenAdd_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_roachWarrenAdd, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: roachWarrenDec
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_roachWarrenDec_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto3EF547FE_g;
+    int auto3EF547FE_var;
+    playergroup autoA89EAA86_g;
+    int autoA89EAA86_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "RoachWarren"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_roachWarren -= 1;
+        if ((libFC904078_gv_sharedUnit1.lv_roachWarren == 0)) {
+            autoA89EAA86_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            autoA89EAA86_var = -1;
+            while (true) {
+                autoA89EAA86_var = PlayerGroupNextPlayer(autoA89EAA86_g, autoA89EAA86_var);
+                if (autoA89EAA86_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(autoA89EAA86_var, "HaveBanelingNest2", true);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_roachWarren -= 1;
+        if ((libFC904078_gv_sharedUnit2.lv_roachWarren == 0)) {
+            auto3EF547FE_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto3EF547FE_var = -1;
+            while (true) {
+                auto3EF547FE_var = PlayerGroupNextPlayer(auto3EF547FE_g, auto3EF547FE_var);
+                if (auto3EF547FE_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto3EF547FE_var, "HaveBanelingNest2", true);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_roachWarrenDec_Init () {
+    libFC904078_gt_roachWarrenDec = TriggerCreate("libFC904078_gt_roachWarrenDec_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_roachWarrenDec, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: lairAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_lairAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoB8C88819_g;
+    int autoB8C88819_var;
+    playergroup auto394EEB8E_g;
+    int auto394EEB8E_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_lair += 1;
+        if ((libFC904078_gv_sharedUnit1.lv_lair == 1)) {
+            auto394EEB8E_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto394EEB8E_var = -1;
+            while (true) {
+                auto394EEB8E_var = PlayerGroupNextPlayer(auto394EEB8E_g, auto394EEB8E_var);
+                if (auto394EEB8E_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto394EEB8E_var, "HaveLair", false);
+                TechTreeSpecificRequirementEnable(auto394EEB8E_var, "UseOverseerMorph", false);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_lair += 1;
+        if ((libFC904078_gv_sharedUnit2.lv_lair == 1)) {
+            autoB8C88819_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            autoB8C88819_var = -1;
+            while (true) {
+                autoB8C88819_var = PlayerGroupNextPlayer(autoB8C88819_g, autoB8C88819_var);
+                if (autoB8C88819_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(autoB8C88819_var, "HaveLair", false);
+                TechTreeSpecificRequirementEnable(autoB8C88819_var, "UseOverseerMorph", false);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_lairAdd_Init () {
+    libFC904078_gt_lairAdd = TriggerCreate("libFC904078_gt_lairAdd_Func");
+    TriggerAddEventUnitAbility(libFC904078_gt_lairAdd, null, AbilityCommand("UpgradeToLair", 0), c_unitAbilStageComplete, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: lairDec
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_lairDec_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto667EB49A_g;
+    int auto667EB49A_var;
+    playergroup auto48C3DA98_g;
+    int auto48C3DA98_var;
+
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetType(EventUnit()) == "Lair") || (UnitGetType(EventUnit()) == "Hive")))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_lair -= 1;
+        if ((libFC904078_gv_sharedUnit1.lv_lair == 0)) {
+            auto48C3DA98_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto48C3DA98_var = -1;
+            while (true) {
+                auto48C3DA98_var = PlayerGroupNextPlayer(auto48C3DA98_g, auto48C3DA98_var);
+                if (auto48C3DA98_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto48C3DA98_var, "HaveLair", true);
+                TechTreeSpecificRequirementEnable(auto48C3DA98_var, "UseOverseerMorph", true);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_lair -= 1;
+        if ((libFC904078_gv_sharedUnit2.lv_lair == 0)) {
+            auto667EB49A_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto667EB49A_var = -1;
+            while (true) {
+                auto667EB49A_var = PlayerGroupNextPlayer(auto667EB49A_g, auto667EB49A_var);
+                if (auto667EB49A_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto667EB49A_var, "HaveLair", true);
+                TechTreeSpecificRequirementEnable(auto667EB49A_var, "UseOverseerMorph", true);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_lairDec_Init () {
+    libFC904078_gt_lairDec = TriggerCreate("libFC904078_gt_lairDec_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_lairDec, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: lurkerDenAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_lurkerDenAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup autoBF649034_g;
+    int autoBF649034_var;
+    playergroup auto483F1C13_g;
+    int auto483F1C13_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "LurkerDenMP"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_lurkerDen += 1;
+        if ((libFC904078_gv_sharedUnit1.lv_lurkerDen == 1)) {
+            auto483F1C13_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto483F1C13_var = -1;
+            while (true) {
+                auto483F1C13_var = PlayerGroupNextPlayer(auto483F1C13_g, auto483F1C13_var);
+                if (auto483F1C13_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto483F1C13_var, "HaveLurkerDen", false);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_lurkerDen += 1;
+        if ((libFC904078_gv_sharedUnit2.lv_lurkerDen == 1)) {
+            autoBF649034_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            autoBF649034_var = -1;
+            while (true) {
+                autoBF649034_var = PlayerGroupNextPlayer(autoBF649034_g, autoBF649034_var);
+                if (autoBF649034_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(autoBF649034_var, "HaveLurkerDen", false);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_lurkerDenAdd_Init () {
+    libFC904078_gt_lurkerDenAdd = TriggerCreate("libFC904078_gt_lurkerDenAdd_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_lurkerDenAdd, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: lurkerDenDec
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_lurkerDenDec_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto9175759F_g;
+    int auto9175759F_var;
+    playergroup auto38B9B029_g;
+    int auto38B9B029_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "LurkerDenMP"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_lurkerDen -= 1;
+        if ((libFC904078_gv_sharedUnit1.lv_lurkerDen == 0)) {
+            auto38B9B029_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto38B9B029_var = -1;
+            while (true) {
+                auto38B9B029_var = PlayerGroupNextPlayer(auto38B9B029_g, auto38B9B029_var);
+                if (auto38B9B029_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto38B9B029_var, "HaveLurkerDen", true);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_lurkerDen -= 1;
+        if ((libFC904078_gv_sharedUnit2.lv_lurkerDen == 0)) {
+            auto9175759F_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto9175759F_var = -1;
+            while (true) {
+                auto9175759F_var = PlayerGroupNextPlayer(auto9175759F_g, auto9175759F_var);
+                if (auto9175759F_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto9175759F_var, "HaveLurkerDen", true);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_lurkerDenDec_Init () {
+    libFC904078_gt_lurkerDenDec = TriggerCreate("libFC904078_gt_lurkerDenDec_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_lurkerDenDec, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: greaterSpireAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_greaterSpireAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto6D4323F3_g;
+    int auto6D4323F3_var;
+    playergroup auto02C49574_g;
+    int auto02C49574_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_greaterSpire += 1;
+        if ((libFC904078_gv_sharedUnit1.lv_greaterSpire == 1)) {
+            auto02C49574_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto02C49574_var = -1;
+            while (true) {
+                auto02C49574_var = PlayerGroupNextPlayer(auto02C49574_g, auto02C49574_var);
+                if (auto02C49574_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto02C49574_var, "HaveGreaterSpire", false);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_greaterSpire += 1;
+        if ((libFC904078_gv_sharedUnit2.lv_greaterSpire == 1)) {
+            auto6D4323F3_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto6D4323F3_var = -1;
+            while (true) {
+                auto6D4323F3_var = PlayerGroupNextPlayer(auto6D4323F3_g, auto6D4323F3_var);
+                if (auto6D4323F3_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto6D4323F3_var, "HaveGreaterSpire", false);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_greaterSpireAdd_Init () {
+    libFC904078_gt_greaterSpireAdd = TriggerCreate("libFC904078_gt_greaterSpireAdd_Func");
+    TriggerAddEventUnitAbility(libFC904078_gt_greaterSpireAdd, null, AbilityCommand("UpgradeToGreaterSpire", 0), c_unitAbilStageComplete, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: greaterSpireDec
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_greaterSpireDec_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    playergroup auto23A748ED_g;
+    int auto23A748ED_var;
+    playergroup auto1466A660_g;
+    int auto1466A660_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "GreaterSpire"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_greaterSpire -= 1;
+        if ((libFC904078_gv_sharedUnit1.lv_greaterSpire == 0)) {
+            auto1466A660_g = libFC904078_gv_teamInfo1.lv_fighterGroup;
+            auto1466A660_var = -1;
+            while (true) {
+                auto1466A660_var = PlayerGroupNextPlayer(auto1466A660_g, auto1466A660_var);
+                if (auto1466A660_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto1466A660_var, "HaveGreaterSpire", true);
+            }
+        }
+
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_greaterSpire -= 1;
+        if ((libFC904078_gv_sharedUnit2.lv_greaterSpire == 0)) {
+            auto23A748ED_g = libFC904078_gv_teamInfo2.lv_fighterGroup;
+            auto23A748ED_var = -1;
+            while (true) {
+                auto23A748ED_var = PlayerGroupNextPlayer(auto23A748ED_g, auto23A748ED_var);
+                if (auto23A748ED_var < 0) { break; }
+                TechTreeSpecificRequirementEnable(auto23A748ED_var, "HaveGreaterSpire", true);
+            }
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_greaterSpireDec_Init () {
+    libFC904078_gt_greaterSpireDec = TriggerCreate("libFC904078_gt_greaterSpireDec_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_greaterSpireDec, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: nukeAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_nukeAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto0775BA36_g;
+    int auto0775BA36_u;
+    unit auto0775BA36_var;
+    unitgroup autoB6CB2443_g;
+    int autoB6CB2443_u;
+    unit autoB6CB2443_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "Nuke"))) {
+            return false;
+        }
+
+        if (!(((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder) || (UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo2.lv_builder)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        autoB6CB2443_g = libFC904078_gv_ghostAcademy1;
+        autoB6CB2443_u = UnitGroupCount(autoB6CB2443_g, c_unitCountAll);
+        for (;; autoB6CB2443_u -= 1) {
+            autoB6CB2443_var = UnitGroupUnitFromEnd(autoB6CB2443_g, autoB6CB2443_u);
+            if (autoB6CB2443_var == null) { break; }
+            UnitMagazineArm(autoB6CB2443_var, AbilityCommand("ArmSiloWithNuke", 0), 1);
+        }
+    }
+    else {
+        auto0775BA36_g = libFC904078_gv_ghostAcademy2;
+        auto0775BA36_u = UnitGroupCount(auto0775BA36_g, c_unitCountAll);
+        for (;; auto0775BA36_u -= 1) {
+            auto0775BA36_var = UnitGroupUnitFromEnd(auto0775BA36_g, auto0775BA36_u);
+            if (auto0775BA36_var == null) { break; }
+            UnitMagazineArm(auto0775BA36_var, AbilityCommand("ArmSiloWithNuke", 0), 1);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_nukeAdd_Init () {
+    libFC904078_gt_nukeAdd = TriggerCreate("libFC904078_gt_nukeAdd_Func");
+    TriggerAddEventUnitArmMagazineProgress(libFC904078_gt_nukeAdd, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: nukeUse
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_nukeUse_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    int lv_ownerOfUnit;
+    int lv_pickedPlayer;
+
+    // Automatic Variable Declarations
+    playergroup auto13DD44B6_g;
+    playergroup auto1C6F70FE_g;
+
+    // Variable Initialization
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    lv_ownerOfUnit = UnitGetOwner(EventUnit());
+    if (((PlayerGroupHasPlayer(libFC904078_gv_playerGroup1, lv_ownerOfUnit) == true) || (lv_ownerOfUnit == 13))) {
+        auto1C6F70FE_g = libFC904078_gv_playerGroup1;
+        lv_pickedPlayer = -1;
+        while (true) {
+            lv_pickedPlayer = PlayerGroupNextPlayer(auto1C6F70FE_g, lv_pickedPlayer);
+            if (lv_pickedPlayer < 0) { break; }
+            if ((lv_pickedPlayer != lv_ownerOfUnit)) {
+                PlayerCreateEffectPoint(lv_pickedPlayer, "Nuke", Point(0.0, 0.0));
+            }
+
+        }
+        if ((lv_ownerOfUnit != 13)) {
+            PlayerCreateEffectPoint(13, "Nuke", Point(0.0, 0.0));
+        }
+
+    }
+    else {
+        auto13DD44B6_g = PlayerGroupAll();
+        lv_pickedPlayer = -1;
+        while (true) {
+            lv_pickedPlayer = PlayerGroupNextPlayer(auto13DD44B6_g, lv_pickedPlayer);
+            if (lv_pickedPlayer < 0) { break; }
+            if ((lv_pickedPlayer != lv_ownerOfUnit)) {
+                PlayerCreateEffectPoint(lv_pickedPlayer, "Nuke", Point(0.0, 0.0));
+            }
+
+        }
+        if ((lv_ownerOfUnit != 14)) {
+            PlayerCreateEffectPoint(14, "Nuke", Point(0.0, 0.0));
+        }
+
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_nukeUse_Init () {
+    libFC904078_gt_nukeUse = TriggerCreate("libFC904078_gt_nukeUse_Func");
+    TriggerAddEventUnitAbility(libFC904078_gt_nukeUse, null, AbilityCommand("TacNukeStrike", 0), c_abilEffectStageCast, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: mothershipAdd
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_mothershipAdd_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto1EA80036_g;
+    int auto1EA80036_u;
+    unit auto1EA80036_var;
+    unitgroup auto07D24CF6_g;
+    int auto07D24CF6_u;
+    unit auto07D24CF6_var;
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        libFC904078_gv_sharedUnit1.lv_motherShip = true;
+        auto07D24CF6_g = UnitGroup("Nexus", libFC904078_gv_teamInfo1.lv_builder, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral) | (1 << c_targetFilterEnemy) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto07D24CF6_u = UnitGroupCount(auto07D24CF6_g, c_unitCountAll);
+        for (;; auto07D24CF6_u -= 1) {
+            auto07D24CF6_var = UnitGroupUnitFromEnd(auto07D24CF6_g, auto07D24CF6_u);
+            if (auto07D24CF6_var == null) { break; }
+            UnitAbilityEnable(auto07D24CF6_var, "NexusTrainMothership", false);
+        }
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_motherShip = true;
+        auto1EA80036_g = UnitGroup("Nexus", libFC904078_gv_teamInfo2.lv_builder, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral) | (1 << c_targetFilterEnemy) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto1EA80036_u = UnitGroupCount(auto1EA80036_g, c_unitCountAll);
+        for (;; auto1EA80036_u -= 1) {
+            auto1EA80036_var = UnitGroupUnitFromEnd(auto1EA80036_g, auto1EA80036_u);
+            if (auto1EA80036_var == null) { break; }
+            UnitAbilityEnable(auto1EA80036_var, "NexusTrainMothership", false);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_mothershipAdd_Init () {
+    libFC904078_gt_mothershipAdd = TriggerCreate("libFC904078_gt_mothershipAdd_Func");
+    TriggerAddEventUnitAbility(libFC904078_gt_mothershipAdd, null, AbilityCommand("NexusTrainMothership", 0), c_unitAbilStageComplete, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: mothershipDec
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_mothershipDec_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    unitgroup auto3AD87B9A_g;
+    int auto3AD87B9A_u;
+    unit auto3AD87B9A_var;
+    unitgroup autoF752DE00_g;
+    int autoF752DE00_u;
+    unit autoF752DE00_var;
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetType(EventUnit()) == "Mothership"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((PlayerGroupHasPlayer(libFC904078_gv_playerGroupAll1, UnitGetOwner(EventUnit())) == true)) {
+        libFC904078_gv_sharedUnit1.lv_motherShip = false;
+        autoF752DE00_g = UnitGroup("Nexus", libFC904078_gv_teamInfo1.lv_builder, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral) | (1 << c_targetFilterEnemy) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        autoF752DE00_u = UnitGroupCount(autoF752DE00_g, c_unitCountAll);
+        for (;; autoF752DE00_u -= 1) {
+            autoF752DE00_var = UnitGroupUnitFromEnd(autoF752DE00_g, autoF752DE00_u);
+            if (autoF752DE00_var == null) { break; }
+            UnitAbilityEnable(autoF752DE00_var, "NexusTrainMothership", true);
+        }
+    }
+    else {
+        libFC904078_gv_sharedUnit2.lv_motherShip = false;
+        auto3AD87B9A_g = UnitGroup("Nexus", libFC904078_gv_teamInfo2.lv_builder, RegionEntireMap(), UnitFilter(0, 0, (1 << c_targetFilterAlly) | (1 << c_targetFilterNeutral) | (1 << c_targetFilterEnemy) | (1 << c_targetFilterMissile), (1 << (c_targetFilterDead - 32)) | (1 << (c_targetFilterHidden - 32))), 0);
+        auto3AD87B9A_u = UnitGroupCount(auto3AD87B9A_g, c_unitCountAll);
+        for (;; auto3AD87B9A_u -= 1) {
+            auto3AD87B9A_var = UnitGroupUnitFromEnd(auto3AD87B9A_g, auto3AD87B9A_u);
+            if (auto3AD87B9A_var == null) { break; }
+            UnitAbilityEnable(auto3AD87B9A_var, "NexusTrainMothership", true);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_mothershipDec_Init () {
+    libFC904078_gt_mothershipDec = TriggerCreate("libFC904078_gt_mothershipDec_Func");
+    TriggerAddEventUnitDied(libFC904078_gt_mothershipDec, null);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: nexus
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_nexus_Func (bool testConds, bool runActions) {
+    // Automatic Variable Declarations
+    // Conditions
+    if (testConds) {
+        if (!((libNtve_gf_TriggeringProgressUnitType() == "Nexus"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder) && (libFC904078_gv_sharedUnit1.lv_motherShip == true)) {
+        UnitAbilityEnable(EventUnitProgressUnit(), "NexusTrainMothership", false);
+    }
+
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo2.lv_builder) && (libFC904078_gv_sharedUnit2.lv_motherShip == true)) {
+        UnitAbilityEnable(EventUnitProgressUnit(), "NexusTrainMothership", false);
+    }
+
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_nexus_Init () {
+    libFC904078_gt_nexus = TriggerCreate("libFC904078_gt_nexus_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_nexus, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: releaseByCommand
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_releaseByCommand_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    unit lv_unit;
+
+    // Automatic Variable Declarations
+    unitgroup auto772A1FA9_g;
+    int auto772A1FA9_u;
+    unitgroup auto27E5DB73_g;
+    int auto27E5DB73_u;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((EventPlayer() != libFC904078_gv_teamInfo1.lv_builder))) {
+            return false;
+        }
+
+        if (!((EventPlayer() != libFC904078_gv_teamInfo2.lv_builder))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if ((PlayerGroupHasPlayer(libFC904078_gv_teamInfo1.lv_fighterGroup, EventPlayer()) == true)) {
+        auto27E5DB73_g = UnitGroupSelected(EventPlayer());
+        auto27E5DB73_u = UnitGroupCount(auto27E5DB73_g, c_unitCountAll);
+        for (;; auto27E5DB73_u -= 1) {
+            lv_unit = UnitGroupUnitFromEnd(auto27E5DB73_g, auto27E5DB73_u);
+            if (lv_unit == null) { break; }
+            if ((UnitGetOwner(lv_unit) == EventPlayer())) {
+                UnitSetOwner(lv_unit, 13, true);
+                UnitSetTeamColorIndex(lv_unit, 0);
+            }
+
+        }
+    }
+    else {
+        auto772A1FA9_g = UnitGroupSelected(EventPlayer());
+        auto772A1FA9_u = UnitGroupCount(auto772A1FA9_g, c_unitCountAll);
+        for (;; auto772A1FA9_u -= 1) {
+            lv_unit = UnitGroupUnitFromEnd(auto772A1FA9_g, auto772A1FA9_u);
+            if (lv_unit == null) { break; }
+            if ((UnitGetOwner(lv_unit) == EventPlayer())) {
+                UnitSetOwner(lv_unit, 14, true);
+                UnitSetTeamColorIndex(lv_unit, 0);
+            }
+
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_releaseByCommand_Init () {
+    libFC904078_gt_releaseByCommand = TriggerCreate("libFC904078_gt_releaseByCommand_Func");
+    TriggerAddEventChatMessage(libFC904078_gt_releaseByCommand, c_playerAny, ("-r"), true);
+    TriggerAddEventChatMessage(libFC904078_gt_releaseByCommand, c_playerAny, ("-R"), true);
+    TriggerAddEventChatMessage(libFC904078_gt_releaseByCommand, c_playerAny, ("-release"), true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: releaseAfterOverseer
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_releaseAfterOverseer_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_rallyPoint;
+
+    // Automatic Variable Declarations
+    playergroup auto786CA741_g;
+    int auto786CA741_var;
+    playergroup auto06B85289_g;
+    int auto06B85289_var;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder) || (UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo2.lv_builder)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((UnitOrderHasAbil(EventUnit(), "move") == true) || (UnitOrderHasAbil(EventUnit(), "BattlecruiserMove") == true))) {
+        lv_rallyPoint = OrderGetTargetPosition(UnitOrder(EventUnit(), 0));
+        if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+        UnitIssueOrder(EventUnit(), OrderTargetingPoint(AbilityCommand("move", 0), lv_rallyPoint), c_orderQueueReplace);
+    }
+    else {
+        if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+    }
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        auto06B85289_g = libFC904078_gv_playerGroup1;
+        auto06B85289_var = -1;
+        while (true) {
+            auto06B85289_var = PlayerGroupNextPlayer(auto06B85289_g, auto06B85289_var);
+            if (auto06B85289_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto06B85289_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+        }
+    }
+    else {
+        auto786CA741_g = libFC904078_gv_playerGroup2;
+        auto786CA741_var = -1;
+        while (true) {
+            auto786CA741_var = PlayerGroupNextPlayer(auto786CA741_g, auto786CA741_var);
+            if (auto786CA741_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto786CA741_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_releaseAfterOverseer_Init () {
+    libFC904078_gt_releaseAfterOverseer = TriggerCreate("libFC904078_gt_releaseAfterOverseer_Func");
+    TriggerAddEventUnitAbility(libFC904078_gt_releaseAfterOverseer, null, AbilityCommand("MorphToOverseer", 0), c_unitAbilStageComplete, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: releaseAfterOverlord(Transport)
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_releaseAfterOverlordTransport_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_rallyPoint;
+
+    // Automatic Variable Declarations
+    playergroup autoF57AD153_g;
+    int autoF57AD153_var;
+    playergroup auto27B29032_g;
+    int auto27B29032_var;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder) || (UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo2.lv_builder)))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((UnitOrderHasAbil(EventUnit(), "move") == true) || (UnitOrderHasAbil(EventUnit(), "BattlecruiserMove") == true))) {
+        lv_rallyPoint = OrderGetTargetPosition(UnitOrder(EventUnit(), 0));
+        if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+        UnitIssueOrder(EventUnit(), OrderTargetingPoint(AbilityCommand("move", 0), lv_rallyPoint), c_orderQueueReplace);
+    }
+    else {
+        if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnit(), 0);
+        }
+    }
+    if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        auto27B29032_g = libFC904078_gv_playerGroup1;
+        auto27B29032_var = -1;
+        while (true) {
+            auto27B29032_var = PlayerGroupNextPlayer(auto27B29032_g, auto27B29032_var);
+            if (auto27B29032_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto27B29032_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyMade);
+        }
+    }
+    else {
+        autoF57AD153_g = libFC904078_gv_playerGroup2;
+        autoF57AD153_var = -1;
+        while (true) {
+            autoF57AD153_var = PlayerGroupNextPlayer(autoF57AD153_g, autoF57AD153_var);
+            if (autoF57AD153_var < 0) { break; }
+            PlayerModifyPropertyFixed(autoF57AD153_var, c_playerPropSuppliesMade, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyMade);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_releaseAfterOverlordTransport_Init () {
+    libFC904078_gt_releaseAfterOverlordTransport = TriggerCreate("libFC904078_gt_releaseAfterOverlordTransport_Func");
+    TriggerAddEventUnitAbility(libFC904078_gt_releaseAfterOverlordTransport, null, AbilityCommand("MorphToTransportOverlord", 0), c_unitAbilStageComplete, false);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: releaseAfterTrain
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_releaseAfterTrain_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_rallyPoint;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder) || (UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo2.lv_builder)))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "SCV"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Drone"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Probe"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Queen"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "Overlord"))) {
+            return false;
+        }
+
+        if (!((libNtve_gf_TriggeringProgressUnitType() != "MULE"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((UnitOrderHasAbil(EventUnitProgressUnit(), "move") == true) || (UnitOrderHasAbil(EventUnitProgressUnit(), "BattlecruiserMove") == true))) {
+        lv_rallyPoint = OrderGetTargetPosition(UnitOrder(EventUnitProgressUnit(), 0));
+        if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnitProgressUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnitProgressUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+        UnitIssueOrder(EventUnitProgressUnit(), OrderTargetingPoint(AbilityCommand("move", 0), lv_rallyPoint), c_orderQueueReplace);
+    }
+    else {
+        if ((UnitGetOwner(EventUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnitProgressUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnitProgressUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_releaseAfterTrain_Init () {
+    libFC904078_gt_releaseAfterTrain = TriggerCreate("libFC904078_gt_releaseAfterTrain_Func");
+    TriggerAddEventUnitTrainProgress(libFC904078_gt_releaseAfterTrain, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: releaseAfterWarp
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_releaseAfterWarp_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_rallyPoint;
+
+    // Automatic Variable Declarations
+    playergroup auto37E6AD24_g;
+    int auto37E6AD24_var;
+    playergroup auto28C2CD71_g;
+    int auto28C2CD71_var;
+
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!(((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder) || (UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo2.lv_builder)))) {
+            return false;
+        }
+
+        if (!((UnitTypeTestAttribute(libNtve_gf_TriggeringProgressUnitType(), c_unitAttributeStructure) == false))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((UnitOrderHasAbil(EventUnitProgressUnit(), "move") == true) || (UnitOrderHasAbil(EventUnitProgressUnit(), "BattlecruiserMove") == true))) {
+        lv_rallyPoint = OrderGetTargetPosition(UnitOrder(EventUnitProgressUnit(), 0));
+        if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnitProgressUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnitProgressUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+        UnitIssueOrder(EventUnitProgressUnit(), OrderTargetingPoint(AbilityCommand("move", 0), lv_rallyPoint), c_orderQueueReplace);
+    }
+    else {
+        if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+            UnitSetOwner(EventUnitProgressUnit(), 13, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+        else {
+            UnitSetOwner(EventUnitProgressUnit(), 14, true);
+            UnitSetTeamColorIndex(EventUnitProgressUnit(), 0);
+        }
+    }
+    if ((UnitGetOwner(EventUnitProgressUnit()) == libFC904078_gv_teamInfo1.lv_builder)) {
+        auto28C2CD71_g = libFC904078_gv_playerGroup1;
+        auto28C2CD71_var = -1;
+        while (true) {
+            auto28C2CD71_var = PlayerGroupNextPlayer(auto28C2CD71_g, auto28C2CD71_var);
+            if (auto28C2CD71_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto28C2CD71_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo1.lv_supplyUsed);
+        }
+    }
+    else {
+        auto37E6AD24_g = libFC904078_gv_playerGroup2;
+        auto37E6AD24_var = -1;
+        while (true) {
+            auto37E6AD24_var = PlayerGroupNextPlayer(auto37E6AD24_g, auto37E6AD24_var);
+            if (auto37E6AD24_var < 0) { break; }
+            PlayerModifyPropertyFixed(auto37E6AD24_var, c_playerPropSuppliesUsed, c_playerPropOperSetTo, libFC904078_gv_teamInfo2.lv_supplyUsed);
+        }
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_releaseAfterWarp_Init () {
+    libFC904078_gt_releaseAfterWarp = TriggerCreate("libFC904078_gt_releaseAfterWarp_Func");
+    TriggerAddEventUnitConstructProgress(libFC904078_gt_releaseAfterWarp, null, c_unitProgressStageComplete);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: select1
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_select1_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_rallyPoint;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) == 13))) {
+            return false;
+        }
+
+        if (!((PlayerGroupHasPlayer(libFC904078_gv_teamInfo1.lv_fighterGroup, EventPlayer()) == true))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "SensorTower"))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "CreepTumorQueen"))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "CreepTumorBurrowed"))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "CreepTumor"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((UnitOrderHasAbil(EventUnit(), "move") == true) || (UnitOrderHasAbil(EventUnit(), "BattlecruiserMove") == true))) {
+        lv_rallyPoint = OrderGetTargetPosition(UnitOrder(EventUnit(), 0));
+        UnitSetOwner(EventUnit(), EventPlayer(), true);
+        UnitIssueOrder(EventUnit(), OrderTargetingPoint(AbilityCommand("move", 0), lv_rallyPoint), c_orderQueueReplace);
+    }
+    else {
+        UnitSetOwner(EventUnit(), EventPlayer(), true);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_select1_Init () {
+    libFC904078_gt_select1 = TriggerCreate("libFC904078_gt_select1_Func");
+    TriggerAddEventUnitSelected(libFC904078_gt_select1, null, c_playerAny, true);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Trigger: select2
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_gt_select2_Func (bool testConds, bool runActions) {
+    // Variable Declarations
+    point lv_rallyPoint;
+
+    // Automatic Variable Declarations
+    // Variable Initialization
+
+    // Conditions
+    if (testConds) {
+        if (!((UnitGetOwner(EventUnit()) == 14))) {
+            return false;
+        }
+
+        if (!((PlayerGroupHasPlayer(libFC904078_gv_teamInfo2.lv_fighterGroup, EventPlayer()) == true))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "SensorTower"))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "CreepTumorQueen"))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "CreepTumorBurrowed"))) {
+            return false;
+        }
+
+        if (!((UnitGetType(EventUnit()) != "CreepTumor"))) {
+            return false;
+        }
+    }
+
+    // Actions
+    if (!runActions) {
+        return true;
+    }
+
+    if (((UnitOrderHasAbil(EventUnit(), "move") == true) || (UnitOrderHasAbil(EventUnit(), "BattlecruiserMove") == true))) {
+        lv_rallyPoint = OrderGetTargetPosition(UnitOrder(EventUnit(), 0));
+        UnitSetOwner(EventUnit(), EventPlayer(), true);
+        UnitIssueOrder(EventUnit(), OrderTargetingPoint(AbilityCommand("move", 0), lv_rallyPoint), c_orderQueueReplace);
+    }
+    else {
+        UnitSetOwner(EventUnit(), EventPlayer(), true);
+    }
+    return true;
+}
+
+//--------------------------------------------------------------------------------------------------
+void libFC904078_gt_select2_Init () {
+    libFC904078_gt_select2 = TriggerCreate("libFC904078_gt_select2_Func");
+    TriggerAddEventUnitSelected(libFC904078_gt_select2, null, c_playerAny, true);
+}
+
+void libFC904078_InitTriggers () {
+    libFC904078_gt_unlock_pv_releaseToChangeOwner_Init();
+    libFC904078_gt_initialization_Init();
+    libFC904078_gt_playerGroup_Init();
+    libFC904078_gt_startLocation_Init();
+    libFC904078_gt_roleSelection1_Init();
+    libFC904078_gt_roleSelection2_Init();
+    libFC904078_gt_meleeSettings1_Init();
+    libFC904078_gt_meleeSettings2_Init();
+    libFC904078_gt_singleMode_Init();
+    libFC904078_gt_ghostAcademyGroup_Init();
+    libFC904078_gt_resource_Init();
+    libFC904078_gt_supplySettings_Init();
+    libFC904078_gt_allianceSettings_Init();
+    libFC904078_gt_raceHelp_Init();
+    libFC904078_gt_supplyLimit_Init();
+    libFC904078_gt_tipCommands_Init();
+    libFC904078_gt_tipGG_Init();
+    libFC904078_gt_tipSensorTower_Init();
+    libFC904078_gt_tipSupplyLimit_Init();
+    libFC904078_gt_tipThank_Init();
+    libFC904078_gt_builderGG_Init();
+    libFC904078_gt_fighterQuit_Init();
+    libFC904078_gt_builderInfoDisplay_Init();
+    libFC904078_gt_resourceDisplay1_Init();
+    libFC904078_gt_resourceDisplay2_Init();
+    libFC904078_gt_resourceUpdate1_Init();
+    libFC904078_gt_resourceUpdate2_Init();
+    libFC904078_gt_addBySupplyDrop_Init();
+    libFC904078_gt_addByConstructComplete_Init();
+    libFC904078_gt_addByTrainComplete_Init();
+    libFC904078_gt_addByWarpStart_Init();
+    libFC904078_gt_decByConstructStarted_Init();
+    libFC904078_gt_addByTrainStart_Init();
+    libFC904078_gt_decByTrainCancel_Init();
+    libFC904078_gt_unchangeByChangeOwner_Init();
+    libFC904078_gt_decByFighterDie_Init();
+    libFC904078_gt_decByBuilderDie_Init();
+    libFC904078_gt_structureShare_Init();
+    libFC904078_gt_upgrade_Init();
+    libFC904078_gt_armoryAdd_Init();
+    libFC904078_gt_armoryDec_Init();
+    libFC904078_gt_banelingNestAdd_Init();
+    libFC904078_gt_banelingNestDec_Init();
+    libFC904078_gt_roachWarrenAdd_Init();
+    libFC904078_gt_roachWarrenDec_Init();
+    libFC904078_gt_lairAdd_Init();
+    libFC904078_gt_lairDec_Init();
+    libFC904078_gt_lurkerDenAdd_Init();
+    libFC904078_gt_lurkerDenDec_Init();
+    libFC904078_gt_greaterSpireAdd_Init();
+    libFC904078_gt_greaterSpireDec_Init();
+    libFC904078_gt_nukeAdd_Init();
+    libFC904078_gt_nukeUse_Init();
+    libFC904078_gt_mothershipAdd_Init();
+    libFC904078_gt_mothershipDec_Init();
+    libFC904078_gt_nexus_Init();
+    libFC904078_gt_releaseByCommand_Init();
+    libFC904078_gt_releaseAfterOverseer_Init();
+    libFC904078_gt_releaseAfterOverlordTransport_Init();
+    libFC904078_gt_releaseAfterTrain_Init();
+    libFC904078_gt_releaseAfterWarp_Init();
+    libFC904078_gt_select1_Init();
+    libFC904078_gt_select2_Init();
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libFC904078_InitLib_completed = false;
+
+void libFC904078_InitLib () {
+    if (libFC904078_InitLib_completed) {
+        return;
+    }
+
+    libFC904078_InitLib_completed = true;
+
+    libFC904078_InitLibraries();
+    libFC904078_InitVariables();
+    libFC904078_InitTriggers();
+}
+

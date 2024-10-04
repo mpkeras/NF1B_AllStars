@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Preload>
+<Asset path="assets\textures\ui_emoticons_gas.dds" Type="Image"/>
+<Asset path="assets\textures\sc2_ui_loadingscreen_extended_raceindicator_zerg.dds" Type="Image"/>
+<Asset path="assets\textures\ui_tip_questionmark.dds" Type="Image"/>
+<Asset path="assets\textures\sc2_ui_loadingscreen_extended_raceindicator_protoss.dds" Type="Image"/>
+<Asset path="assets\textures\sc2_ui_loadingscreen_extended_raceindicator_terran.dds" Type="Image"/>
+<Asset path="assets\textures\ui_emoticons_minerals.dds" Type="Image"/>
+<Abil id="move"/>
+<Abil id="BattlecruiserMove"/>
+<Actor id="SYSTEM_ActorConfig"/>
+<Effect id="Nuke"/>
+</Preload>

@@ -1,0 +1,136 @@
+include "TriggerLibs/natives"
+
+//--------------------------------------------------------------------------------------------------
+// Library: NF1B
+//--------------------------------------------------------------------------------------------------
+// Structures
+struct libFC904078_gs_sharedUnit {
+    int lv_armory;
+    int lv_banelingNest;
+    int lv_roachWarren;
+    int lv_lair;
+    int lv_lurkerDen;
+    int lv_greaterSpire;
+    bool lv_motherShip;
+    int lv_nuke;
+};
+
+struct libFC904078_gs_teamInfo {
+    int lv_playerNum;
+    int lv_builder;
+    playergroup lv_fighterGroup;
+    int lv_neutral;
+    string lv_race;
+    int lv_playerColor;
+    color lv_color;
+    point lv_startLocation;
+    fixed lv_supplyMade;
+    fixed lv_supplyUsed;
+};
+
+// Variable Declarations
+int libFC904078_gv_mineral1;
+int libFC904078_gv_vespene1;
+int libFC904078_gv_mineral2;
+int libFC904078_gv_vespene2;
+bool libFC904078_gv_ggFlag;
+bool libFC904078_gv_tipSensorTowerFlag1;
+bool libFC904078_gv_tipSensorTowerFlag2;
+unitgroup libFC904078_gv_ghostAcademy;
+unitgroup libFC904078_gv_ghostAcademy1;
+unitgroup libFC904078_gv_ghostAcademy2;
+libFC904078_gs_sharedUnit libFC904078_gv_sharedUnit1;
+libFC904078_gs_sharedUnit libFC904078_gv_sharedUnit2;
+libFC904078_gs_teamInfo libFC904078_gv_teamInfo1;
+libFC904078_gs_teamInfo libFC904078_gv_teamInfo2;
+playergroup libFC904078_gv_playerGroup1;
+playergroup libFC904078_gv_playerGroup2;
+playergroup libFC904078_gv_playerGroupAll1;
+playergroup libFC904078_gv_playerGroupAll2;
+playergroup libFC904078_gv_fighterGroup1;
+playergroup libFC904078_gv_fighterGroup2;
+playergroup libFC904078_gv_fighterGroupAll1;
+playergroup libFC904078_gv_fighterGroupAll2;
+int libFC904078_gv_pv_releaseToChangeOwner;
+
+// Function Declarations
+void libFC904078_gf_wait (int lp_s);
+void libFC904078_gf_signal (int lp_s);
+void libFC904078_gf_TvT (playergroup lp__playGroupSelf);
+void libFC904078_gf_TvZ (playergroup lp__playGroupSelf);
+void libFC904078_gf_TvP (playergroup lp__playGroupSelf);
+void libFC904078_gf_ZvT (playergroup lp__playGroupSelf);
+void libFC904078_gf_ZvZ (playergroup lp__playGroupSelf);
+void libFC904078_gf_ZvP (playergroup lp__playGroupSelf);
+void libFC904078_gf_PvT (playergroup lp__playGroupSelf);
+void libFC904078_gf_PvZ (playergroup lp__playGroupSelf);
+void libFC904078_gf_PvP (playergroup lp__playGroupSelf);
+
+// Trigger Declarations
+trigger libFC904078_gt_unlock_pv_releaseToChangeOwner;
+trigger libFC904078_gt_initialization;
+trigger libFC904078_gt_playerGroup;
+trigger libFC904078_gt_startLocation;
+trigger libFC904078_gt_roleSelection1;
+trigger libFC904078_gt_roleSelection2;
+trigger libFC904078_gt_meleeSettings1;
+trigger libFC904078_gt_meleeSettings2;
+trigger libFC904078_gt_singleMode;
+trigger libFC904078_gt_ghostAcademyGroup;
+trigger libFC904078_gt_resource;
+trigger libFC904078_gt_supplySettings;
+trigger libFC904078_gt_allianceSettings;
+trigger libFC904078_gt_raceHelp;
+trigger libFC904078_gt_supplyLimit;
+trigger libFC904078_gt_tipCommands;
+trigger libFC904078_gt_tipGG;
+trigger libFC904078_gt_tipSensorTower;
+trigger libFC904078_gt_tipSupplyLimit;
+trigger libFC904078_gt_tipThank;
+trigger libFC904078_gt_builderGG;
+trigger libFC904078_gt_fighterQuit;
+trigger libFC904078_gt_builderInfoDisplay;
+trigger libFC904078_gt_resourceDisplay1;
+trigger libFC904078_gt_resourceDisplay2;
+trigger libFC904078_gt_resourceUpdate1;
+trigger libFC904078_gt_resourceUpdate2;
+trigger libFC904078_gt_addBySupplyDrop;
+trigger libFC904078_gt_addByConstructComplete;
+trigger libFC904078_gt_addByTrainComplete;
+trigger libFC904078_gt_addByWarpStart;
+trigger libFC904078_gt_decByConstructStarted;
+trigger libFC904078_gt_addByTrainStart;
+trigger libFC904078_gt_decByTrainCancel;
+trigger libFC904078_gt_unchangeByChangeOwner;
+trigger libFC904078_gt_decByFighterDie;
+trigger libFC904078_gt_decByBuilderDie;
+trigger libFC904078_gt_structureShare;
+trigger libFC904078_gt_upgrade;
+trigger libFC904078_gt_armoryAdd;
+trigger libFC904078_gt_armoryDec;
+trigger libFC904078_gt_banelingNestAdd;
+trigger libFC904078_gt_banelingNestDec;
+trigger libFC904078_gt_roachWarrenAdd;
+trigger libFC904078_gt_roachWarrenDec;
+trigger libFC904078_gt_lairAdd;
+trigger libFC904078_gt_lairDec;
+trigger libFC904078_gt_lurkerDenAdd;
+trigger libFC904078_gt_lurkerDenDec;
+trigger libFC904078_gt_greaterSpireAdd;
+trigger libFC904078_gt_greaterSpireDec;
+trigger libFC904078_gt_nukeAdd;
+trigger libFC904078_gt_nukeUse;
+trigger libFC904078_gt_mothershipAdd;
+trigger libFC904078_gt_mothershipDec;
+trigger libFC904078_gt_nexus;
+trigger libFC904078_gt_releaseByCommand;
+trigger libFC904078_gt_releaseAfterOverseer;
+trigger libFC904078_gt_releaseAfterOverlordTransport;
+trigger libFC904078_gt_releaseAfterTrain;
+trigger libFC904078_gt_releaseAfterWarp;
+trigger libFC904078_gt_select1;
+trigger libFC904078_gt_select2;
+
+// Library Initialization
+void libFC904078_InitVariables ();
+
