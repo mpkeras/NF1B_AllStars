@@ -101,7 +101,6 @@
         <AssetArray File="Assets\Sounds\Dragoon_MoveStart01.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Dragoon_MoveStart02.wav" FacialGroup=""/>
         <AssetArray File="Assets\Sounds\Dragoon_MoveStart03.wav" FacialGroup=""/>
-        <Chance value="0"/>
         <DupeMuteCount value="1"/>
         <Pitch value="-1.000000,1.000000"/>
         <PlayDelay value="500,1000"/>
