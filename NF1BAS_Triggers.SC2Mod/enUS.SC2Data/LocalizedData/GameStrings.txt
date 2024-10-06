@@ -1,4 +1,4 @@
-﻿DocInfo/Name=Just Another StarCraft II Mod
+﻿DocInfo/Name=NF1BAS_Triggers
 Param/Value/lib_FC904078_05DEA601=The TvP bio playstyle is not very different from the ladder. If you choose mech, be aware that what makes traditional mech hold up in TvP are <c val="ffff8a">Vultures'</c> <c val="ffff8a">Spider Mines</c>.
 Param/Value/lib_FC904078_0EE65C85=Your race is <c val="ff0000">Terran</c>, your opponent's race is <c val="ff0000">Terran</c>.
 Param/Value/lib_FC904078_145AC551=Commands

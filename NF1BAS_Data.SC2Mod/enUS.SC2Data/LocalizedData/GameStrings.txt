@@ -79,7 +79,7 @@ Button/Tooltip/ResearchStasisField=Unlocks the Stasis Field ability on the <c va
 Button/Tooltip/Stimpack=Enables <c val="ffff8a">Marines</c>, <c val="ffff8a">Marauders</c>, and <c val="ffff8a">Firebats</c> to use the Stimpack ability. Stimpacks cause damage to a unit, but they increase its attack and movement speeds for a short time.
 Button/Tooltip/TornadoMissile=When attacking a Siege Tank, the Warhound launches electrically charged missiles at its target, dealing 30 damage per volley.<n/><c val="#ColorAttackInfo">Can attack ground units.</c> 
 DocInfo/DescShort=Any
-DocInfo/Name=N Fight 1 Builds (Data)
+DocInfo/Name=NF1BAS_Data
 Effect/Name/ArbiterMPRecallInitialSet=Arbiter MPRecall Initial Set
 Effect/Name/ArbiterMPRecallMagazineIterate=Arbiter MPRecall Magazine Iterate
 Effect/Name/CorsairMPDisruptionWebIterateTransport=Disruption Web (Iterate Transport)

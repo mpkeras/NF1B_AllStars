@@ -1,3 +1,2 @@
-﻿DocInfo/DescLong=Completely devoid of any description whatsoever.
-DocInfo/DescShort=Any
-DocInfo/Name=Just Another StarCraft II Mod
+﻿DocInfo/DescShort=Any
+DocInfo/Name=NF1BAS_Assets

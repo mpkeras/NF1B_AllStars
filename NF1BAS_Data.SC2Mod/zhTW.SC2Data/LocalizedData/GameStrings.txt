@@ -74,7 +74,7 @@ Button/Tooltip/ResearchStasisField=解锁<c val="ffff8a">仲裁者</c>的静滞�
 Button/Tooltip/Stimpack=使<c val="ffff8a">陆战队员</c>, <c val="ffff8a">劫掠者</c>, 以及<c val="ffff8a">火蝠</c>能够使用强化剂。强化剂会对使用者造成伤害，但能暂时提高攻击速度和移动速度。
 Button/Tooltip/TornadoMissile=向目标攻城坦克发射充电飞弹，每波造成<d ref="Effect,HHTornadoMissileDamage,Amount"/>点伤害。死亡时会耗尽所有充能。<n/><c val="#ColorAttackInfo">可以对地和对空。</c> 
 DocInfo/DescShort=Any
-DocInfo/Name=N打1造(数据)
+DocInfo/Name=N打1造数据
 Effect/Name/ArbiterMPRecallInitialSet=Arbiter MPRecall Initial Set
 Effect/Name/ArbiterMPRecallMagazineIterate=Arbiter MPRecall Magazine Iterate
 Effect/Name/CorsairMPDisruptionWebIterateTransport=Disruption Web (Iterate Transport)
